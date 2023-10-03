@@ -8,6 +8,8 @@
 # ejercicio 1
 telefono = input("////////Ingrese telefono con el formato +34-XXXXXXXXX-XX////////\n")
 
-telefono.find("-")
-telefono.rfind("-")
-print(telefono.find, telefono.rfind)
+prefijo = telefono.find("-")
+extencion = telefono.rfind("-")
+numeroPuro = telefono[prefijo+1:extencion]
+
+print("Su numero telefonico es: ", numeroPuro,".")
