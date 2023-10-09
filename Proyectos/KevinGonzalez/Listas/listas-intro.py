@@ -1,3 +1,11 @@
+numeros = [0, 1, 2, 3]
+letras = ["a", "b", "c", "d"]
+alfanumerico = numeros + letras
+
+print(alfanumerico[1:5])
+print(alfanumerico)
+
+""" 
 # Lista vacia
 milista = []
 milista2 = list()
@@ -46,3 +54,4 @@ nombreCampers.pop(-3)
 print(nombreCampers)
 
 nombreCampers.remove("Sandra")
+ """
