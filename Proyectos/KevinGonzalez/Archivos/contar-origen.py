@@ -6,7 +6,7 @@ fd = open("Proyectos/KevinGonzalez/Archivos/mbox-short.txt", "r")
 cl = 0
 setEmail = set()
 for linea in fd:
-    if linea.startswith("From:")
+    if linea.startswith("From:"):
     # cl += 1
     # email = linea.split()[1]
     # print(email)
