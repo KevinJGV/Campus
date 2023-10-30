@@ -207,11 +207,13 @@ def add_product(dic):
     print("●" * 10, "Registro de productos","●" * 10, "\n")
     cantidad_ingreso = readNumAbort("¿Cuantos productos desea agregar en ésta operación (Para abortar ingrese cero (0))? => ")
     for i in range(cantidad_ingreso):
+        print("\n", "+" * 15, "Nueva adicion de base de datos".center(15), "+" * 15, "\n")
         id = validarAddId("ID del producto => ", dic)
         nombre = validarNombre("Nombre del articulo => ")
         precio = validarPrecio("Precio del articulo => ")
         cantidad = validarCant("Cantidad del articulo => ")
         dic[id] = {"id" : id,"nombre" : nombre, "precio" : precio, "cantidad" : cantidad}
+        print("\n", f">>>>> ID {id} AGREGADO SATISFACTORIAMENTE <<<<<".center(20), "\n")
     return dic
 
 def modifyData(identifier, dic, number):
@@ -296,11 +298,11 @@ def delete_product(dic):
             input()
 
 
-def marketing_plan(dic):
-    print("●"*10,"Plan de Marketing", "●"*10)
-    while True:
-        try:
-            
+# def marketing_plan(dic):
+#     print("●"*10,"Plan de Marketing", "●"*10)
+#     while True:
+#         try:
+
 def menu(dic):
     while True:
         print("●" * 40, "Menu Principal","●" * 40)
@@ -329,3 +331,4 @@ productos = {}
 while True:
     menu(productos)
     break
+print(productos)
