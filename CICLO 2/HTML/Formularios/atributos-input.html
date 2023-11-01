@@ -9,7 +9,8 @@
     <h1>Atributos Input</h1>
     <hr>
     <br>
-    <form action="index.html" method="post">
+    <!-- <form action="index.html" method="post"> -->
+    <form action="https://google.com/search" method="get">
         <label for="fnombres">Nombre:</label>
         <!-- <input type="text" name="fnombres" id="fnombres" maxlength="15" minlength="1" placeholder="Primer nombre" list="browsers" value="Navegador1" readonly> -->
         <input type="text" name="fnombres" id="fnombres" maxlength="15" minlength="1" placeholder="Primer nombre" list="browsers" value="Navegador1" pattern="[a-zA-Z]{0,9}">
@@ -19,21 +20,92 @@
             <option value="Navegador3"></option>
             <option value="Navegador4"></option>
         </datalist> -->
+
         <br><br>
         <label for="pass">Contraseña:</label>
         <input type="password" name="pass" id="pass">
+
         <br><br>
+        <p>Lenguaje de programacion favorito:</p>
+        <input type="radio" name="Lenguaje" id="Ada" value="Ada">
+        <label for="Lenguaje">Ada</label><br>
+        <input type="radio" name="Lenguaje" id="Python" value="Python" checked>
+        <label for="Lenguaje">Python</label><br>
+        <input type="radio" name="Lenguaje" id="JavaScript" value="JavaScript">
+        <label for="Lenguaje">JavaScript</label><br>
+
+        <br>
+        <p>Pasatiempo favorito:</p>
+        <input type="checkbox" name="pasatiempo" id="Leer" value="Leer">
+        <label for="Leer">Leer</label></input></br>
+        <input type="checkbox" name="pasatiempo" id="Comer" value="Comer">
+        <label for="Comer">Comer</label></input><br>
+        <input type="checkbox" name="pasatiempo" id="Hacer el amor" value="Hacer el amor" checked>
+        <label for="Hacer el amor">Hacer el amor</label></input><br>
+        <input type="checkbox" name="pasatiempo" id="Gym" value="Gym">
+        <label for="Gym">Gym</label></input><br>
+        <input type="checkbox" name="pasatiempo" id="Trotar" value="Trotar">
+        <label for="Trotar">Trotar</label></input><br>
+
+        <br><br>
+        <input type="button" value="Ver mensaje" onclick="alert(AmorYPaz)">
+
+        <br>
+        <br>
+        <label for="color">Escoja un color:</label>
+        <input type="color" name="color" id="color">
+
+        <br>
+        <br>
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" name="fecha" id="fecha">
+
+        <br>
+        <br>
+        <label for="fechamin">Ingrese una fecha anterior a 2030-12-31:</label>
+        <input type="date" name="fechamin" id="fechamin" max="2030-12-31"><br>
+        <label for="fechamax">Ingrese una fecha posterior a 1920-12-31:</label>
+        <input type="date" name="fechamax" id="fechamax" min="1920-12-31"><br>
+        <label for="fechayhora">Fecha y hora de nacimiento:</label>
+        <input type="datetime-local" name="fechayhora" id="fechayhora"><br>
+        <label for="mesnac">Mes de nacimiento:</label>
+        <input type="month" name="mesnac" id="mesnac">
+
+        <br>
+        <br>
+
+        <label for="numero">Ingrese numeros:</label>
+        <input type="number" name="numero" id="numero" min="18" max="50" step="2"
+        value="18">
+
+        <br>
+
+        <label for="e-mail">Ingrese su e-mail:</label>
+        <input type="email" name="e-mail" id="e-mail" required>
+
+        <br><br>
+        <label for="volumen">Volumen:</label>
+        <input type="range" name="volumen" id="volumen"
+        min="0" max="100" value="50" step="5">
+
+        <br>
+        <input type="hidden" name="formstatus" value="completo">
+
+        <br><br>
+        <label for="busqueda">BUSQUEDA EN GOOGLE:</label>
+        <input type="search" name="q" id="busqueda">
+        
+        <br><br>
+        <label for="archivo">Escoja un archivo</label>
+        <input type="file" name="archivo" id="archivo" accept=".png,.docx"><br>
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpiar">
+        <input type="image" src="../../IMG/capi.jpg" alt="capibara" width="50px" onclick="alert('capibaracapibaracapibara')">
+
         <br><br>
-        <hr>
-        <p>Lenguaje de programacion favorito:</p>
-        <input type="radio" name="Lenguaje" id="Ada">
-        <label for="Lenguaje">Ada</label><br>
-        <input type="radio" name="Lenguaje" id="Python" checked>
-        <label for="Lenguaje">Python</label><br>
-        <input type="radio" name="Lenguaje" id="JavaScript">
-        <label for="Lenguaje">JavaScript</label><br>
+        <label for="texto">Tu texto bonito:</label>
+        <br>
+        <textarea name="texto" id="texto" cols="50" rows="5"></textarea>
     </form>
 </body>
 </html>
