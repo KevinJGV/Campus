@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Input</title>
+</head>
+<body>
+    <h1>Atributos Input</h1>
+    <hr>
+    <br>
+    <form action="index.html" method="post">
+        <label for="fnombres">Nombre:</label>
+        <!-- <input type="text" name="fnombres" id="fnombres" maxlength="15" minlength="1" placeholder="Primer nombre" list="browsers" value="Navegador1" readonly> -->
+        <input type="text" name="fnombres" id="fnombres" maxlength="15" minlength="1" placeholder="Primer nombre" list="browsers" value="Navegador1" pattern="[a-zA-Z]{0,9}">
+        <!-- <datalist id="browsers">
+            <option value="Navegador1"></option>
+            <option value="Navegador2"></option>
+            <option value="Navegador3"></option>
+            <option value="Navegador4"></option>
+        </datalist> -->
+        <br><br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass">
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+        <br><br>
+        <hr>
+        <p>Lenguaje de programacion favorito:</p>
+        <input type="radio" name="Lenguaje" id="Ada">
+        <label for="Lenguaje">Ada</label><br>
+        <input type="radio" name="Lenguaje" id="Python" checked>
+        <label for="Lenguaje">Python</label><br>
+        <input type="radio" name="Lenguaje" id="JavaScript">
+        <label for="Lenguaje">JavaScript</label><br>
+    </form>
+</body>
+</html>
