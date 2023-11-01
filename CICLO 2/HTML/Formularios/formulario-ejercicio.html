@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Ejercicio</title>
+</head>
+<body>
+    <h1 align="center">Formulario ACME</h1>
+    <hr>
+    <br><br>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Preferencias personalizadas</legend>
+            <label for="fecha1">Elija fecha:</label>
+            <input type="date" name="fecha1" id="fecha1"><br>
+            <label for="archivo1">Seleccione archivo:</label>
+            <input type="file" name="archivo1" id="archivo1"><br>
+            <input type="radio" name="procesador" id="AMD" value="AMD">
+            <label for="procesador">AMD</label><br>
+            <input type="radio" name="procesador" id="Intel i5" value="Intel i5">
+            <label for="procesador">Intel i5</label><br>
+            <input type="radio" name="procesador" id="Intel i7" value="Intel i7">
+            <label for="procesador">Intel i7</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Indique sus preferencias</legend>
+            <input type="radio" name="materia" id="Matematicas" value="Matematicas">
+            <label for="materia">Matematicas</label>
+            <input type="radio" name="materia" id="Historia" value="Historia">
+            <label for="materia">Historia</label>
+            <input type="radio" name="materia" id="Geografia" value="Geografia">
+            <label for="materia">Geografia</label>
+            <input type="radio" name="materia" id="Lengua" value="Lengua">
+            <label for="materia">Lengua</label>
+            <br>
+            <label for="nombre">Nombres:</label>
+            <input type="text" name="nombre" id="nombre" maxlength="20" minlength="1" placeholder="Nombre"><br>
+            <label for="apelido">Apellidos:</label>
+            <input type="text" name="apelido" id="apelido" maxlength="20" minlength="1" placeholder="Apellidos"><br>
+            <label for="direccion">Direccion:</label>
+            <input type="text" name="direccion" id="direccion" maxlength="20" minlength="1" placeholder="Direccion"><br>
+            <label for="color">Elija su color de preferencia:</label>
+            <input type="color" name="color" id="color"><br>
+            <textarea name="texto" id="texto" cols="50" rows="5" placeholder="Utilice este cuadro para escribir"></textarea><br>
+            <label for="fecha2">Ingrese fecha:</label>
+            <input type="date" name="fecha2" id="fecha2"><br>
+            <select name="idioma" id="idioma">
+                <option value="español">Español</option>
+                <option value="ingles" selected>Ingles</option>
+            </select><br>
+            <label for="hora">Elija una hora:</label>
+            <input type="time" name="hora" id="hora"><br>
+            <label for="archivo2">Seleccione un archivo:</label>
+            <input type="file" name="archivo2" id="archivo2"><br>
+            <input type="checkbox" name="sexo" id="Mujer" value="Mujer">
+            <label for="sexo">Mujer</label>
+            <input type="checkbox" name="sexo" id="Hombre" value="Hombre">
+            <label for="sexo">Hombre</label>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
