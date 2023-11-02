@@ -1,0 +1,21 @@
+* {
+    color: gray;
+  }
+  p {
+    color: red;
+  }
+  .prueba {
+    color: blue; font-size: xx-large;
+  }
+  #html {
+    color: black;
+  }
+  div p sub {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: italic;color: greenyellow;
+  }
+  div p .prueba {
+    background-color: yellow;
+  }
+  i, u, .prueba {
+    border: 1px solid black;
+  }
