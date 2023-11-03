@@ -1,0 +1,17 @@
+main{
+    width: 600px;
+    border: 1px solid;
+    content-visibility:auto;
+}
+
+div{
+    padding: 20px;
+    border: 1px solid tomato;
+}
+
+.column{
+    width: 50px;
+    border:1px  solid green;
+    display:inline-block;
+    margin:0%
+}

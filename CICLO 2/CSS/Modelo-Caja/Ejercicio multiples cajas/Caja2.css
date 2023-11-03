@@ -1,0 +1,40 @@
+main{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: sienna;
+    color: white;
+    padding-inline: 90px ;
+    padding-bottom: 280px;
+}
+
+.img{
+    background-color: orangered;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+    border: solid white;
+    background-color: gray;
+}
+
+.intro{
+    background: gold;
+    padding-top: 20px;
+    padding-inline: 90px;
+    padding-bottom: 115px;
+}
+
+.pie{
+    background-color:royalblue;
+    padding: 10px;
+}
+
+footer{
+    font-weight: bold;
+    color: white;
+    padding-bottom: 10px;
+}
