@@ -1,0 +1,31 @@
+body{
+    padding-inline: 10px;
+}
+
+h1{
+    border: 2px solid #00f;
+    padding-inline: 10px;
+    margin-block: 30px;
+}
+
+h2{
+    border: 2px solid #AAA;
+    padding-inline: 5px;
+    margin-block: 15px;
+}
+
+ul{
+    border: 2px solid #0f0
+}
+
+li{
+    margin-block: 15px;
+}
+
+#primerli{
+    margin-top: 0px;
+}
+
+#ultimoli{
+    margin-bottom: 0px;
+}
