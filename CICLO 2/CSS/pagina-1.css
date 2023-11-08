@@ -6,8 +6,6 @@
 }
 
 body{
-    display: grid;
-    place-content: center
 }
 
 div{
@@ -66,6 +64,7 @@ span{
 
 #lateral{
     float: left;
+    display: inline;
 }
 #noticias{
     border: #d1d1d5 solid 2px;
@@ -88,11 +87,11 @@ span{
     border: #db9157 solid 2px;
     width: 198px;
     float: right;
-    position: ;
 }
 
 main{
     width: 800px;
+    display: ;
 }
 article a{
     color: #CC6600;
