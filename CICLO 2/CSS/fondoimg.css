@@ -1,0 +1,11 @@
+div{
+    border: 1px solid gray;
+    width: 50%;
+    height: 300px;
+    margin: 30px auto;
+    background-image: url("../IMG/fondo_menu.gif");
+    /* background-repeat: repeat-x space; */
+    background-repeat: no-repeat;
+    background-position: 80% 20%;
+    background-size: cover;
+}
