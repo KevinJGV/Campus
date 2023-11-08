@@ -43,7 +43,7 @@ header aside{
 }
 
 nav{
-    background-image: url(fondo_menu.gif);
+    background-image: url(../IMG/fondo_menu.gif);
     background-size: auto; 
     margin-right: 1.3em;
     padding: 5px;
