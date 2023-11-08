@@ -14,7 +14,7 @@ main{
 .h3inicial{
     margin-top: 0px;
 }
-.contenedor{
+main > div{
     background-color: transparent;
     margin: 0px;
     border: none;
@@ -28,25 +28,11 @@ div{
     padding: 3%;
 }
 
-#color-1{
-    background-color: black;
+.contenedor1{
+    background-image: linear-gradient(#717171, black)
 }
-
-#color-2{
-    background-color: gray;
+.contenedor1 > div{
+    background-image: none;
+    transition: background-position 0.5s linear;
+    background-position: calc(100% - (100% * (1 - ((index + 1) / (total_divs))))) 0;
 }
-
-#color-3{
-    background-color: red;
-}
-
-#color-4{background-color: #fff5ff;}
-#color-5{background-color: #ffddf6;}
-#color-6{background-color: #ffc6eb;}
-#color-7{background-color: #ffb1e2;}
-#color-8{background-color: #ff98d6;}
-#color-9{background-color: #ff81cb;}
-#color-10{background-color: #ff69c0;}
-#color-11{background-color: #ff52b7;}
-#color-12{background-color: #ff37a9;}
-#color-13{background-color: #ff1a9e;}
