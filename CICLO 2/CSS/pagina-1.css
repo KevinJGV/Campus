@@ -2,7 +2,18 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
     line-height: 1.4 ;
+    margin: 5px;
 }
+
+body{
+    display: grid;
+    place-content: center
+}
+
+div{
+    width: auto;
+}
+
 
 h2{
     color: #CC6600;
@@ -24,14 +35,14 @@ header aside{
   width: fit-content;
   margin-left: 10px;
   margin-top: 10px;
-  z-index: 0;
 }
 
 nav{
-    background-image: url(../IMG/fondo_menu.gif); 
+    background-image: url(fondo_menu.gif);
+    background-size: auto; 
     margin-right: 1.3em;
     padding: 5px;
-    z-index: 1;
+    width: 100%;
 }
 nav a{
     color: white;
@@ -40,8 +51,7 @@ nav a{
 
 aside{
     font-size: 0.9em;
-    padding: 5px;
-    width: 20%;
+    width: 200px;
 }
 
 span{
@@ -69,14 +79,15 @@ span{
 }
 
 #secundario{
-    float: right;
     color: #555;
     border: #db9157 solid 2px;
+    width: 198px;
+    float: right;
 }
 
 main{
-    display: inline-block;
-    width: 57%;
+    width: 800px;
+    position: relative;
 }
 article a{
     color: #CC6600;
@@ -93,5 +104,7 @@ main img{
 }
 
 footer{
-
+    clear: both;
+    text-align: center;
+    font-size: 0.8em;
 }
