@@ -27,7 +27,12 @@ h3{
 }
 
 h1{
-    font-size: 1.6em
+    font-size: 1.6em;
+    background-color: #db9157;
+}
+
+header{
+    height: 50px;
 }
 
 header aside{
@@ -83,11 +88,11 @@ span{
     border: #db9157 solid 2px;
     width: 198px;
     float: right;
+    position: ;
 }
 
 main{
     width: 800px;
-    position: relative;
 }
 article a{
     color: #CC6600;
@@ -104,7 +109,17 @@ main img{
 }
 
 footer{
-    clear: both;
-    text-align: center;
     font-size: 0.8em;
+    padding: 5px;
+    clear: both;
+    border-block:  #c9c6c6 solid 1px
+}
+
+footer a{
+    border-right: #999 solid 1px;
+    padding-right: 1%;
+}
+
+strong{
+    float: right;
 }
