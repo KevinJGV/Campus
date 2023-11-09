@@ -1,0 +1,98 @@
+button{
+    box-shadow: 5px 5px;
+    margin: 5px;
+}
+
+.classic{
+    border: 3px dashed red;
+}
+
+.classic:hover{
+    background-color: pink;
+    color: black;
+}
+
+.classic:active{
+    background-color: red;
+    color: white;
+    border: black solid 5px;
+}
+
+.primary{
+    font-size: 5rem;
+}
+
+.large{
+    width: 50%;
+}
+
+button.classic.primary.large{
+    color: limegreen;
+}
+
+button[disabled]{
+    width: 25%;
+}
+
+[disabled]{
+    background-color: lightpink;
+    margin-left: 15%;
+}
+
+a[rel="nofollow"]{
+    background: rebeccapurple;
+    color: white;
+}
+
+[data-mood~="happy"]{
+    background-color: greenyellow;
+    text-align: center;
+    width: 15%;
+    padding: 3px;
+}
+
+[lang|="es"]{
+    background-color: red;
+    color: white;
+}
+
+
+
+a[href]::after{
+    content: "URL: ["attr(href)"]";
+    display: inline-block;
+    color: gray;
+}
+
+a[href]:link{
+    color:gold;
+}
+
+a[href]:visited{
+    border: black solid 4px;
+}
+
+a[href^="http:"]::after{
+    content: "Pagina insegura: "attr(href);
+    display: inline-block;
+    color: red;
+}
+
+a[href$=".pdf"]::before{
+    content: url(../../IMG/Pdf-2127829.png);
+}
+
+a[href*="hola"] {
+    border: 1px solid;
+}
+
+input[type]:focus{
+    border: black dashed 3px;
+    background-color: rgb(230, 230, 193);
+}
+
+div:focus-within{
+    border: black dashed 2px;
+    background-color: rgb(230, 230, 193)
+}
+

@@ -1,0 +1,15 @@
+img[src]{
+    border: red solid 5px;
+}
+
+a[class=""]{
+    color: green;
+}
+
+a[href^="https"]{
+    color: pink;
+}
+
+a.externo{
+    color:darkmagenta;
+}
