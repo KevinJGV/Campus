@@ -1,0 +1,40 @@
+div{
+    border:black 2px dashed ;
+}
+#uno{
+    background-color: darkblue;
+    height: 100px;
+}
+#dos{
+    background-color:deepskyblue;
+    position: absolute;
+    display:inline-block;
+    width: 48%;
+    box-sizing: border-box;
+}
+#tres{
+    background-color: lightgray;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
+    left: 50%;
+}
+#cuatro{
+    background-color: gray;
+    box-sizing: border-box;
+    width: 70%;
+    height: 50px;
+}
+#cinco{
+    background-color: orange;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#seis{
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}

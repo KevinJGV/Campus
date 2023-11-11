@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    border:black 2px dashed ;
+    height: 700px;
+}
+#uno{
+    background-color: darkblue;
+    color: white;
+    height: 15%;
+}
+#dos{
+    background-color:deepskyblue;
+    height: 25%;
+    width: 50%;
+    float: left;
+}
+#tres{
+    background-color:lightgray;
+    height: 25%;
+    width: 50%;
+    float: right;
+}
+#cuatro{
+    background-color:gray;
+    height: 60%;
+    width: 70%;
+    float: left;
+}
+#cinco{
+    background-color:peru;
+    height: 30%;
+    width: 30%;
+    float: right
+}
+#seis{
+    background-color:red;
+    height: 30%;
+    width: 30%;
+    float: right
+}
