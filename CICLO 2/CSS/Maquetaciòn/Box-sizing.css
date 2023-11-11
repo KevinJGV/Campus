@@ -1,0 +1,8 @@
+.red-box{
+    background-color: red;
+    height: 400px;
+    width: 100px;
+    border: 10px black solid;
+    padding: 0 5%;
+    box-sizing: border-box;
+}

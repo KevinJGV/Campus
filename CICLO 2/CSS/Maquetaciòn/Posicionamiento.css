@@ -1,0 +1,51 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    height: 2500px;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+div{
+    border-radius: 5px;
+    background-color: rgb(46, 46, 46);
+}
+
+.parent{
+    position: relative;
+}
+.static{
+    background-color:#dddddd ;
+    position: static;
+}
+.relative{
+    background-color:#81c476 ;
+    position: relative;
+    left: 50px;
+    top: 5px;
+    z-index: 1;
+}
+.absolute{
+    background-color:#fc9191 ;
+    position: absolute;
+    top: 10px
+}
+.fixed{
+    background-color:cyan ;
+    position: fixed;
+    top: 50%;
+}
+.sticky{
+    background-color: peru ;
+    position: sticky;
+}
