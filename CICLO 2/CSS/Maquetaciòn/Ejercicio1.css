@@ -1,0 +1,25 @@
+*{
+    position: relative;
+}
+
+.abu{
+    border: blue 1px solid;
+    height: 165px;
+}
+
+.padre{
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    top: 2px;
+    left: 30%;
+}
+
+.hijo{
+    font-size: 7rem;
+    line-height: 0;
+    color: red;
+    top: 33%;
+    left: 45%;
+}
