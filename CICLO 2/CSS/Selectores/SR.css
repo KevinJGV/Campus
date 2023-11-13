@@ -1,10 +1,23 @@
 table{
     padding: 0px;
     border-collapse: collapse;
+    width: 200px;
 }
 td{
     border: black 1px solid;
     margin: 0px;
     padding: 3px;
-    padding-right: 50px;
+    width: 100% ;   
+}
+
+td:hover{
+    background-color: lightgray;
+    transition:ease-in 0.2s;
+}
+td::before{
+    content: url(../../IMG/flecha_inactiva.png);
+}
+
+td:hover::before{
+    content: url(../../IMG/flecha_activa.png);
 }

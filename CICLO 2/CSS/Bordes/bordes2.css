@@ -11,7 +11,7 @@ main{
     padding: 8px;
 }
 
-.h3inicial{
+main h3:first-child{
     margin-top: 0px;
 }
 
