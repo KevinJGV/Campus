@@ -14,25 +14,29 @@ main{
 .h3inicial{
     margin-top: 0px;
 }
-main > div{
-    background-color: transparent;
-    margin: 0px;
-    border: none;
-    padding: 0px;
+
+table{
+    border-spacing: 1px;
+    width: 100%;
 }
 
-
-div{
-    border: 2px solid;
-    margin-block: 0.7px;
-    padding: 3%;
+td{
+    border: black 1px solid;
+    height: 10px;
 }
 
-.contenedor1{
-    background-image: linear-gradient(#717171, black)
+.contenedor1 > *{
+    background-image: linear-gradient(rgb(70, 68, 68),black);;
 }
-.contenedor1 > div{
-    background-image: none;
-    transition: background-position 0.5s linear;
-    background-position: calc(100% - (100% * (1 - ((index + 1) / (total_divs))))) 0;
+
+.contenedor2 > *{
+    background-image: linear-gradient(rgb(70, 68, 68),rgb(91, 88, 88));
+}
+
+.contenedor3 > *{
+    background-image: linear-gradient(rgb(156, 6, 6),red);
+}
+
+.contenedor4 > *{
+    background-image: linear-gradient(#fff5ff,#ff1a9e);
 }
