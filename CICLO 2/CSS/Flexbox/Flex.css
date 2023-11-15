@@ -1,0 +1,35 @@
+body{
+    background-color: beige;
+}
+
+.item{
+    border: solid 1px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    margin: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: gray;
+    border: solid;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    flex-flow: row wrap;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* justify-content: space-around;
+    justify-content: space-evenly; */
+    height: 600px;
+    align-items: center;
+    align-content: space-between;
+    
+}
