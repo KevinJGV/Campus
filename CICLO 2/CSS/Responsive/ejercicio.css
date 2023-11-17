@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 100%;
+}
+.contenedor{
+    border: solid;
+}
+
+@media (max-width:480px) {
+    .contenedor{
+        border: solid;
+        width: 75%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    .papa{
+        grid-area: 1/1/3/-1;
+    }
+
+    .cerdo{
+        grid-area: 3/1/5/-1;
+    }
+    
+    .enano{
+        grid-area: 5/1/7/-1;
+    }
+
+    .arbol{
+        grid-area: 7/1/9/-1;
+    }
+}
+
+@media (min-width:480px) and (max-width:780px){
+    .contenedor{
+        border: solid;
+        width: 75%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    .papa{
+        grid-area: 1/1/2/5;
+    }
+
+    .cerdo{
+        grid-area: 1/5/2/10;
+    }
+    
+    .enano{
+        grid-area: 2/1/3/5;
+    }
+
+    .arbol{
+        grid-area: 2/5/3/10;
+    }
+}
+
+@media (min-width:780px) {
+    .contenedor{
+        border: solid;
+        width: 75%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+
+    .papa{
+        grid-area: 1/1/2/2;
+    }
+
+    .cerdo{
+        grid-area: 1/2/2/3;
+    }
+    
+    .enano{
+        grid-area: 1/3/2/4;
+    }
+
+    .arbol{
+        grid-area: 1/4/2/5;
+    }
+}
