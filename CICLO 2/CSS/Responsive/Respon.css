@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+img{
+    visibility: hidden;
+}
+@media screen and (max-width:683px) {
+    body{
+        background-color: turquoise;
+    }
+
+    h1{
+        text-align: center;
+        text-transform: lowercase;
+    }
+
+    img{
+        visibility: hidden;
+    }
+}
+
+@media(min-width:1200px) {
+    body{
+        background-color:chocolate;
+    }
+
+    h1{
+        text-align: right;
+        text-transform: uppercase;
+        margin: auto;
+    }
+
+
+    img{
+        visibility: visible;
+        margin: auto;
+    }
+
+}
