@@ -1,0 +1,61 @@
+.caja{
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    transition: all 0.5s 0.1s;
+}
+
+.caja:hover{
+    background-color: tomato;
+    width: 120px;
+    height: 120px;
+    rotate: 45deg;
+    border-radius: 25%;
+    /* transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 0.1s; */
+    transition: background-color 2s 4s, width 4s 6s, height 6s 8s, rotate 8s 10s, border-radius 10s 12s
+}
+
+
+
+.parent > div[class] {
+    width: 12em;
+    min-width: 12em;
+    padding: 3px;
+    margin-bottom: 4px;
+    background-color: black;
+    color:white;
+    transition-property: all;
+    transition-duration: 7s;
+}
+
+.parent:hover > div[class] {
+    width: 90vw;
+    min-width: 24em;
+    background-color: blue;
+    color: orange;
+    border: 1px solid orange;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.ease {
+    transition-timing-function: ease;
+}
+.easein {   
+    transition-timing-function: ease-in;
+}
+.easeout {
+    transition-timing-function: ease-out;
+}
+.easeinout {
+    transition-timing-function: ease-in-out;
+}
+.linear {
+    transition-timing-function: linear;
+}
+.cb {
+    transition-timing-function: cubic-bezier(.6,-0.62,.44,1.7)
+}
