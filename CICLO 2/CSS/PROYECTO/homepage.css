@@ -23,6 +23,9 @@ html, body{
 } */
 
 .topbg{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
@@ -50,26 +53,519 @@ html, body{
     visibility: visible;
     height: 100vb;
     width: 100%;
-    z-index: 1;
-  }
+    z-index: 2;
+}
 
+
+/********* SECCION DE PUNTOS DE FONDO***************/
+
+.point-floating-1 {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    -webkit-animation-name: p1;
+    -webkit-animation-duration: 80s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p1;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.2rem);
+}
+
+.point-floating-2 {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    -webkit-animation-name: p2;
+    -webkit-animation-duration: 90s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p2;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.5rem);
+}
+
+.point-floating-3 {
+    background-color: white;
+    height: 5px;
+    width: 5px;
+    position: relative;
+    -webkit-animation-name: p3;
+    -webkit-animation-duration: 70s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p3;
+    animation-duration: 70s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.5rem);
+}
+
+.point-floating-4 {
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    position: relative;
+    -webkit-animation-name: p4;
+    -webkit-animation-duration: 80s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p4;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.5rem);
+}
+
+.point-floating-5 {
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    position: relative;
+    -webkit-animation-name: p5;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p5;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.2rem);
+}
+
+.point-floating-6 {
+    background-color: white;
+    height: 8px;
+    width: 8px;
+    position: relative;
+    -webkit-animation-name: p6;
+    -webkit-animation-duration: 70s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p6;
+    animation-duration: 70s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.3rem);
+}
+
+.point-floating-7 {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    -webkit-animation-name: p7;
+    -webkit-animation-duration: 70s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p7;
+    animation-duration: 70s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.4rem);
+}
+
+.point-floating-8 {
+    background-color: white;
+    height: 6px;
+    width: 6px;
+    position: relative;
+    -webkit-animation-name: p8;
+    -webkit-animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p8;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.2rem);
+}
+
+.point-floating-9 {
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    -webkit-animation-name: p9;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: p9;
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    filter: blur(0.4rem);
+}
+
+@-webkit-keyframes p1 {
+    0% {
+        left: 0px;
+        top: 0px
+    }
+
+    50% {
+        left: 0;
+        top: 800px
+    }
+
+    100% {
+        left: 0px;
+        top: 0px
+    }
+}
+
+@keyframes p1 {
+    0% {
+        left: 800px;
+        top: 0px
+    }
+
+    50% {
+        left: 0px;
+        top: 800px
+    }
+
+    100% {
+        left: 800px;
+        top: 0px
+    }
+}
+
+@-webkit-keyframes p2 {
+    0% {
+        left: 0;
+        top: 100px
+    }
+
+    50% {
+        left: 0;
+        top: 800px
+    }
+
+    100% {
+        left: 0;
+        top: 100px
+    }
+}
+
+@keyframes p2 {
+    0% {
+        left: 0;
+        top: 100px
+    }
+
+    50% {
+        left: 0px;
+        top: 800px
+    }
+
+    100% {
+        left: 0;
+        top: 100px
+    }
+}
+
+@-webkit-keyframes p3 {
+    0% {
+        left: 300px;
+        top: 900px
+    }
+
+    50% {
+        left: 500px;
+        top: 0px
+    }
+
+    100% {
+        left: 300px;
+        top: 900px
+    }
+}
+
+@keyframes p3 {
+    0% {
+        left: 300px;
+        top: 900px
+    }
+
+    50% {
+        left: 500px;
+        top: 0px
+    }
+
+    100% {
+        left: 300px;
+        top: 900px
+    }
+}
+
+@-webkit-keyframes p4 {
+    0% {
+        left: 1000px;
+        top: 500px
+    }
+
+    50% {
+        left: 00px;
+        top: 500px
+    }
+
+    100% {
+        left: 1000px;
+        top: 500px
+    }
+}
+
+@keyframes p4 {
+    0% {
+        left: 1000px;
+        top: 500px
+    }
+
+    50% {
+        left: 0px;
+        top: 500px
+    }
+
+    100% {
+        left: 1000px;
+        top: 500px
+    }
+}
+
+@-webkit-keyframes p5 {
+    0% {
+        left: 500px;
+        top: 1000px
+    }
+
+    50% {
+        left: 50%;
+        top: 0px
+    }
+
+    100% {
+        left: 500px;
+        top: 1000px
+    }
+}
+
+@keyframes p5 {
+    0% {
+        left: 500px;
+        top: 1000px
+    }
+
+    50% {
+        left: 50%;
+        top: 0px
+    }
+
+    100% {
+        left: 500px;
+        top: 1000px
+    }
+}
+
+@-webkit-keyframes p6 {
+    0% {
+        left: 500px;
+        top: 200px
+    }
+
+    50% {
+        left: 50%;
+        top: 70%
+    }
+
+    100% {
+        left: 500px;
+        top: 200px
+    }
+}
+
+@keyframes p6 {
+    0% {
+        left: 500px;
+        top: 200px
+    }
+
+    50% {
+        left: 50%;
+        top: 70%
+    }
+
+    100% {
+        left: 500px;
+        top: 200px
+    }
+}
+
+@-webkit-keyframes p7 {
+    0% {
+        left: 50px;
+        top: 10%
+    }
+
+    50% {
+        left: 50%;
+        top: 10%
+    }
+
+    100% {
+        left: 50px;
+        top: 10%
+    }
+}
+
+@keyframes p7 {
+    0% {
+        left: 50px;
+        top: 10%
+    }
+
+    50% {
+        left: 50%;
+        top: 10%
+    }
+
+    100% {
+        left: 50px;
+        top: 10%
+    }
+}
+
+@-webkit-keyframes p8 {
+    0% {
+        left: 0;
+        top: 20%
+    }
+
+    50% {
+        left: 50%;
+        top: 20%
+    }
+
+    100% {
+        left: 0;
+        top: 20%
+    }
+}
+
+@keyframes p8 {
+    0% {
+        left: 0;
+        top: 20%
+    }
+
+    50% {
+        left: 50%;
+        top: 20%
+    }
+
+    100% {
+        left: 0;
+        top: 20%
+    }
+}
+
+@-webkit-keyframes p9 {
+    0% {
+        left: 1000px;
+        top: 100px
+    }
+
+    50% {
+        left: 500px;
+        top: 950px
+    }
+
+    100% {
+        left: 1000px;
+        top: 100px
+    }
+}
+
+@keyframes p9 {
+    0% {
+        left: 1000px;
+        top: 100px
+    }
+
+    50% {
+        left: 500px;
+        top: 950px
+    }
+
+    100% {
+        left: 1000px;
+        top: 100px
+    }
+}
+
+/*******************FINAL******************/
+
+.point {
+    border-radius: 50%;
+    z-index: 999;
+    position: absolute
+}
+/* .cristal{
+    background-color: rgba(255, 255, 255, 0.034);
+    backdrop-filter: blur(1rem);
+    position: absolute;
+    height: 100vb;
+    width: 150%;
+    z-index: 3
+} */
 .mainlayer{
     position: absolute;
     width: 100%;
     z-index: 2;
 
 }
-  
-  @keyframes bg-animation {
-      0% { transform: translate(0,0) }
-      10% { transform: translate(-5%,-5%) }
-      20% { transform: translate(-10%,5%) }
-      30% { transform: translate(5%,-10%) }
-      40% { transform: translate(-5%,15%) }
-      50% { transform: translate(-10%,5%) }
-      60% { transform: translate(15%,0) }
-      70% { transform: translate(0,10%) }
-      80% { transform: translate(-15%,0) }
-      90% { transform: translate(10%,5%) }
-      100% { transform: translate(5%,0) }
-  }
+
+.navbutton{
+    padding: 1rem;
+    
+}
+
+.navbutton hr{
+    min-width: 85px;
+    width: 10%;
+    justify-content: center;
+}
+
+/* .lateralbar{
+    transform: rotate(-90deg);    
+} */
+.lateralbar *{
+    border: solid;
+    font-family: 'alumni sans';
+    
+}
+
+.kglabel {
+    display: grid;
+    grid-template-columns:min-content min-content;
+    font-size: 2rem;
+    border: solid;
+}
+
+.dots{
+    margin-block: 5px;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 6rem;
+    height: 4rem;
+    line-height: 30px;
+}
+
+.about{
+    font-weight: extrabold;
+    font-style: italic;
+    font-size: 4rem;
+    margin-block: 5px;
+    padding: 5px;
+    height: 4rem;
+    line-height: 45px;
+
+}
+
