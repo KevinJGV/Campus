@@ -617,9 +617,46 @@ body {
   
   .whitelabel {
     flex-grow: 1;
-    padding: 20px; 
+    padding: 0; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
   }
   
+  .whitelabel *{
+    font-size: 2rem;
+    font-family: 'alumni sans';
+    width: auto;
+    /* flex-grow: 1; */
+    transform: rotate(-90deg);
+  }
+
+.fullabout {
+    margin-block: 0;
+    padding-left: 12px;
+    padding-block: 0;
+    padding-right: 25px;
+    height: auto;
+    overflow: hidden;
+}
+
+.fullabout > h2 {
+    margin-block: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.fullabout > a {
+    font-style: italic;
+    font-size: 3.5rem;
+    margin-block: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 35px;
+    text-decoration: none;
+}
+
   .kglabel {
     padding: 0; 
     box-sizing: border-box;
@@ -668,6 +705,9 @@ body {
     line-height: 35px;
     text-decoration: none;
 }
+
+
+
 
 BARRA LATERAL EXTENDIDA 
 
