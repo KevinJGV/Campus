@@ -7,43 +7,36 @@
 
 html,
 body {
+    display: flex;
     background-color: #222223;
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    position: relative;
+    /* overflow: hidden; */
 }
 
-/* .background{
-    background-color: black;
-    overflow: hidden;
-    position: relative;
-    margin: 2rem 2rem 0 2rem;
-    border-radius: 1rem 1rem 0 0;
-    height: 100vh;
-} */
-
 .topbg {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column wrap;
-    overflow: hidden;
-    position: relative;
+    position: fixed;
     box-sizing: border-box;
-    padding: 0;
-    margin-inline: 2rem;
-    margin-top: 2rem;
-    border-radius: 1rem 1rem 0 0;
-    height: 100%;
+    width: 100vw;
+    height: 100VH;
+    z-index: 0;
 }
 
 .bgblack {
     background-color: black;
     position: absolute;
-    height: 100vb;
-    width: 150%;
-    z-index: 0;
+    height: 100vH;
+    width: 100VW;
+    z-index: 1;
+}
+
+.point {
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute
 }
 
 .bgnoise {
@@ -53,9 +46,9 @@ body {
     animation: bg-animation .2s infinite;
     opacity: 1;
     visibility: visible;
-    height: 100vb;
-    width: 100%;
-    z-index: 1;
+    height: 100vH;
+    width: 100VW;
+    z-index: 2;
 }
 
 
@@ -502,13 +495,6 @@ body {
     }
 }
 
-
-.point {
-    border-radius: 50%;
-    z-index: 1;
-    position: absolute
-}
-
 /*******************FINAL******************/
 /* .cristal{
     background-color: rgba(255, 255, 255, 0.034);
@@ -522,13 +508,15 @@ body {
     position: absolute;
     width: 100%;
     z-index: 2;
-    height: 100%;
+    height: 200%;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(30, 1fr);
 }
 
 .navbutton {
+    z-index: 2;
+    position: fixed;
     margin-top: 1rem;
     grid-area: 1/15;
 }
@@ -565,11 +553,11 @@ body {
     text-align: center;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: rgb(65, 59, 59)
 }
 
-#desplegar:target + .menu {
+#desplegar:target+.menu {
     display: grid;
     grid-template-columns: auto;
     background-color: white;
@@ -587,21 +575,23 @@ body {
     overflow: hidden;
     z-index: 9;
 }
-#lownavbutton{
+
+#lownavbutton {
     width: fit-content;
     margin-inline: 48%;
     align-items: center;
     height: 50%;
 }
 
-#lownavbutton hr{
+#lownavbutton hr {
     min-width: 85px;
     width: fit-content;
     text-align: center;
     margin: 8px;
     color: black;
 }
-.lateralbar {
+
+/* .lateralbar {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     border: white solid 1px;
@@ -612,6 +602,7 @@ body {
     top: 70px;
     left: -10px;
     grid-area: 1/1/7/3;
+
 }
 
 .kglabel {
@@ -636,16 +627,25 @@ body {
 }
 
 .about {
-    font-weight: extrabold;
-    font-style: italic;
-    font-size: 4rem;
     margin-block: 0;
     padding: 6px;
     padding-right: 25px;
     height: 4rem;
     line-height: 50px;
-
+    text-decoration: none;
+    overflow: hidden;
 }
+
+.about * {
+    font-style: italic;
+    font-size: 4rem;
+    margin-block: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    overflow: hidden;
+} */
 
 .porfolio {
     grid-area: 8/14/14/29;
@@ -660,49 +660,99 @@ body {
     font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 1rem);
 }
 
-
-/* BARRA LATERAL EXTENDIDA
-
 .lateralbar {
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    border: white solid 1px;
-    font-family: 'alumni sans';
-    transform: rotate(-90deg);
     position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px; /* Ajusta este valor según el ancho que desees para la barra lateral */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #333; /* Ajusta este valor según el color que desees para la barra lateral */
+  }
+  
+  .whitelabel {
+    flex-grow: 1;
+    padding: 20px; /* Ajusta este valor según el espacio que desees alrededor de los elementos */
+    /* Aquí puedes agregar los estilos para los elementos dentro de .whitelabel */
+  }
+  
+  .kglabel {
+    padding: 20px; /* Ajusta este valor según el espacio que desees alrededor de los elementos */
+    background-color: #555; /* Ajusta este valor según el color que desees para .kglabel */
+    /* Aquí puedes agregar los estilos para los elementos dentro de .kglabel */
+  }
+  
+
+
+BARRA LATERAL EXTENDIDA 
+
+/* .lateralbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border: white solid ;
+    font-family: 'alumni sans';
+    position: fixed;
+    left: -1.8rem;
+    z-index: 3;
 }
 
-.kglabel{
-    display:flex;
+.whitelabel {
+    display: grid;
+    flex: auto;
+    grid-template-columns: repeat(10, 1fr);
+    width: 5px;
+    border: white solid;
+    z-index: 3;
+    position: relative;
+}
+
+.kglabel {
+    display: flex;
     height: 4rem;
     box-sizing: border-box;
+    z-index: 3;
+    position: relative;
 }
+
 .kglabel * {
     font-size: 2rem;
     width: fit-content;
     font-family: 'alumni sans';
+    z-index: 3;
 }
 
-.dots{
+.dots {
     margin-block: 0;
     padding: 5px;
     margin-left: 10px;
     font-size: 6rem;
     height: 4rem;
     line-height: 32px;
+    z-index: 3;
 }
 
-.about{
-    font-weight: extrabold;
+.about {
+    margin-block: 0;
+    padding: 6px;
+    padding-right: 25px;
+    height: 4rem;
+    line-height: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.about * {
     font-style: italic;
     font-size: 4rem;
     margin-block: 0;
-    padding: 6px;
-    padding-right: 20px;
-    height: 4rem;
+    padding: 0;
+    height: 100%;
     line-height: 50px;
-    border-right: white solid 1px;
-
-}
-
-*/
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 3;
+} */
