@@ -1,10 +1,12 @@
-*{
+* {
     color: white;
     /* border: solid 1px; */
     font-family: 'dela gothic one';
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     background-color: #222223;
     width: 100%;
     height: 100%;
@@ -22,7 +24,7 @@ html, body{
     height: 100vh;
 } */
 
-.topbg{
+.topbg {
     display: flex;
     flex-direction: column;
     flex-flow: column wrap;
@@ -36,7 +38,7 @@ html, body{
     height: 100%;
 }
 
-.bgblack{
+.bgblack {
     background-color: black;
     position: absolute;
     height: 100vb;
@@ -53,7 +55,7 @@ html, body{
     visibility: visible;
     height: 100vb;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 
 
@@ -500,13 +502,14 @@ html, body{
     }
 }
 
-/*******************FINAL******************/
 
 .point {
     border-radius: 50%;
-    z-index: 999;
+    z-index: 1;
     position: absolute
 }
+
+/*******************FINAL******************/
 /* .cristal{
     background-color: rgba(255, 255, 255, 0.034);
     backdrop-filter: blur(1rem);
@@ -515,57 +518,191 @@ html, body{
     width: 150%;
     z-index: 3
 } */
-.mainlayer{
+.mainlayer {
     position: absolute;
     width: 100%;
     z-index: 2;
-
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
 }
 
-.navbutton{
-    padding: 1rem;
-    
+.navbutton {
+    margin-top: 1rem;
+    grid-area: 1/15;
 }
 
-.navbutton hr{
+.navbutton hr {
     min-width: 85px;
     width: 10%;
     justify-content: center;
 }
 
-/* .lateralbar{
-    transform: rotate(-90deg);    
-} */
-.lateralbar *{
-    border: solid;
+.menu {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    transform: translateX(-50%);
+    width: clamp(100%, 1.0774rem + 3.7936vw, 100%);
+    height: clamp(100%, 1.0774rem + 3.7936vw, 100%);
+    border-radius: 0 0 100% 100%;
+    transition: ease-in 0.5s;
+    padding: 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.menu a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: clamp(3rem, 1.0774rem + 3.7936vw, 7rem);
+    text-align: center;
+}
+
+.menu a:hover{
+    color: rgb(65, 59, 59)
+}
+
+#desplegar:target + .menu {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: clamp(100%, 1.0774rem + 3.7936vw, 100%);
+    border-radius: 0;
+    transition: ease-in 0.4s;
+    padding-bottom: 1%;
+    /* padding: 5%; */
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 9;
+}
+#lownavbutton{
+    width: fit-content;
+    margin-inline: 48%;
+    align-items: center;
+    height: 50%;
+}
+
+#lownavbutton hr{
+    min-width: 85px;
+    width: fit-content;
+    text-align: center;
+    margin: 8px;
+    color: black;
+}
+.lateralbar {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border: white solid 1px;
+    border-radius: 6px;
     font-family: 'alumni sans';
-    
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    grid-area: 1/1/7/3;
 }
 
 .kglabel {
-    display: grid;
-    grid-template-columns:min-content min-content;
-    font-size: 2rem;
-    border: solid;
+    display: flex;
+    height: 4rem;
+    box-sizing: border-box;
 }
 
-.dots{
-    margin-block: 5px;
+.kglabel * {
+    font-size: 2rem;
+    width: fit-content;
+    font-family: 'alumni sans';
+}
+
+.dots {
+    margin-block: 0;
     padding: 5px;
     margin-left: 10px;
     font-size: 6rem;
     height: 4rem;
-    line-height: 30px;
+    line-height: 32px;
+}
+
+.about {
+    font-weight: extrabold;
+    font-style: italic;
+    font-size: 4rem;
+    margin-block: 0;
+    padding: 6px;
+    padding-right: 25px;
+    height: 4rem;
+    line-height: 50px;
+
+}
+
+.porfolio {
+    grid-area: 8/14/14/29;
+    text-align: right;
+    /* font-size: 3.5rem; */
+    font-size: clamp(3rem, 1.0774rem + 3.7936vw, 5rem);
+}
+
+.freelance {
+    grid-area: 24/23/28/29;
+    text-align: right;
+    font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 1rem);
+}
+
+
+/* BARRA LATERAL EXTENDIDA
+
+.lateralbar {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    border: white solid 1px;
+    font-family: 'alumni sans';
+    transform: rotate(-90deg);
+    position: fixed;
+}
+
+.kglabel{
+    display:flex;
+    height: 4rem;
+    box-sizing: border-box;
+}
+.kglabel * {
+    font-size: 2rem;
+    width: fit-content;
+    font-family: 'alumni sans';
+}
+
+.dots{
+    margin-block: 0;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 6rem;
+    height: 4rem;
+    line-height: 32px;
 }
 
 .about{
     font-weight: extrabold;
     font-style: italic;
     font-size: 4rem;
-    margin-block: 5px;
-    padding: 5px;
+    margin-block: 0;
+    padding: 6px;
+    padding-right: 20px;
     height: 4rem;
-    line-height: 45px;
+    line-height: 50px;
+    border-right: white solid 1px;
 
 }
 
+*/
