@@ -506,12 +506,8 @@ body {
 } */
 .mainlayer {
     position: absolute;
-    width: 100%;
-    z-index: 2;
-    height: 200%;
-    display: grid;
-    grid-template-columns: repeat(30, 1fr);
-    grid-template-rows: repeat(30, 1fr);
+    left: 16%;
+    right: 8%;
 }
 
 .navbutton {
@@ -591,61 +587,6 @@ body {
     color: black;
 }
 
-/* .lateralbar {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    border: white solid 1px;
-    border-radius: 6px;
-    font-family: 'alumni sans';
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 70px;
-    left: -10px;
-    grid-area: 1/1/7/3;
-
-}
-
-.kglabel {
-    display: flex;
-    height: 4rem;
-    box-sizing: border-box;
-}
-
-.kglabel * {
-    font-size: 2rem;
-    width: fit-content;
-    font-family: 'alumni sans';
-}
-
-.dots {
-    margin-block: 0;
-    padding: 5px;
-    margin-left: 10px;
-    font-size: 6rem;
-    height: 4rem;
-    line-height: 32px;
-}
-
-.about {
-    margin-block: 0;
-    padding: 6px;
-    padding-right: 25px;
-    height: 4rem;
-    line-height: 50px;
-    text-decoration: none;
-    overflow: hidden;
-}
-
-.about * {
-    font-style: italic;
-    font-size: 4rem;
-    margin-block: 0;
-    padding: 0;
-    height: 100%;
-    line-height: 50px;
-    text-decoration: none;
-    overflow: hidden;
-} */
 
 .porfolio {
     grid-area: 8/14/14/29;
@@ -661,30 +602,72 @@ body {
 }
 
 .lateralbar {
+    border: #757573 1px solid;
+    border-radius: 7pt;
     position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 200px; /* Ajusta este valor según el ancho que desees para la barra lateral */
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 55px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #333; /* Ajusta este valor según el color que desees para la barra lateral */
+    z-index: 8;
   }
   
   .whitelabel {
     flex-grow: 1;
-    padding: 20px; /* Ajusta este valor según el espacio que desees alrededor de los elementos */
-    /* Aquí puedes agregar los estilos para los elementos dentro de .whitelabel */
+    padding: 20px; 
   }
   
   .kglabel {
-    padding: 20px; /* Ajusta este valor según el espacio que desees alrededor de los elementos */
-    background-color: #555; /* Ajusta este valor según el color que desees para .kglabel */
-    /* Aquí puedes agregar los estilos para los elementos dentro de .kglabel */
-  }
+    padding: 0; 
+    box-sizing: border-box;
+    height: fit-content;
+}
   
+.kglabel * {
+    font-size: 2rem;
+    width: fit-content;
+    font-family: 'alumni sans';
+    transform: rotate(-90deg);
+    
+}
 
+.dots {
+    margin-block: 0;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 6rem;
+    height: 4rem;
+    line-height: 15px;
+    z-index: 3;
+}
+
+.about {
+    margin-block: 0;
+    padding-left: 12px;
+    padding-block: 0;
+    padding-right: 25px;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.about > h2 {
+    margin-block: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.about > a {
+    font-style: italic;
+    font-size: 3.5rem;
+    margin-block: 0;
+    padding: 0;
+    height: 100%;
+    line-height: 35px;
+    text-decoration: none;
+}
 
 BARRA LATERAL EXTENDIDA 
 
