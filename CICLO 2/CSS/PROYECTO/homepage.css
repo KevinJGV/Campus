@@ -597,10 +597,9 @@ body {
     border-radius: 7pt;
     position: fixed;
     left: 10px;
-    bottom: 10px;
     width: 55px;
-    height: max-content;
-    top: 50%;
+    height: 200px;
+    top: 45%;
     bottom: 50%;
     backdrop-filter: blur(1rem);
     z-index: 2;
@@ -643,7 +642,7 @@ body {
 }
 
 .dots {
-    margin-block: 0;
+    margin-block: -4rem;
     padding: 5px;
     margin-left: 10px;
     font-size: 6rem;
@@ -904,10 +903,9 @@ body {
 
 .techtools{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;;
     
 }
 
@@ -916,16 +914,85 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    width: 90%;
+    width: 80%;
 }
 .tool img{
     width: 90%;
     margin-block: 20px;
     filter: drop-shadow(16px 7px 8px #7b7b7b9c);
-    border:  dotted white;
     border-left: none;
     border-bottom: none;
     border-radius: 10pt;
 }
 
+.tool h3{
+    font-family: 'alumni sans'
+}
+
+.typing-demo{
+    display: inline;
+    font-family: poppins;
+    font-size: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
+    animation: blink .5s step-end infinite alternate 2s;
+    border-right: 10px solid rgba(255, 255, 255, 0.87);
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+  }
+
+  .Hypervinculosline{
+    text-decoration: none;
+    font-family: poppins;
+    font-weight: Bold;
+    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
+}
+
+.Hypervinculosline:hover{
+    text-decoration:line-through;
+    font-family: 'dela gothic one';
+    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    display: inline;
+    float: right;
+    bottom: 135px;
+    animation: spin 7s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+.circle img{
+    width: 100%;
+}
+  
+
+.footer hr{
+    border: 0.1px;
+}
+
+.finallabel{
+    height: 135px;
+}
+
+.finallabel img{
+    width: 50px;
+}
+
+.pfooter{
+    font-family: sans-serif;
+    font-weight: normal;
+}
+.finallabel span{
+    position: absolute;
+    right: 0;
+    font-family: sans-serif;
+}
