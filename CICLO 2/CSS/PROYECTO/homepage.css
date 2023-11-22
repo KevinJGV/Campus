@@ -668,19 +668,6 @@ body {
     height: clamp(1447px, 1.0774rem + 3.7936vw, 1800px);
 }
 
-/* .porfolio {
-    position: sticky;
-    margin-top: 20rem;
-    margin-bottom: 10rem;
-    text-align: right;
-    font-size: clamp(3rem, 1.0774rem + 3.7936vw, 5rem);
-    view-timeline-name: --h1;
-    view-timeline-axis: block;
-    animation-timeline: --h1;
-    animation-name: porfolio;
-} */
-
-
 
 @keyframes sticky {
     from {

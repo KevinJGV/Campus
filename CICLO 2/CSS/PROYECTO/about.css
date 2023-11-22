@@ -1,7 +1,7 @@
 * {
     color: white;
     /* border: solid 1px; */
-    font-family: 'dela gothic one';
+    font-family: sans-serif;
 }
 
 html,
@@ -655,10 +655,6 @@ body {
     bottom: 0;
 }
 
-.seccion1 {
-    height: clamp(1447px, 1.0774rem + 3.7936vw, 1800px);
-}
-
 .typing-demo {
     display: inline;
     font-family: poppins;
@@ -800,3 +796,31 @@ body {
       height: 16px
     }
   }
+
+.seccion1{
+    height: 500px;
+    display: inline-block;
+    margin-right: 35%;
+    font-size: ;
+}
+
+#mainalumni{
+    font-family: 'alumni sans';
+    font-weight: lighter;
+    font-style: italic;
+    font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
+    margin-top: 100px;
+}
+
+#alumni{
+    font-family: 'alumni sans';
+    font-weight: lighter;
+    font-style: italic;
+    font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
+}
+
+.avatar{
+    position: absolute;
+    top: 300px;
+    width: clamp(1rem, 1.0774rem + 3.7936vw, 450px);
+}
