@@ -554,7 +554,7 @@ body {
 
 .menu a:hover {
     color: rgb(65, 59, 59);
-    text-decoration:line-through
+    text-decoration: line-through
 }
 
 #desplegar:target+.menu {
@@ -640,7 +640,8 @@ body {
     transform: rotate(-90deg);
 
 }
-.about{
+
+.about {
     margin-block: 2.5rem;
 }
 
@@ -725,7 +726,8 @@ body {
     font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 1rem);
 }
 
-.hola, .hola * {
+.hola,
+.hola * {
     box-sizing: border-box;
     margin: 0;
 }
@@ -745,7 +747,8 @@ body {
 }
 
 
-.des, .dis {
+.des,
+.dis {
     text-align: center;
     font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 8rem);
     text-justify: center;
@@ -808,7 +811,7 @@ body {
     font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 10rem)
 }
 
-.parrafo{
+.parrafo {
     margin-top: 50px;
     padding-block: 13rem;
     font-family: sans-serif;
@@ -825,7 +828,7 @@ body {
 }
 
 
-.littlegallery{
+.littlegallery {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
@@ -833,7 +836,7 @@ body {
     column-gap: 20px;
 }
 
-.card{
+.card {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -844,17 +847,19 @@ body {
     border: #3a3a3a 0.1px solid;
     box-shadow: 0 0 20px #6d6d6db2;
 }
-.card img{
+
+.card img {
     width: 90%;
     margin-block: 20px;
     border-radius: 4pt;
     box-shadow: 0 0 10px #7575738a;
 }
 
-.etiquetas{
+.etiquetas {
     height: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
 }
-.etiquetas span{
+
+.etiquetas span {
     font-family: 'alumni sans';
     font-size: clamp(1rem, 1.0774rem + 3.7936vh, 1.5rem);
     margin-inline: 10px;
@@ -863,32 +868,32 @@ body {
     padding-inline: 5px;
 }
 
-.CW{
+.CW {
     color: #063718;
     background-color: #bff0d8;
 }
 
-.AW{
+.AW {
     color: #063718;
     background-color: #bff0d8;
 }
 
-.WDD{
+.WDD {
     color: #003d72;
     background-color: #c4e5fb;
 }
 
-.WD{
+.WD {
     color: #003d72;
     background-color: #c4e5fb;
 }
 
-.Pers{
+.Pers {
     color: #5c451a;
     background-color: #fbe1a1;
 }
 
-.Hypervinculos{
+.Hypervinculos {
     margin: clamp(8rem, 1.0774rem + 3.7936vh, 8rem);
     display: block;
     text-align: center;
@@ -896,20 +901,21 @@ body {
     text-decoration: none;
 }
 
-.Hypervinculos:hover{
+.Hypervinculos:hover {
     margin: clamp(8rem, 1.0774rem + 3.7936vh, 8rem);
     display: block;
     text-align: center;
     font-size: clamp(5rem, 1.0774rem + 3.7936vh, 10rem);
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
-.techtools{
+.techtools {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0;
-    box-sizing: border-box;;
-    
+    box-sizing: border-box;
+    ;
+
 }
 
 .tool {
@@ -919,7 +925,8 @@ body {
     align-items: center;
     width: 80%;
 }
-.tool img{
+
+.tool img {
     width: 90%;
     margin-block: 20px;
     filter: drop-shadow(16px 7px 8px #7b7b7b9c);
@@ -928,11 +935,11 @@ body {
     border-radius: 10pt;
 }
 
-.tool h3{
+.tool h3 {
     font-family: 'alumni sans'
 }
 
-.typing-demo{
+.typing-demo {
     display: inline;
     font-family: poppins;
     font-size: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
@@ -941,18 +948,20 @@ body {
 }
 
 @keyframes blink {
-    50% { border-color: transparent }
-  }
+    50% {
+        border-color: transparent
+    }
+}
 
-  .Hypervinculosline{
+.Hypervinculosline {
     text-decoration: none;
     font-family: poppins;
     font-weight: Bold;
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
 
-.Hypervinculosline:hover{
-    text-decoration:line-through;
+.Hypervinculosline:hover {
+    text-decoration: line-through;
     font-family: 'dela gothic one';
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
@@ -966,35 +975,46 @@ body {
     float: right;
     bottom: 135px;
     animation: spin 7s linear infinite;
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-.circle img{
-    width: 100%;
 }
-  
 
-.footer hr{
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle:hover {
+    animation-play-state: paused;
+}
+
+.circle img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+
+.footer hr {
     border: 0.1px;
 }
 
-.finallabel{
+.finallabel {
     height: 135px;
 }
 
-.finallabel img{
+.finallabel img {
     width: 50px;
 }
 
-.pfooter{
+.pfooter {
     font-family: sans-serif;
     font-weight: normal;
 }
-.finallabel span{
+
+.finallabel span {
     position: absolute;
     right: 0;
     font-family: sans-serif;

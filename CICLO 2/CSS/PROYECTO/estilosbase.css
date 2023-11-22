@@ -546,7 +546,7 @@ body {
 
 .menu a:hover {
     color: rgb(65, 59, 59);
-    text-decoration:line-through
+    text-decoration: line-through
 }
 
 #desplegar:target+.menu {
@@ -632,7 +632,8 @@ body {
     transform: rotate(-90deg);
 
 }
-.about{
+
+.about {
     margin-block: 2.5rem;
 }
 
@@ -658,7 +659,7 @@ body {
     height: clamp(1447px, 1.0774rem + 3.7936vw, 1800px);
 }
 
-.typing-demo{
+.typing-demo {
     display: inline;
     font-family: poppins;
     font-size: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
@@ -667,18 +668,20 @@ body {
 }
 
 @keyframes blink {
-    50% { border-color: transparent }
-  }
+    50% {
+        border-color: transparent
+    }
+}
 
-  .Hypervinculosline{
+.Hypervinculosline {
     text-decoration: none;
     font-family: poppins;
     font-weight: Bold;
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
 
-.Hypervinculosline:hover{
-    text-decoration:line-through;
+.Hypervinculosline:hover {
+    text-decoration: line-through;
     font-family: 'dela gothic one';
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
@@ -692,35 +695,45 @@ body {
     float: right;
     bottom: 135px;
     animation: spin 7s linear infinite;
-  }
-
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-.circle img{
-    width: 100%;
 }
-  
 
-.footer hr{
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle:hover{
+    animation-play-state: paused;
+}
+.circle img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+
+.footer hr {
     border: 0.1px;
 }
 
-.finallabel{
+.finallabel {
     height: 135px;
 }
 
-.finallabel img{
+.finallabel img {
     width: 50px;
 }
 
-.pfooter{
+.pfooter {
     font-family: sans-serif;
     font-weight: normal;
 }
-.finallabel span{
+
+.finallabel span {
     position: absolute;
     right: 0;
     font-family: sans-serif;
