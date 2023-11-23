@@ -8,12 +8,12 @@ html,
 body {
     display: flex;
     background-color: #222223;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     position: relative;
-    /* overflow: hidden; */
+    overflow-x: hidden; 
 }
 
 .advice{
@@ -40,13 +40,15 @@ body {
     right: 0;
     left: 0;
     z-index: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .bgblack {
     background-color: black;
     position: absolute;
-    height: 100vH;
-    width: 100VW;
+    height: 100%;
+    width: 100%;
     z-index: 1;
 }
 
@@ -63,8 +65,8 @@ body {
     animation: bg-animation .2s infinite;
     opacity: 1;
     visibility: visible;
-    height: 100vH;
-    width: 100VW;
+    height: 100%;
+    width: 100%;
     z-index: 2;
     top: 0;
 }
@@ -1140,5 +1142,27 @@ body {
 }
 
 @media (min-width:719px) and (max-width:920px) {
+    .seccion2 h2 span {
+        opacity: 30%;
+    }
+
+    .littlegallery {
+        display: flex;
+        flex-flow: column;
+    }
+.etiquetas{
+    height: 5rem;
+}
+.etiquetas span{
+    margin: 5px;
     
+    display: block;
+}
+
+.Hypervinculos{
+    margin-inline: 0;
+    margin-block: 4rem ;
+    font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
+    text-decoration: none;
+}
 }

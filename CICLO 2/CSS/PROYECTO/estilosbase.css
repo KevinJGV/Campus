@@ -13,9 +13,25 @@ body {
     padding: 0;
     margin: 0;
     position: relative;
-    /* overflow: hidden; */
+    overflow-x: hidden; 
 }
 
+.advice{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-block: 30% ;
+    text-align: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 9999;
+}
+.advice h1{
+    color: black;
+    font-family: sans-serif;
+    font-size: 1;
+}
 .topbg {
     position: fixed;
     box-sizing: border-box;
@@ -24,13 +40,15 @@ body {
     right: 0;
     left: 0;
     z-index: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .bgblack {
     background-color: black;
     position: absolute;
-    height: 100vH;
-    width: 100VW;
+    height: 100%;
+    width: 100%;
     z-index: 1;
 }
 
@@ -47,8 +65,8 @@ body {
     animation: bg-animation .2s infinite;
     opacity: 1;
     visibility: visible;
-    height: 100vH;
-    width: 100VW;
+    height: 100%;
+    width: 100%;
     z-index: 2;
     top: 0;
 }
@@ -498,6 +516,14 @@ body {
 }
 
 /*******************FINAL******************/
+/* .cristal{
+    background-color: rgba(255, 255, 255, 0.034);
+    ;
+    position: absolute;
+    height: 100vb;
+    width: 150%;
+    z-index: 3
+} */
 
 .navcontainer {
     position: fixed;
@@ -509,7 +535,6 @@ body {
 .navbutton {
     position: fixed;
     margin-top: 1rem;
-    grid-area: 1/15;
 }
 
 .navbutton hr {
@@ -653,10 +678,48 @@ body {
     right: 8%;
     top: 0;
     bottom: 0;
+    height: 350vh;
+}
+.Hypervinculos {
+    margin: clamp(8rem, 1.0774rem + 3.7936vh, 8rem);
+    display: block;
+    text-align: center;
+    font-size: clamp(5rem, 1.0774rem + 3.7936vh, 10rem);
+    text-decoration: none;
 }
 
-.seccion1 {
-    height: clamp(1447px, 1.0774rem + 3.7936vw, 1800px);
+.Hypervinculos:hover {
+    text-decoration: line-through;
+}
+
+.techtools {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    box-sizing: border-box;
+    ;
+
+}
+
+.tool {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.tool img {
+    width: 90%;
+    margin-block: 20px;
+    filter: drop-shadow(16px 7px 8px #7b7b7b9c);
+    border-left: none;
+    border-bottom: none;
+    border-radius: 10pt;
+}
+
+.tool h3 {
+    font-family: 'alumni sans'
 }
 
 .typing-demo {
@@ -683,7 +746,6 @@ body {
 .Hypervinculosline:hover {
     text-decoration: line-through;
     font-family: 'dela gothic one';
-    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
 
 .circle {
@@ -707,9 +769,10 @@ body {
     }
 }
 
-.circle:hover{
+.circle:hover {
     animation-play-state: paused;
 }
+
 .circle img {
     width: 100%;
     border-radius: 100px;
@@ -735,6 +798,69 @@ body {
 
 .finallabel span {
     position: absolute;
+    display: block;
+    height: 50px;
     right: 0;
     font-family: sans-serif;
+    padding-top: 15px;
+
 }
+
+@media screen and (max-width:319px) {
+    .advice{
+        visibility: visible;
+    }
+    html,body{
+        overflow: hidden;
+    }
+}
+
+@media (min-width:319px) and (max-width:719px) {
+    html,body{
+        overflow-x: hidden;
+    }   
+
+    .lateralbar{
+        visibility: hidden;
+    }
+
+    .menu a{
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
+        height: 20px;
+        align-content: center;
+    }
+
+    #lownavbutton{
+        margin-inline: 40%;
+    }
+
+    .navcontainer{
+        left:38%;
+        right: 50%;
+    }
+
+    .typing-demo{
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 3rem);
+    }
+
+    .Hypervinculosline{
+        font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem)
+    }
+
+    .circle {
+        width: 135px;
+        border-radius: 50%;
+        position: relative;
+        bottom: auto;
+        float:none;
+        display: block;
+        margin-bottom: 50px;
+        animation: spin 7s linear infinite;
+    }       
+}
+
+@media (min-width:719px) and (max-width:920px) {
+
+}
+
+/************************************************************************FINAL DE DISEÑO DE PAGINA **************************************************************************************************************/
