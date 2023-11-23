@@ -909,11 +909,6 @@ svg{
 .seccion2 p{
     font-size: clamp(1rem, 1.0774rem + 3.7936vw, 1.5rem);
 }
-
-@keyframes deslizar {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
   
   .bgtools {
     background-color: #8a8a8a21;
@@ -921,16 +916,34 @@ svg{
     padding-block: 10px ;
     border: #66666636 solid 1px;
     border-radius: 8px;
-    height: 100px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(20,auto);
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 1rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width:thin;
+    scrollbar-track-color: #1ED760;
   }
   
-  .tools {
-    display: flex;
-    width: 1000%;
-    height: 150px;
-    animation: deslizar 20s linear infinite;
-  }
-  .tools img{
-    width: 10%;
-    flex-shrink: 0;
-  }
+.tool{
+    background-color: #8a8a8a21;
+    backdrop-filter: blur(0.5rem);
+    padding-block: 10px ;
+    border: #66666636 solid 1px;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.tool1{
+    visibility: hidden;
+    margin-left: 420px
+}
+
+.tool img{
+    width: 100%;
+    
+}

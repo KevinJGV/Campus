@@ -8,7 +8,7 @@ html,
 body {
     display: flex;
     background-color: #222223;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -16,6 +16,22 @@ body {
     /* overflow: hidden; */
 }
 
+.advice{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-block: 30% ;
+    text-align: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 9999;
+}
+.advice h1{
+    color: black;
+    font-family: sans-serif;
+    font-size: 1;
+}
 .topbg {
     position: fixed;
     box-sizing: border-box;
@@ -517,7 +533,6 @@ body {
 .navbutton {
     position: fixed;
     margin-top: 1rem;
-    grid-area: 1/15;
 }
 
 .navbutton hr {
@@ -889,10 +904,6 @@ body {
 }
 
 .Hypervinculos:hover {
-    margin: clamp(8rem, 1.0774rem + 3.7936vh, 8rem);
-    display: block;
-    text-align: center;
-    font-size: clamp(5rem, 1.0774rem + 3.7936vh, 10rem);
     text-decoration: line-through;
 }
 
@@ -950,7 +961,6 @@ body {
 .Hypervinculosline:hover {
     text-decoration: line-through;
     font-family: 'dela gothic one';
-    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
 
 .circle {
@@ -1003,6 +1013,132 @@ body {
 
 .finallabel span {
     position: absolute;
+    display: block;
+    height: 50px;
     right: 0;
     font-family: sans-serif;
+    padding-top: 15px;
+
+}
+
+@media screen and (max-width:319px) {
+    .advice{
+        visibility: visible;
+    }
+    html,body{
+        overflow: hidden;
+    }
+}
+
+@media (min-width:319px) and (max-width:719px) {
+    html,body{
+        overflow-x: hidden;
+    }   
+
+    .lateralbar{
+        visibility: hidden;
+    }
+
+    .menu a{
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
+        height: 20px;
+        align-content: center;
+    }
+
+    #lownavbutton{
+        margin-inline: 40%;
+    }
+
+    .navcontainer{
+        left:38%;
+        right: 50%;
+    }
+
+    .porfolio{
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
+    }
+    .hola { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .hola h3 {
+        font-size: (0.1rem, 1.0774rem + 3.7936vw, 1rem);
+    }
+    
+    
+    .des,
+    .dis {
+        text-align: center;
+        font-size: clamp(3rem, 1.0774rem + 3.7936vw, 8rem);
+
+        text-justify: center;
+    }
+
+    .hola hr {
+        width: 50%;
+        height: 0.1px;
+        align-self: center;
+        justify-self: center
+    }
+    
+    .ilu {  
+        font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 10rem)
+    }
+
+    .parrafo {
+        margin-top: 50px;
+        padding-block: 13rem;
+        font-family: sans-serif;
+        font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem);}
+
+        .seccion2 h2 span {
+            opacity: 30%;
+        }
+    
+        .littlegallery {
+            display: flex;
+            flex-flow: column;
+        }
+    .etiquetas{
+        height: 5rem;
+    }
+    .etiquetas span{
+        margin: 5px;
+        
+        display: block;
+    }
+
+    .Hypervinculos{
+        margin-inline: 0;
+        margin-block: 4rem ;
+        font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
+        text-decoration: none;
+    }
+
+    .typing-demo{
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 3rem);
+    }
+
+    .Hypervinculosline{
+        font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem)
+    }
+
+    .circle {
+        width: 135px;
+        border-radius: 50%;
+        position: relative;
+        bottom: auto;
+        float:none;
+        display: block;
+        margin-bottom: 50px;
+        animation: spin 7s linear infinite;
+    }       
+}
+
+@media (min-width:719px) and (max-width:920px) {
+    
 }
