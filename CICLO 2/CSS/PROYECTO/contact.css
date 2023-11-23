@@ -1,5 +1,7 @@
-* {
-    color: white;
+@import url(fonts.css);
+
+*{
+     color: white;
     /* border: solid 1px; */
     font-family: sans-serif;
 }

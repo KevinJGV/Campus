@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../FUENTES/Poppins-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'DelaGothicOne-Regular';
+    src: url('../../FUENTES/DelaGothicOne-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../../FUENTES/Poppins-SemiBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../../FUENTES/Poppins-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../../FUENTES/Poppins-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins-Black';
+    src: url('../../FUENTES/Poppins-Black.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'AlumniSans-VariableFont_wght';
+    src: url('../../FUENTES/AlumniSans-VariableFont_wght.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'AlumniSans-Italic-VariableFont_wght';
+    src: url('../../FUENTES/AlumniSans-Italic-VariableFont_wght.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Audiowide-Regular';
+    src: url('../../FUENTES/Audiowide-Regular.ttf') format('truetype');
+  }
+  
