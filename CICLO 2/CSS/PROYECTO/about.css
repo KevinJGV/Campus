@@ -1,4 +1,4 @@
-@import url(fonts.css); 
+@import url(../../CSS/PROYECTO/fonts.css);
 
 * {
     color: white;
@@ -633,7 +633,7 @@ body {
     overflow: hidden;
     margin-block: 0;
     font-size: 2rem;
-    font-family: 'alumni sans'
+    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
 }
 
 .style1 a {
@@ -655,7 +655,7 @@ body {
 .kglabel * {
     font-size: 2rem;
     width: fit-content;
-    font-family: 'alumni sans';
+    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
     transform: rotate(-90deg);
 
 }
@@ -721,7 +721,7 @@ body {
 }
 
 .tool h3 {
-    font-family: 'alumni sans'
+    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
 }
 
 .typing-demo {
@@ -747,7 +747,7 @@ body {
 
 .Hypervinculosline:hover {
     text-decoration: line-through;
-    font-family: 'dela gothic one';
+    font-family: 'dela gothic one','DelaGothicOne-Regular',DelaGothicOne-Regular , sans-serif;
 }
 
 .circle {
@@ -978,7 +978,7 @@ body {
 
 #mainalumni{
     grid-area: 1/1/2/3;
-    font-family: 'alumni sans';
+    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
     font-weight: lighter;
     font-style: italic;
     font-size: clamp(3rem, 1.0774rem + 3.7936vw, 5rem);
@@ -992,7 +992,7 @@ body {
 
 }
 #alumni{
-    font-family: 'alumni sans';
+    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
     font-weight: lighter;
     font-style: italic;
     font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
