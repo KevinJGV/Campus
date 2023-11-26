@@ -1034,6 +1034,12 @@ body {
     }
 }
 
+@media (max-width:425px) {
+    .techtools{
+        grid-template-columns: 1fr;
+    }
+
+}
 @media (min-width:319px) and (max-width:719px) {
     html,body{
         overflow-x: hidden;
