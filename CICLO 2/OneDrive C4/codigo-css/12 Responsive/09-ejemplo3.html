@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navidad Responsive</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+        h1 {
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .contenedor {
+            background-color: antiquewhite;
+            height: 100vh;
+            max-width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: "fn1" 
+                                    "fn3" 
+                                    "fn4" 
+                                    "fn2";
+            grid-template-columns: minmax(5rem, auto-fit);
+            
+        }
+        
+        section {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+
+        div[id^='fn'] {
+            /*height: auto;
+            inline-size: 100%;
+            object-fit: cover;*/
+            width: 100%;
+            border: 1px solid  red;
+            background-size: contain;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        
+
+        #fn1 {
+            grid-area: fn1;
+            background-image: url('https://cdn-icons-png.flaticon.com/256/4193/4193253.png');
+            
+        }
+
+        #fn2 {
+            grid-area: fn2;
+            background-image: url('https://cdn-icons-png.flaticon.com/256/4193/4193299.png');
+        }
+
+        #fn3 {
+            grid-area: fn3;
+            background-image: url('https://cdn-icons-png.flaticon.com/256/4193/4193257.png');
+        }
+
+        #fn4 {
+            grid-area: fn4;
+            background-image: url('https://cdn-icons-png.flaticon.com/256/4193/4193265.png');
+        }
+
+        /* 480 - 768 */
+        @media (min-width:480px) and (max-width:768px) {
+            .contenedor {
+                background-color: cadetblue;
+                height: 100vh;
+                display: grid;
+                grid-auto-flow: dense;
+                grid-template-areas: "fn1 fn2" "fn3 fn4";
+                align-content: start;
+            }
+
+            .contenedor > section {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /* 768 */
+        @media (min-width:768px)  {
+            .contenedor {
+                background-color: tomato;
+                height: 100vh;
+                display: grid;
+                grid-auto-flow: dense;
+                grid-template-areas: "fn1 fn2 fn3 fn4";
+                align-content: start;
+            }
+
+            .contenedor > section {
+                width: 100%;
+                height: 100%;
+            }
+
+            .id {
+                width: auto;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Navidad</h1>
+    <div class="contenedor">
+        
+        <!-- <div id="fn1"></div>
+        <div id="fn2"></div>
+        <div id="fn3"></div>
+        <div id="fn4"></div> -->
+
+        <section>
+            <img src="https://cdn-icons-png.flaticon.com/256/4193/4193253.png" alt="Feliz navidad 1" id="fn1">
+        </section>
+
+        <section>
+            <img src="https://cdn-icons-png.flaticon.com/256/4193/4193299.png" alt="Feliz navidad 2" id="fn2">
+        </section>
+
+        <section>
+            <img src="https://cdn-icons-png.flaticon.com/256/4193/4193257.png" alt="Feliz navidad 3" id="fn3">
+        </section>
+
+        <section>
+            <img src="https://cdn-icons-png.flaticon.com/256/4193/4193265.png" alt="Feliz navidad 4" id="fn4">
+        </section>
+    </div>
+    
+</body>
+</html>
