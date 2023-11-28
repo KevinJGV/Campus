@@ -9,6 +9,7 @@
         header{
             display: flex;
             width: 100%;
+            padding: 1rem;
         }
         .mainheader{
             display: flex;
@@ -31,6 +32,25 @@
             height: fit-content;
             align-self: center;
         }
+
+        .navcontainer{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        main{
+            display: flex;
+            gap: 10px;
+            padding: 1rem;
+        }
+        .lateral{
+            flex-grow: 0;
+        }
+
+        .central{
+            flex-grow: 2;
+        }
     </style>
 </head>
 
@@ -49,7 +69,6 @@
     </header>
     <nav>
         <ul class="navcontainer">
-            <ul></ul>
             <a href="http://" class="Link">
                 <li>Link</li>
             </a>
@@ -64,12 +83,14 @@
             </a>
         </ul>
     </nav>
-    <div class="lateral">
-        <h2>Este debe quedar a la dererecha</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laboriosam eum incidunt explicabo doloremque, voluptates labore, dolore nostrum soluta quasi cupiditate perferendis nesciunt eaque suscipit, blanditiis illo? Molestiae, quos.</p>
-    </div>
-    <div class="main"><h1>TITULO</h1>
-    <h2>Este en medio</h2></div>
+    <main>
+        <div class="lateral">
+            <h2>Este debe quedar a la dererecha</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at laboriosam eum incidunt explicabo doloremque, voluptates labore, dolore nostrum soluta quasi cupiditate perferendis nesciunt eaque suscipit, blanditiis illo? Molestiae, quos.</p>
+        </div>
+        <div class="central"><h1>TITULO</h1>
+        <h2>Este en medio</h2></div>
+    </main>
     <footer>
         <p>Copyright © 2023 - Todos los derechos reservados.</p>
     </footer>
