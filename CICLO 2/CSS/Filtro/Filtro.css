@@ -161,6 +161,7 @@ footer img{
         padding-inline: 10%;
     }
 
+
     .articles {
         display: block;
         justify-content: space-around;
@@ -173,5 +174,22 @@ footer img{
     .logocont img{
         width: 65%;
     margin-top: 100px;
+    }
+
+    .infos{
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .info{
+        width: 200px;
+
+    }
+
+}
+
+@media (max-width: 1220px) {
+    .background img{
+        width: 1220px;
     }
 }
