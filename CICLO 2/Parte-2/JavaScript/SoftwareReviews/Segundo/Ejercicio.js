@@ -6,6 +6,7 @@ let lista = document.getElementById("lista");
 
 while (activo === true) {
     let prompts = Number(prompt("CALCULADOR PARA MEDIA DE VALORES\n\nIngrese cuantos numeros deseé, para calcular la media de ellos ingrese un numero negativo (Este ultimo no afectara la media)"));
+    debugger; console.trace(prompts);
     if (isNaN(prompts)) {
         alert("Ingreso erroneo, deben ser numeros naturales.")
     } else if (prompts == ""){

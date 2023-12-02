@@ -13,8 +13,7 @@ let oldcampers = Number(prompt("Campers antiguos:")) ; let newcampers = Number(p
 
 if (pc < totalcampers) {
     alert('Hay más Campers que pcs disponibles en CampusLands, es necesario seccionar por jornadas para dar una solución a la diferencia.');
-    let newflag = newcampers; let oldflag = oldcampers; let pcflag = pc; let jornadasflag = jornadas
-    if ()
-
-
+    
+        
 }
+
