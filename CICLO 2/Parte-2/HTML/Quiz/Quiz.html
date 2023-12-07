@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        #contenedor {
+            display: flex;
+        }
+        #contenedor>:nth-child(1){
+            flex-grow: 1;
+        }
+        #contenedor>:nth-child(2){
+            flex-grow: 2;
+        }
+    </style>
 </head>
 <body>
+    <h1>PROYECTOR DE DEUDAS</h1>
+    <br>
+    <div id="contenedor">
+        <div id="tabla1"></div>
+        <div id="tabla2"></div>
+    </div>
     <script src="../../JavaScript/Quiz/Quiz.js"></script>
 </body>
 </html>
