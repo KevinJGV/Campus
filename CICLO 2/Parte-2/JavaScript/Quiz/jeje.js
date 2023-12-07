@@ -1,8 +1,8 @@
-<!-- Crear una tabla HTML -->
+
 <table>
-  <!-- Crear una fila para los encabezados -->
+ 
   <tr>
-    <!-- Iterar sobre las llaves del mapa -->
+
     <% for (let key of map.keys()) { %>
       <!-- Crear una celda de encabezado con la llave -->
       <th><%= key %></th>
