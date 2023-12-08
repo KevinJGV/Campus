@@ -1,8 +1,9 @@
 function send() {
     const form = document.querySelector("form")
     const formData = new FormData(form)
+    console.log(formData)
     for (const elem of formData) {
-        if (elem[1] >= 17) {
+        if (edad >= 17) {
             console.log ("Puedes entrar a campus")
         }
     }

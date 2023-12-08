@@ -1,4 +1,4 @@
-obj = {
+let obj = {
     "Empleados": [{
         "nombre": "Juan",
         "apellido": "Lopez",

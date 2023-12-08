@@ -23,6 +23,19 @@
 <body>
     <h1>PROYECTOR DE DEUDAS</h1>
     <br>
+    <form action="">
+        <label for="prestamo">Monto del credito: </label>
+        <input type="text" name="prestamo" id="prestamo">
+        <br>
+        <label for="intereses">Interés% (Anual): </label>
+        <input type="text" name="intereses" id="intereses">
+        <br>
+        <label for="pagos">Número de pagos (Mensuales): </label>
+        <input type="text" name="pagos" id="pagos">
+        <br>
+    </form>
+    <button onclick="send()">Enviar</button>
+    <br>
     <div id="contenedor">
         <div id="tabla1"></div>
         <div id="tabla2"></div>
