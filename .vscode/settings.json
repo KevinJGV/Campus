@@ -1,3 +1,8 @@
 {
-    "python.analysis.typeCheckingMode": "basic"
+	"python.analysis.typeCheckingMode": "basic",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"audioCues.format": "userGesture",
+	"prettier.useTabs": true,
+	"prettier.bracketSameLine": true
 }
