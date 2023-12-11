@@ -5,19 +5,19 @@ const input_interes = Number(prompt("Interés% (Anual)"));
 const input_pagos = Number(prompt("Número de pagos (Mensuales)"));
 
 
-function proceso(prestamo,interes,cuotas) {
+function proceso(prestamo, interes, cuotas) {
     //Definicion de datos valor
-//    debugger
-    let interes_a = prestamo*interes;
-    let interes_m = interes_a/cuotas; interes_m = Number(interes_m.toFixed(0))
-    let capital = prestamo/cuotas; capital = Number(capital.toFixed(0))
-    let total_deuda = prestamo+interes_a;
-    let deuda_mensual = capital+interes_m;
+    //    debugger
+    let interes_a = prestamo * interes;
+    let interes_m = interes_a / cuotas; interes_m = Number(interes_m.toFixed(0))
+    let capital = prestamo / cuotas; capital = Number(capital.toFixed(0))
+    let total_deuda = prestamo + interes_a;
+    let deuda_mensual = capital + interes_m;
     //Bases de datos
     const map = new Map();
     const bdd = new Array(prestamo, total_deuda, capital, interes_m, deuda_mensual);
 
-    for (let i = 1; i < cuotas+1;i++) {
+    for (let i = 1; i < cuotas + 1; i++) {
         if (i == 1) {
             let bdd_copia = bdd.slice();
             map.set(i, bdd_copia);
@@ -32,4 +32,4 @@ function proceso(prestamo,interes,cuotas) {
 
 }
 
-proceso(input_prestamo,input_interes,input_pagos)
+proceso(input_prestamo, input_interes, input_pagos)

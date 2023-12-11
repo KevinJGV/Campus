@@ -3,7 +3,7 @@
 * {
     color: white;
     /* border: solid 1px; */
-    font-family: 'dela gothic one','DelaGothicOne-Regular',DelaGothicOne-Regular , sans-serif;
+    font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
 }
 
 html,
@@ -15,27 +15,28 @@ body {
     padding: 0;
     margin: 0;
     position: relative;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
-.advice{
+.advice {
     background-color: white;
     position: fixed;
     width: 100%;
     height: 100%;
-    padding-block: 30% ;
+    padding-block: 30%;
     text-align: center;
     justify-content: center;
     visibility: hidden;
     z-index: 9999;
 }
-.advice h1{
+
+.advice h1 {
     color: black;
     font-family: sans-serif;
     font-size: 1;
 }
 
-.alpha{
+.alpha {
     position: fixed;
     z-index: 50;
     width: fit-content;
@@ -645,7 +646,7 @@ body {
     overflow: hidden;
     margin-block: 0;
     font-size: 2rem;
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
 }
 
 .style1 a {
@@ -667,7 +668,7 @@ body {
 .kglabel * {
     font-size: 2rem;
     width: fit-content;
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
     transform: rotate(-90deg);
 
 }
@@ -686,13 +687,20 @@ body {
     z-index: 3;
 }
 
+.containermainlayer {
+    width: 100vw;
+    height: 4690px;
+    position: absolute;
+
+}
+
 .mainlayer {
     position: absolute;
     left: 16%;
     right: 8%;
     top: 0;
     bottom: 0;
-    height: 350vh;
+    height: fit-content;
 }
 
 .seccion1 {
@@ -878,7 +886,7 @@ body {
 }
 
 .etiquetas span {
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
     font-size: clamp(1rem, 1.0774rem + 3.7936vh, 1.5rem);
     margin-inline: 10px;
     box-sizing: border-box;
@@ -950,12 +958,12 @@ body {
 }
 
 .tool h3 {
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
 }
 
 .typing-demo {
     display: inline;
-    font-family: poppins,'Poppins-Medium',Poppins-Medium,sans-serif;
+    font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-size: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
     animation: blink .5s step-end infinite alternate 2s;
     border-right: 10px solid rgba(255, 255, 255, 0.87);
@@ -969,14 +977,14 @@ body {
 
 .Hypervinculosline {
     text-decoration: none;
-    font-family: poppins,'Poppins-Medium',Poppins-Medium,sans-serif;
+    font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-weight: Bold;
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
 }
 
 .Hypervinculosline:hover {
     text-decoration: line-through;
-    font-family: 'dela gothic one','DelaGothicOne-Regular',DelaGothicOne-Regular , sans-serif;
+    font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
 }
 
 .circle {
@@ -1038,60 +1046,66 @@ body {
 }
 
 @media screen and (max-width:319px) {
-    .advice{
+    .advice {
         visibility: visible;
     }
-    html,body{
+
+    html,
+    body {
         overflow: hidden;
     }
 }
 
 @media (max-width:425px) {
-    .techtools{
+    .techtools {
         grid-template-columns: 1fr;
     }
 
 }
-@media (min-width:319px) and (max-width:719px) {
-    html,body{
-        overflow-x: hidden;
-    }   
 
-    .lateralbar{
+@media (min-width:319px) and (max-width:719px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .lateralbar {
         visibility: hidden;
     }
 
-    .menu a{
+    .menu a {
         font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
         height: 20px;
         align-content: center;
     }
 
-    #lownavbutton{
+    #lownavbutton {
         margin-inline: 40%;
     }
 
-    .navcontainer{
-        left:38%;
+    .navcontainer {
+        left: 38%;
         right: 50%;
     }
 
-    .porfolio{
+    .porfolio {
         font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
     }
-    .hola { 
+
+    .hola {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+
     }
-    
+
     .hola h3 {
         font-size: (0.1rem, 1.0774rem + 3.7936vw, 1rem);
     }
-    
-    
+
+
     .des,
     .dis {
         text-align: center;
@@ -1106,8 +1120,8 @@ body {
         align-self: center;
         justify-self: center
     }
-    
-    .ilu {  
+
+    .ilu {
         font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 10rem)
     }
 
@@ -1115,37 +1129,40 @@ body {
         margin-top: 50px;
         padding-block: 13rem;
         font-family: sans-serif;
-        font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem);}
+        font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem);
+    }
 
-        .seccion2 h2 span {
-            opacity: 30%;
-        }
-    
-        .littlegallery {
-            display: flex;
-            flex-flow: column;
-        }
-    .etiquetas{
+    .seccion2 h2 span {
+        opacity: 30%;
+    }
+
+    .littlegallery {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .etiquetas {
         height: 5rem;
     }
-    .etiquetas span{
+
+    .etiquetas span {
         margin: 5px;
-        
+
         display: block;
     }
 
-    .Hypervinculos{
+    .Hypervinculos {
         margin-inline: 0;
-        margin-block: 4rem ;
+        margin-block: 4rem;
         font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
         text-decoration: none;
     }
 
-    .typing-demo{
+    .typing-demo {
         font-size: clamp(1rem, 1.0774rem + 3.7936vw, 3rem);
     }
 
-    .Hypervinculosline{
+    .Hypervinculosline {
         font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem)
     }
 
@@ -1154,11 +1171,11 @@ body {
         border-radius: 50%;
         position: relative;
         bottom: auto;
-        float:none;
+        float: none;
         display: block;
         margin-bottom: 50px;
         animation: spin 7s linear infinite;
-    }       
+    }
 }
 
 @media (min-width:719px) and (max-width:920px) {
@@ -1170,26 +1187,28 @@ body {
         display: flex;
         flex-flow: column;
     }
-.etiquetas{
-    height: 5rem;
-}
-.etiquetas span{
-    margin: 5px;
-    
-    display: block;
-}
 
-.techtools {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0;
-    box-sizing: border-box;
-}
+    .etiquetas {
+        height: 5rem;
+    }
 
-.Hypervinculos{
-    margin-inline: 0;
-    margin-block: 4rem ;
-    font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
-    text-decoration: none;
-}
+    .etiquetas span {
+        margin: 5px;
+
+        display: block;
+    }
+
+    .techtools {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .Hypervinculos {
+        margin-inline: 0;
+        margin-block: 4rem;
+        font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
+        text-decoration: none;
+    }
 }
