@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function validardia(msj) {
+            // debugger
+            let fecha = Number(prompt((msj)));
+            let bandera = true;
+            while (bandera === true) {
+                if (isNaN(fecha) || fecha === "" || fecha <= 0 || fecha > 31 || fecha.length > 2 || fecha.length < 2) {
+                    alert("Ingreso erroneo.")
+                    fecha = prompt(msj)
+                } else {
+                    bandera = false;
+                    return Number(fecha)
+                }
+            }
+        }
+
+        function validarmes(msj) {
+            // debugger
+            let fecha = Number(prompt((msj)));
+            let bandera = true;
+            while (bandera === true) {
+                if (isNaN(fecha) || fecha === "" || fecha <= 0 || fecha > 12 || fecha.length > 2 || fecha.length < 2) {
+                    alert("Ingreso erroneo.")
+                    fecha = prompt(msj)
+                } else {
+                    bandera = false;
+                    return Number(fecha)
+                }
+            }
+        }
+
+        function validaraño(msj) {
+            let fecha = Number(prompt((msj)));
+            let bandera = true;
+            while (bandera === true) {
+                if (isNaN(fecha) || fecha === "" || fecha === 0 || fecha.length < 4) {
+                    alert("Ingreso erroneo.")
+                    fecha = prompt(msj)
+                } else {
+                    bandera = false;
+                    return Number(fecha)
+                }
+            }
+        }
+
+        function fecha(año, mes, dia) {
+            let v = new Date(año, mes, dia)
+            v = v.getDate()
+            return v
+        }
+
+        let bandera = true
+        while (bandera === true) {
+            const diapacto = validardia("Dia de entrega pactado (formato DD): ");
+            const mespacto = validarmes("Mes de entrega pactado (formato MM): ");
+            const añopacto = validaraño("Año de entrega pactado (formato MM): ");
+            const fechapacto = fecha(añopacto, mespacto, diapacto);
+            const diaentrega = validardia("Dia de entrega real (formato DD): ");
+            const mesentrega = validarmes("Mes de entrega real (formato DD): ");
+            const añoentrega = validaraño("Año de entrega real (formato DD): ");
+            const fechaentrega = fecha(añoentrega, mesentrega, diaentrega);
+            const resultado = fechaentrega - fechapacto
+
+            if (resultado <= 0) {
+                alert("Perfecto.")
+            } else if (resultado <= 3) {
+                const multa = resultado * 7000;
+                alert(`Muy mal. Tienes ${resultado} dias de incumplimiento, tu multa pendiente es de $7000xDia.\nTotal: ${multa}`)
+            } else {
+                const multa = resultado * 10000;
+                alert(`Horrible. Tienes ${resultado} dias de incumplimiento, tu multa pendiente es de $10000xDia y haz sido baneado de la vida durante 6 meses.\nTotal: ${multa}`)
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
