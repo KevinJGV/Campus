@@ -19,8 +19,10 @@ function proceso(prestamo, interes, cuotas) {
 
     for (let i = 1; i < cuotas + 1; i++) {
         if (i == 1) {
+            let tabla = document.getElementById("tabla2").innerHTML = "<table><thead><tr><th>MES</th><th>VALOR</th><th>VALOR TOTAL</th><th>CAPITAL</th><th>INTERES</th><th>TOTAL</th></tr></thead></table>"
             let bdd_copia = bdd.slice();
             map.set(i, bdd_copia);
+
         } else {
             bdd[0] = bdd[0] - capital;
             bdd[1] = bdd[1] - deuda_mensual;
