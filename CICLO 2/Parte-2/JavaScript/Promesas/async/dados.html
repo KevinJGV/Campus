@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+         async function doTask(iterations) {
+            const numbers = [];
+            for (let i = 0; i < iterations; i++) {
+                const number = 1 +  Math.floor(Math.random() * 6);
+                numbers.push(number);
+                if (number === 6) {
+                    return {
+                        error: true,
+                        iter: i + 1,
+                        message: "Se ha sacado un 6"
+
+                    };
+                }
+            }
+            return {
+                error: false,
+                value: numbers
+            };
+        }
+        console.log(doTask(10));
+
+        async function task(i) {
+            return new Promise((resolve, reject) => {
+                const number = Math.floor(Math.random() * 6) + 1;
+                if (number === 6) {
+                    reject(new Error (`Ha salido un 6 en la operaciòn ${i}`));
+                } else {
+                    resolve(number);
+                }
+            });
+        
+        async function ciclo() {
+            const i = 10;
+            let promiseArr = Array(i).fill(0).map((_,i) => task(i));
+            try {
+                let results = await Promise.all
+            }
+        }
+        }
+
+    </script>
+</body>
+
+</html>
