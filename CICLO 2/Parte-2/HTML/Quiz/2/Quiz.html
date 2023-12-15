@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-block: 25vh;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            border: solid 1px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .poke1,
+        .poke2 {
+            flex-grow: 5;
+        }
+
+        .container:nth-child(2) {
+            flex-grow: 1;
+        }
+
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .winner {
+            flex-grow: 5;
+        }
+
+        footer:nth-child(2) {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CLUB DE PELEA POKEMON</h1>
+    <div class="container">
+        <div class="poke1">
+            <div class="player">
+                <button class="user" onclick="seleccion()">MI Pokemon</button>
+            </div>
+            <div class="box" id="user">
+            </div>
+            <p class="info">
+                Name: <span id="name"></span><br>
+                HP: <span id="hp"></span><br>
+                Attack: <span id="att"></span><br>
+                Defense: <span id="def"></span><br>
+                Speed: <span id="spd"></span><br>
+            </p>
+        </div>
+        <div class="figth">
+            <button class="figthbutton" onclick="figth()"> Figth! </button>
+        </div>
+        <div class="poke2">
+            <div class="player">
+                <div class="cpu">CPU Pokemon</div>
+            </div>
+            <div class="box" id="cpu">
+            </div>
+            <p class="info">
+                Name: <span id="namecpu"></span><br>
+                HP: <span id="hpcpu"></span><br>
+                Attack: <span id="attcpu"></span><br>
+                Defense: <span id="defcpu"></span><br>
+                Speed: <span id="spdcpu"></span><br>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="winner winner1">
+            <div class="winnerbox"> WINNER!!! </div>
+        </div>
+        <div></div>
+        <div class="winner winner2">
+            <div class="winnerbox"> WINNER!!! </div>
+        </div>
+    </footer>
+    <script src="../../../JavaScript/Quiz/2/Quiz.js"></script>
+</body>
+
+</html>
