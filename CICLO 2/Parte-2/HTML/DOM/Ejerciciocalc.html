@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALC</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputs"><label for="numero1">NUMERO 1: </label>
+            <input type="text" name="numero1" id="numero1">
+            <br>
+            <label for="numero2">NUMERO 2: </label>
+            <input type="text" name="numero2" id="numero2">
+            <hr>
+            <label for="r">RESULTADO </label>
+            <input type="text" name="r" id="r">
+        </div>
+        <div class="operar">
+            <button id="suma">SUMAR</button>
+        </div>
+    </div>
+    <script>
+        (function onClick() {
+            const onclick = document.getElementById("suma");
+            onclick.setAttribute("onClick", "sumar()");
+            const r = document.getElementById("r");
+            r.setAttribute("readonly", true)
+        })()
+
+        function sumar() {
+            const valor1 = document.getElementById("numero1");
+            const valor2 = document.getElementById("numero2");
+            const op = valor1 + valor2;
+            
+        }
+    </script>
+</body>
+
+</html>
