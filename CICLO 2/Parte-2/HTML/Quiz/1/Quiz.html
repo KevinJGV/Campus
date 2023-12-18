@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUIZ 1</title>
     <style>
-        h1{
+        h1 {
             text-align: center;
         }
 
         #contenedor {
             display: flex;
+            padding: 10px;
+            gap: 5px;
         }
-        #contenedor>:first-child{
+
+        #contenedor>:first-child {
             flex-grow: 1;
         }
-        #contenedor>:last-child{
+
+        #contenedor>:last-child {
             flex-grow: 2;
         }
     </style>
 </head>
+
 <body>
     <h1>PROYECTOR DE DEUDAS</h1>
     <br>
@@ -34,12 +40,13 @@
         <input type="text" name="pagos" id="pagos">
         <br>
     </form>
-    <button onclick="send()">Enviar</button>
+    <button onclick="proceso()">Enviar</button>
     <br>
     <div id="contenedor">
         <div id="tabla1"></div>
         <div id="tabla2"></div>
     </div>
-    <script src="../../JavaScript/Quiz/Quiz.js"></script>
+    <script src="../../../JavaScript/Quiz/1/Quiz.js"></script>
 </body>
+
 </html>
