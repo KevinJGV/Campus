@@ -1,9 +1,4 @@
-// Inicializacion de datos
-
-const input_prestamo = Number(prompt("Simulador de prestamo\n\nMonto del credito"));
-const input_interes = Number(prompt("Interés% (Anual)"));
-const input_pagos = Number(prompt("Número de pagos (Mensuales)"));
-
+// Inicializacion de datos y definiciones
 
 function proceso(prestamo, interes, cuotas) {
     //Definicion de datos valor
@@ -33,5 +28,14 @@ function proceso(prestamo, interes, cuotas) {
     console.log(map);
 
 }
+
+const input_prestamo = Number(prompt("Simulador de prestamo\n\nMonto del credito"));
+const input_interes = Number(prompt("Interés% (Anual)"));
+const input_pagos = Number(prompt("Número de pagos (Mensuales)"));
+
+///Escritura en html
+
+
+
 
 proceso(input_prestamo, input_interes, input_pagos)
