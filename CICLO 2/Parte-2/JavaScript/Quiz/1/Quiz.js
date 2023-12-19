@@ -139,14 +139,14 @@ function proceso(prestamo, interes, cuotas) {
                 table.insertAdjacentElement("beforeend", tbody)
             }
         };
-        fragmento.insertAdjacentElement("afterbegin", table)
+        // fragmento.insertAdjacentElement("afterbegin", table)
         tabla2.insertAdjacentElement("afterbegin", fragmento)
     };
     tabla2(prestamo, total_deuda, capital, interes_m, interes_a);
 }
 
-const input_prestamo = document.querySelector("#prestamo");
-const input_interes = document.querySelector("#intereses");
-const input_pagos = document.querySelector("#pagos");
+const input_prestamo = document.querySelector("#prestamo").value;
+const input_interes = document.querySelector("#intereses").value;
+const input_pagos = document.querySelector("#pagos").value;
 
-proceso(input_prestamo.value, input_interes.value, input_pagos.value)
+proceso(input_prestamo, input_interes, input_pagos)
