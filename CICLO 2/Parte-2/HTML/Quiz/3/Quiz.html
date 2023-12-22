@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASHCARDS</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .headcontainer {
+            display: flex;
+            padding-inline: 50px;
+        }
+
+        .headcontainer * {
+            margin-inline: 5px;
+        }
+
+        .headcontainer h1 {
+            flex-grow: 4;
+            text-align: center;
+        }
+
+        .headcontainer button {
+            height: 50px;
+            align-self: center;
+        }
+
+        .add {
+            flex-grow: 2;
+        }
+
+        .del {
+            flex-grow: 1;
+        }
+
+        main {
+            background: lightgray;
+            height: 100vh;
+        }
+
+        .generadorcontainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .generador {
+            display: flex;
+            flex-flow: column wrap;
+            width: 450px;
+            margin: 8px;
+
+            padding: 5px;
+            border: 1px gray solid;
+            box-shadow: 5px 5px 5px 5px;
+        }
+
+        .generador * {
+            margin: 3px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 8px;
+        }
+
+        .generador label {
+            transform: translateX(10px);
+        }
+
+        .generador input {
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .generador button {
+            min-width: fit-content;
+            max-width: 115px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script defer>
+        function add() {
+            
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="headcontainer">
+            <h1>Gestiòn de tarjetas</h1>
+            <button class="add" onclick="add()">Agregar</button>
+            <button class="del" onclick="del()">Eliminar</button>
+        </div>
+    </header>
+    <main>
+        <div class="generadorcontainer">
+            <div class="generador">
+                <h2>Crear Card</h2>
+                <br>
+                <label for="quest">Pregunta</label>
+                <input type="text" name="quest" id="quest">
+                <br>
+                <label for="answ">Respuesta</label>
+                <input type="text" name="answ" id="answ">
+                <br>
+                <button class="save" onclick="save()">Guardar</button>
+                <button class="close" onclick="close()">Cerrar</button>
+            </div>
+        </div>
+        <div class="tarjetascontanier">
+
+        </div>
+    </main>
+</body>
+
+</html>

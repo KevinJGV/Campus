@@ -609,29 +609,28 @@ div.isConnected; // false
 
 En este caso, lo que hemos hecho es buscar el elemento HTML `<div class="deleteme">` en el documento HTML y desconectarlo de su elemento padre, de forma que dicho elemento pasa a no pertenecer al documento HTML, pero sigue existiendo en la constante `div`.
 
-
 ## API de inserción adyacente
 
 Probablemente, una de las APIs de manejo del DOM más desconocidas y más interesantes, es la de Inserción de elementos adjacentes. Son una familia de 3 métodos que permiten hacer prácticamente cualquier operación posible en el DOM.
 
 Son los métodos que tenemos a continuación:
 
-* `.insertAdjacentElement(position, element)`: Inserta el `element` en la posición `position`. Si falla, `null`.
-* `.insertAdjacentHTML(position, htmlCode)`: Inserta el código HTML de `htmlCode` en la posición `position`.
-* `.insertAdjacentText(position, text)`: Inserta el texto `text` en la posición `position`.
+- `.insertAdjacentElement(position, element)`: Inserta el `element` en la posición `position`. Si falla, `null`.
+- `.insertAdjacentHTML(position, htmlCode)`: Inserta el código HTML de `htmlCode` en la posición `position`.
+- `.insertAdjacentText(position, text)`: Inserta el texto `text` en la posición `position`.
 
 Los métodos de la familia `insertAdjacent` son bastante más versátiles que `.appendChild()`, ya que permiten muchas más posibilidades. Tenemos tres versiones diferentes:
 
-* `.insertAdjacentElement()` donde insertamos una etiqueta HTML
-* `.insertAdjacentHTML()` donde insertamos código HTML directamente (similar a `innerHTML`)
-* `.insertAdjacentText()` donde insertamos un texto directamente (similar a `textContent`)
+- `.insertAdjacentElement()` donde insertamos una etiqueta HTML
+- `.insertAdjacentHTML()` donde insertamos código HTML directamente (similar a `innerHTML`)
+- `.insertAdjacentText()` donde insertamos un texto directamente (similar a `textContent`)
 
 Ten en cuenta que `position` es un `string` que puede tener uno de los siguientes valores:
 
-* `beforebegin`: Inserta el elemento antes de la etiqueta HTML de apertura.
-* `afterbegin`: Inserta el elemento dentro, antes de su primer hijo.
-* `beforeend`: Inserta el elemento dentro, justo antes de la etiqueta HTML de cierre.
-* `afterend`: Inserta el elemento después de la etiqueta HTML de cierre.
+- `beforebegin`: Inserta el elemento antes de la etiqueta HTML de apertura.
+- `afterbegin`: Inserta el elemento dentro, antes de su primer hijo.
+- `beforeend`: Inserta el elemento dentro, justo antes de la etiqueta HTML de cierre.
+- `afterend`: Inserta el elemento después de la etiqueta HTML de cierre.
 
 Veamos algunos ejemplo aplicando cada uno de ellos con el método `.insertAdjacentElement()`:
 
@@ -668,4 +667,44 @@ container.insertAdjacentHTML("beforebegin", "<p>Hola</p>");
 
 container.insertAdjacentText("beforebegin", "Hola a todos");
 // C) Hola a todos <div class="container">App</div>
+```
+
+# Navegar por elementos del DOM
+
+En algunas ocasiones, cuando conocemos y controlamos perfectamente la estructura del código HTML de la página, nos puede resultar más cómodo tener a nuestra disposición una serie de propiedades para navegar por la jerarquía de elementos HTML relacionados.
+
+## Navegar a través de elementos
+
+Las propiedades que veremos a continuación devuelven información de otros elementos relacionados con el elemento en cuestión.
+
+| Propiedades de elementos HTML | Descripción                                                  |
+| ----------------------------- | ------------------------------------------------------------ |
+| `children`                    | Devuelve una lista de elementos HTML hijos.                  |
+| `parentElement`               | Devuelve el padre del elemento o `null` si no tiene.         |
+| `firstElementChild`           | Devuelve el primer elemento hijo.                            |
+| `lastElementChild`            | Devuelve el último elemento hijo.                            |
+| `previousElementSibling`      | Devuelve el elemento hermano anterior o `null` si no tiene.  |
+| `nextElementSibling`          | Devuelve el elemento hermano siguiente o `null` si no tiene. |
+
+En primer lugar, tenemos la propiedad `children` que nos ofrece un `HTMLCollection` con una lista de elementos HTML hijos. Podríamos acceder a cualquier hijo utilizando los corchetes de array y seguir utilizando otras propiedades en el hijo seleccionado.
+
+- La propiedad `firstElementChild` sería un acceso rápido a `children[0]`.
+- La propiedad `lastElementChild` sería un acceso rápido al último elemento hijo.
+
+Por último, tenemos las propiedades `previousElementSibling` y `nextElementSibling` que nos devuelven los elementos hermanos anteriores o posteriores, respectivamente. La propiedad `parentElement` nos devolvería el padre del elemento en cuestión. En el caso de no existir alguno de estos elementos, nos devolvería `null`.
+
+Consideremos el siguiente documento HTML:
+
+```html
+<html>
+	<body>
+		<div id="app">
+			<div class="header">
+				<h1>Titular</h1>
+			</div>
+			<p>Párrafo de descripción</p>
+			<a href="/">Enlace</a>
+		</div>
+	</body>
+</html>
 ```
