@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLASHCARDS</title>
     <style>
+        * {
+            font-family: sans-serif;
+        }
+
         body {
             margin: 0;
         }
@@ -84,11 +88,125 @@
         .hidden {
             display: none;
         }
+
+        .tarjetascontanier {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-evenly;
+        }
+
+
+
+        .tarjeta {
+            background: white;
+            margin: 50px;
+            border: 1px gray solid;
+            box-shadow: 2px 2px 15px 4px;
+            min-width: 300px;
+            min-height: fit-content;
+            height: 250px;
+        }
+
+        .headcard {
+            border-bottom: 1px orange solid;
+            display: flex;
+            flex-flow: row-reverse;
+            height: 35px;
+        }
+
+        .tarjeta button {
+            height: 25px;
+            align-self: center;
+            margin-inline: 5px;
+        }
+
+        .bodycard {
+            padding-inline: 25px;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .tarjeta h3 {
+            font-size: 1.5rem;
+        }
+
+        .pcard {
+            background: lightgray;
+            border-radius: 10px;
+            min-height: 50px;
+            padding-top: 20px;
+            padding-left: 10px;
+            color: orangered;
+            font-weight: bold;
+        }
     </style>
     <script defer>
+        const d = document
         function add() {
-            
+            const generador = d.querySelector(".generadorcontainer");
+            generador.classList.remove("hidden");
         }
+
+        let contador = 0;
+
+        function save() {
+            try {
+                // debugger
+                const container = d.querySelector(".tarjetascontanier")
+                const quest = d.querySelector("#quest").value;
+                const answ = d.querySelector("#answ").value;
+                if (quest === "" || answ === "") {
+                    throw new Error("Complete ambos campos.");
+                };
+                const fragmento = d.createDocumentFragment();
+                const div = d.createElement("div");
+                div.classList.add("tarjeta");
+                const divhead = d.createElement("div");
+                const deletebutton = d.createElement("button");
+                deletebutton.setAttribute("onclick", "autodestruction()");
+                deletebutton.insertAdjacentText("afterbegin", "Borrar")
+                divhead.insertAdjacentElement("beforeend", deletebutton);
+                divhead.classList.add("headcard");
+                for (contador; contador < 100; contador++) {
+                    contador++;
+                    divhead.classList.add(`objetivo${contador}`);
+                    break
+                }
+                div.insertAdjacentElement("beforeend", divhead);
+                const divbody = d.createElement("div");
+                divbody.classList.add("bodycard")
+                const h3div = d.createElement("h3");
+                h3div.insertAdjacentText("afterbegin", quest);
+                divbody.insertAdjacentElement("beforeend", h3div);
+                const pdiv = d.createElement("p");
+                pdiv.insertAdjacentText("afterbegin", answ);
+                pdiv.classList.add("pcard");
+                pdiv.setAttribute("onclick","p()");
+                divbody.insertAdjacentElement("beforeend", pdiv);
+                div.insertAdjacentElement("beforeend", divbody);
+                fragmento.appendChild(div);
+                container.appendChild(fragmento);
+            } catch (error) {
+                console.error(error);
+                alert(error);
+            } finally {
+                d.querySelector("#quest").value = "";
+                d.querySelector("#answ").value = "";
+            }
+
+        }
+
+        let objetivo = undefined;
+        function autodestruction() {
+
+        }
+
+        function limpiar() {
+            const contenedor = document.querySelector(".tarjetascontanier");
+            while (contenedor.firstChild) {
+                contenedor.removeChild(contenedor.firstChild);
+            };
+        };
     </script>
 </head>
 
@@ -97,11 +215,11 @@
         <div class="headcontainer">
             <h1>Gestiòn de tarjetas</h1>
             <button class="add" onclick="add()">Agregar</button>
-            <button class="del" onclick="del()">Eliminar</button>
+            <button class="del" onclick="limpiar()">Limpiar</button>
         </div>
     </header>
     <main>
-        <div class="generadorcontainer">
+        <div class="generadorcontainer hidden">
             <div class="generador">
                 <h2>Crear Card</h2>
                 <br>
@@ -116,7 +234,15 @@
             </div>
         </div>
         <div class="tarjetascontanier">
-
+            <div class="tarjeta">
+                <div class="headcard">
+                    <button onclick="autodestruction()">Borrar</button>
+                </div>
+                <div class="bodycard">
+                    <h3>Titulo</h3>
+                    <p class="pcard">Parrafo</p>
+                </div>
+            </div>
         </div>
     </main>
 </body>

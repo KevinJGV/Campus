@@ -14,6 +14,8 @@ function proceso() {
         let capital = Number((input_prestamo / input_pagos).toFixed(0));
         let total_deuda = input_prestamo + interes_a;
         let deuda_mensual = capital + interes_m;
+
+        //Elimiar tablas existentes
         const validartablas = () => {
             const tabla1 = document.querySelector("#tabla1");
             const tabla2 = document.querySelector("#tabla2");
