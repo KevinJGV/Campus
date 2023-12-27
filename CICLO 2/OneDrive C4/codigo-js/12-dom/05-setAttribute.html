@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo setAttribute</title>
+</head>
+
+<body>
+    <a id="miEnlace" href="https://campuslands.com" target="_blank">Enlace de Ejemplo</a>
+
+    <button onclick="cambiar()">Cambiar</button>
+
+    <script>
+        function cambiar() {
+            // Seleccionar el elemento
+            const enlace = document.getElementById('miEnlace');
+
+            // Cambiar el valor del atributo 'href'
+            enlace.setAttribute('href', 'https://google.com');
+        }
+
+    </script>
+</body>
+
+</html>
