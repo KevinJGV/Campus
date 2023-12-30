@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Pokemones</title>
+    <script defer src="../../JavaScript/Async-Await/randompokm.js"></script>
+    <style>
+        * {
+            text-align: center;
+            /* border: solid 1px; */
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-inline: 150px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Listado de Pokemons</h2>
+    <div class="container">
+        <div class="poke">
+            <img class="box1">
+            </img>
+            <p class="info">
+                <span id="id"></span><br>
+                <span id="name"></span><br>
+            </p>
+        </div>
+        <div class="poke">
+            <img class="box2">
+            </img>
+            <p class="info">
+                <span id="id"></span><br>
+                <span id="name"></span><br>
+            </p>
+        </div>
+    </div>
+    <button onclick="switcher()"> ¡SWITCH! </button>
+</body>
+
+</html>
