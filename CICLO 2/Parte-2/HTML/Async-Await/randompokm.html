@@ -11,12 +11,12 @@
             text-align: center;
             /* border: solid 1px; */
         }
+
         .container {
             display: flex;
             justify-content: space-around;
             margin-inline: 150px;
         }
-
     </style>
 </head>
 
@@ -27,19 +27,23 @@
             <img class="box1">
             </img>
             <p class="info">
-                <span id="id"></span><br>
-                <span id="name"></span><br>
+                <span id="id1"></span><br>
+                <span id="name1"></span><br>
             </p>
         </div>
         <div class="poke">
             <img class="box2">
             </img>
             <p class="info">
-                <span id="id"></span><br>
-                <span id="name"></span><br>
+                <span id="id2"></span><br>
+                <span id="name2"></span><br>
             </p>
         </div>
     </div>
+    <input type="checkbox" name="check" id="check" checked>
+    <label for="check"> Por defecto se selecciona consecutivamente los Pokemons, si desea hacerlo aleatoriamente marqué
+        ésta casilla =)</label>
+    <br><br>
     <button onclick="switcher()"> ¡SWITCH! </button>
 </body>
 
