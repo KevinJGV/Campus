@@ -37,12 +37,16 @@
             flex-grow: 1;
         }
 
-
         footer {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+        }
+
+        .announce {
+            background: orangered;
+            color: white;
         }
 
         .winner {
@@ -52,6 +56,10 @@
         footer:nth-child(2) {
             flex-grow: 1;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -60,7 +68,7 @@
     <div class="container">
         <div class="poke1">
             <div class="player">
-                <button class="user" onclick="seleccion()">MI Pokemon</button>
+                <button class="user" onclick="seleccion(unlockFight())">MI Pokemon</button>
             </div>
             <div class="box" id="user">
             </div>
@@ -73,7 +81,7 @@
             </p>
         </div>
         <div class="figth">
-            <button class="figthbutton" onclick="figth()"> Figth! </button>
+            <button id="figthbutton" onclick="figth()" disabled> Figth! </button>
         </div>
         <div class="poke2">
             <div class="player">
@@ -90,7 +98,11 @@
             </p>
         </div>
     </div>
+    <div class="announce">
+        asdsa
+    </div>
     <footer>
+
         <div class="winner winner1">
             <div class="winnerbox"> WINNER!!! </div>
         </div>
