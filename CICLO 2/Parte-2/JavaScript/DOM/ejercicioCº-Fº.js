@@ -20,6 +20,7 @@ function banderaF() {
 
 
 const calcular = () => {
+    // debugger;
     //METODO DATE + EVENTOS
     if (updateOnC === undefined) {
         updateOnC = 0.0001;
@@ -44,15 +45,20 @@ const calcular = () => {
     // bandera === "c" ? farenheit.value = ((celsius.value * 9 / 5) + 32).toFixed(2) : celsius.value = ((farenheit.value - 32) * 5 / 9).toFixed(2);
 
     //METODO ONCHANGE + BANDERA + PLACEHOLDER (PREFERIDO <3)
-    if (bandera === "c") {
-        farenheit.value = "";
-        celsius.setAttribute("placeholder", "");
-        const calcFar = ((celsius.value * 9 / 5) + 32).toFixed(2);
-        farenheit.setAttribute("placeholder", calcFar);
+    if (celsius.value === "" && farenheit.value === "") {
+        farenheit.setAttribute("placeholder", "0.00");
+        celsius.setAttribute("placeholder", "0.00");
     } else {
-        celsius.value = "";
-        farenheit.setAttribute("placeholder", "");
-        const calcCel = ((farenheit.value - 32) * 5 / 9).toFixed(2);
-        celsius.setAttribute("placeholder", calcCel);
+        if (bandera === "c") {
+            farenheit.value = "";
+            celsius.setAttribute("placeholder", "");
+            const calcFar = ((celsius.value * 9 / 5) + 32).toFixed(2);
+            farenheit.setAttribute("placeholder", calcFar);
+        } else {
+            celsius.value = "";
+            farenheit.setAttribute("placeholder", "");
+            const calcCel = ((farenheit.value - 32) * 5 / 9).toFixed(2);
+            celsius.setAttribute("placeholder", calcCel);
+        }
     }
 }
