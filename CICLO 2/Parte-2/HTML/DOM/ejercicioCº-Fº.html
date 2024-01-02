@@ -17,15 +17,15 @@
         <fieldset>
             <legend>Calculadora de Cº a Fº</legend>
             <label for="Celsius">Grados Centìgrados </label>
-            <input type="text" name="Celsius" id="Celsius">
+            <input type="text" name="Celsius" id="Celsius" onchange="banderaC()">
             <br>
             <label for="Farenheit">Grados Farenheit </label>
-            <input type="text" name="Farenheit" id="Farenheit">
+            <input type="text" name="Farenheit" id="Farenheit" onchange="banderaF()">
             <br>
             <button onclick="calcular()"> Calcular </button>
         </fieldset>
     </main>
-    <script src="../../JavaScript/DOM/ejercicioCº-Fº.js"></script>
+    <script defer src="../../JavaScript/DOM/ejercicioCº-Fº.js"></script>
 </body>
 
 </html>

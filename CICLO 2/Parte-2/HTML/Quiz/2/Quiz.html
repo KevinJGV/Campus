@@ -12,7 +12,7 @@
         }
 
         body {
-            margin-block: 25vh;
+            margin-block: 15vh;
             height: 100%;
         }
 
@@ -22,10 +22,20 @@
             justify-content: center;
         }
 
+        .box {
+            min-height: 1vw;
+            min-width: 1vw;
+            height: 447px;
+            width: 447px;
+            max-height: 447px;
+            max-width: 447px;
+            margin: auto;
+        }
+
         img {
             border: solid 1px;
             width: fit-content;
-            height: fit-content;
+            height: 100%;
         }
 
         .poke1,
@@ -49,6 +59,26 @@
             color: white;
         }
 
+        .empate {
+            margin-inline: 10%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .eleccionCPU_box {
+            border: solid 1px;
+            margin-inline: 40%;
+        }
+
+        .resultdraw_box {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .resultdraw {
+            margin-inline: 30%;
+        }
+
         .winner {
             flex-grow: 5;
         }
@@ -60,6 +90,16 @@
         .hidden {
             display: none;
         }
+
+        .yellow {
+            background: rgb(202, 189, 111);
+        }
+
+        .red {
+            background: orangered;
+            color: whitesmoke;
+            border: 2px solid;
+        }
     </style>
 </head>
 
@@ -68,8 +108,9 @@
     <div class="container">
         <div class="poke1">
             <div class="player">
-                <button class="user" onclick="seleccion(unlockFight())">MI Pokemon</button>
+                <button class="user">MI Pokemon</button>
             </div>
+            <br>
             <div class="box" id="user">
             </div>
             <p class="info">
@@ -81,12 +122,13 @@
             </p>
         </div>
         <div class="figth">
-            <button id="figthbutton" onclick="figth()" disabled> Figth! </button>
+            <button id="figthbutton" disabled> Figth! </button>
         </div>
         <div class="poke2">
             <div class="player">
                 <div class="cpu">CPU Pokemon</div>
             </div>
+            <br>
             <div class="box" id="cpu">
             </div>
             <p class="info">
@@ -99,16 +141,43 @@
         </div>
     </div>
     <div class="announce">
-        asdsa
+    </div>
+    <div class="empate yellow hidden">
+        <br>
+        <p>Oh-oh...<br>, parece que tanto tú como el oponente estan en igualdad de velocidad de reaccion para poder
+            decidir quien empezara a atacar.<br>Lo decidiremos con un piedra,papel o tijeras.<br> Elige tu movimiento :)
+        </p>
+        <br>
+        <br>
+        <input type="radio" name="juego" id="piedra" value="Piedra">
+        <label for="juego">PIEDRA 🪨</label>
+        <br>
+        <input type="radio" name="juego" id="papel" value="Papel">
+        <label for="juego">PAPEL 🧻</label>
+        <br>
+        <input type="radio" name="juego" id="tijera" value="Tijera">
+        <label for="juego">TIJERA ✂️</label>
+        <br>
+        <br>
+        <button id="empate_button">JUGAR</button>
+        <br>
+        <br>
+        <fieldset class="eleccionCPU_box hidden">
+            <legend>La CPU a elegido</legend>
+            <div class="eleccionCPU hidden"></div>
+        </fieldset>
+        <br>
+        <div class="resultdraw_box">
+            <div class="resultdraw red hidden">s</div>
+        </div>
     </div>
     <footer>
-
-        <div class="winner winner1">
-            <div class="winnerbox"> WINNER!!! </div>
+        <div class="winner">
+            <div class="winnerbox winner1 hidden"> WINNER!!! </div>
         </div>
         <div></div>
-        <div class="winner winner2">
-            <div class="winnerbox"> WINNER!!! </div>
+        <div class="winner">
+            <div class="winnerbox winner2 hidden"> WINNER!!! </div>
         </div>
     </footer>
     <script src="../../../JavaScript/Quiz/2/Quiz.js"></script>
