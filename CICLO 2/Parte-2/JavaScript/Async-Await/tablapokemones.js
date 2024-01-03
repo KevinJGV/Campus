@@ -5,8 +5,7 @@ const API = "https://pokeapi.co/api/v2/pokemon/";
 
 function toCapitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
+};
 
 for (let i = 1; i <= 100; i++) {
     fetch(`${API}${i}`)
