@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <fieldset>
+            <legend>Calculadora de Divisas EUR-USD</legend>
+            <label for="euro">EUROS </label>
+            <input type="text" name="euro" id="euro" onchange="banderaE()">
+            <br>
+            <label for="dolar">DOLAR </label>
+            <input type="text" name="dolar" id="dolar" onchange="banderaD()">
+            <br>
+            <button onclick="calcular()"> Calcular </button>
+        </fieldset>
+    </main>
+    <script defer src="../../JavaScript/DOM/ExchangeAPI.js"></script>
+</body>
+
+</html>
