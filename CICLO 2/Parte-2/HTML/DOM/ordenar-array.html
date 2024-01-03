@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="../../JavaScript/DOM/ordenar-array.js"></script>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin-inline: 20%;
+            padding-top: 50px;
+        }
+
+        button {
+            background: dodgerblue;
+            color: white;
+            height: 35px;
+        }
+
+        #arr {
+            width: 250px;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        #box_text {
+            width: 90%;
+        }
+
+        #box_button {
+            width: 10%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ordenar Arrays de cadenas</h1>
+    <br>
+    <p>Ingrese nombres (o un nombre) para incorporarlos a la caja que las almacena.</p>
+    <br>
+    <div class="input">
+        <label for="arr">Nombres </label>
+        <input type="text" name="arr" id="arr" placeholder="Carlos, Kamil    Lucho:Lidia/ Arnulfo...">
+        <button id="input_button">Agregar y ordenar nombres</button>
+        <br>
+    </div>
+    <br>
+    <h2>Nombres ordenados</h2>
+    <br>
+    <div class="box">
+        <textarea name="box_text" id="box_text" cols="30" rows="10" placeholder="Aquí apareceran los nombres ordenados."
+            readonly></textarea>
+        <br>
+        <button id="box_button">Limpiar</button>
+    </div>
+</body>
+
+</html>
