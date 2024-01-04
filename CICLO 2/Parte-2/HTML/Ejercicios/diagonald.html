@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function diagonal1(arr) {
+            let int = [];
+            for (let n = 0; n <= arr.length; n++) {
+                int.push(arr[n][n]);
+            };
+            let res = int.forEach((element) => {
+                return res += element;
+            });
+            console.log("Diagonal 1 = " + res)
+            return res;
+        };
+
+        function diagonal2(arr) {
+            let int = [];
+            let m = [2, 1, 0];
+            for (let n = 0; n <= arr.length; n++) {
+                int.push(arr[n][m[n]]);
+            };
+            let res = int.forEach((element) => {
+                return res += element;
+            });
+            console.log("Diagonal 2 = " + res)
+            return res;
+        };
+
+        function diagonalDifference(arr) {
+            const num1 = diagonal1(arr);
+            const num2 = diagonal2(arr);
+            const res = Math.abs(num1 - num2);
+            console.log("Diferencia Diagonal = " + res)
+            return res
+        };
+        debugger
+        const arr = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]];
+
+        const resultado = diagonalDifference(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
