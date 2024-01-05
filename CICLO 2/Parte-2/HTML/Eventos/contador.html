@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contador</h1>
+    <br>
+    <div class="num">0</div>
+    <br>
+    <button class="sum">Aumentar+1</button>
+    <button class="res">Restar-1</button>
+    <br>
+    <script defer>
+        const d = document;
+        const num = d.querySelector(".num");
+        const sum = d.querySelector(".sum");
+        const res = d.querySelector(".res");
+        let cont = 0;
+        sum.addEventListener("mousedown", () => {
+            cont += 1;
+            num.textContent = "";
+            num.insertAdjacentText("afterbegin", cont);
+        });
+
+        sum.addEventListener("mousedown", () => {
+            cont += 1;
+            num.textContent = "";
+            num.insertAdjacentText("afterbegin", cont);
+        });
+
+        res.addEventListener("click", () => {
+            cont -= 1;
+            num.textContent = "";
+            num.insertAdjacentText("afterbegin", cont);
+        });
+
+        res.addEventListener("mouseup", () => {
+            cont -= 1;
+            num.textContent = "";
+            num.insertAdjacentText("afterbegin", cont);
+        });
+    </script>
+</body>
+
+</html>

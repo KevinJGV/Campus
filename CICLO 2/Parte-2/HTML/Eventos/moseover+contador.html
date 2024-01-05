@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            padding: 5px;
+            height: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TITULO</h1>
+    <div class="container">
+        <p id="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam numquam sint officia reiciendis
+            assumenda
+            accusantium in ratione, deserunt sit consequatur animi nostrum a nobis quam est non, ipsum dolorem autem
+            officiis, perspiciatis sapiente. Rerum expedita iure architecto beatae nulla atque officia adipisci, aperiam
+            itaque fugiat est quod modi voluptatibus porro!</p>
+        <p id="target" class="hidden">asdsa</p>
+    </div>
+
+    <script defer>
+        const cont = document.querySelector(".container");
+        const p = document.querySelector("#p");
+        const target = document.querySelector("#target");
+        // debugger
+        let contador = 0;
+
+
+        cont.addEventListener("mouseover", () => {
+            contador += 1;
+            p.classList.toggle("hidden");
+            target.textContent = "";
+            target.insertAdjacentText("afterbegin", `Ha pasado el mouse ${contador} veces`)
+            target.classList.toggle("hidden");
+        })
+
+        p.addEventListener("mouseover", () => {
+            contador -= 1;
+        })
+
+        target.addEventListener("mouseover", () => {
+            contador -= 1;
+        })
+
+        cont.addEventListener("mouseout", () => {
+            p.classList.toggle("hidden");
+            target.classList.toggle("hidden");
+        })
+    </script>
+</body>
+
+</html>
