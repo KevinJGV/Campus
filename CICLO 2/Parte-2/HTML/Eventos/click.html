@@ -17,7 +17,7 @@
     <input type="text" name="put" id="put">
     <button>Boton</button>
     <script defer>
-        // debugger
+        debugger
         const string = "0123456789ABCDEF";
         const button = document.querySelector("button");
         const input = document.querySelector("input");
@@ -30,7 +30,13 @@
         };
         button.addEventListener("click", change);
         button.addEventListener("dblclick", () => alert("Doble click"));
-        input.addEventListener("input", change)
+        input.addEventListener("input", change);
+        input.addEventListener('keydown', (event) => {
+            console.log(event); // all event related info
+            console.log(event.type);
+            console.log(event.key);
+            console.log(event.code);
+        });
     </script>
 </body>
 

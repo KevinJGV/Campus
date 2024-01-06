@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boton {
+            display: block;
+            width: 100px;
+            cursor: pointer;
+            margin: 10px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EJERCICIO 1</h1>
+    <br>
+    <div id="boton1" class="boton">Pulsar aquí</div>
+    <div id="boton2" class="boton">Pulsar aquí</div>
+    <br>
+    <hr>
+    <br>
+    <h1>EJERCICIO 2</h1>
+    <br>
+    <div>
+        <label>Coordenada X</label>
+        <input id="cX">
+    </div>
+    <div>
+        <label>Coordenada Y</label>
+        <input id="cY">
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h1>EJERCICIO 3</h1>
+    <br>
+    <form>
+        <label>No se aceptan dígitos</label>
+        <input type="text" id="letras">
+    </form>
+    <script defer>
+        const d = document;
+        //1
+        const botones = d.querySelectorAll(".boton");
+        const pulsar = (event) => {
+            alert(event.target.id);
+        };
+        for (let boton of botones) {
+            boton.addEventListener("click", pulsar)
+        }
+
+        //2
+        // d.addEventListener("click", (event) => {
+        //     d.querySelector("#cX").value = event.clientX
+        //     d.querySelector("#cY").value = event.clientY
+        // })
+
+        //3
+        // debugger
+        const digits = d.querySelector("#letras");
+        digits.addEventListener("input", (event) => {
+            if (digits.value === "0" || digits.value === "1" || digits.value === "2" || digits.value === "3" || digits.value === "4" || digits.value === "5" || digits.value === "6" || digits.value === "7" || digits.value === "8" || digits.value === "9") {
+                digits.value = "";
+                event.preventDefault()
+            }
+        })
+    </script>
+</body>
+
+</html>

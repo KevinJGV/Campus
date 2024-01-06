@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .oculto {
+            display: none;
+            transition: display 0.3s;
+        }
+
+
+        .visible {
+            display: block;
+            transition: display 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="oculto" id="ficha1">
+        Hola, soy el bloque 1</div>
+    <div class="oculto" id="ficha2">
+        Hola, soy el bloque 2</div>
+    <div class="oculto" id="ficha3">
+        Hola, soy el bloque 3</div>
+    <script>
+        // debugger
+        const d = document;
+        const f1 = d.querySelector("#ficha1");
+        const f2 = d.querySelector("#ficha2");
+        const f3 = d.querySelector("#ficha3");
+        const evento = (element) => {
+            const obj = d.querySelector("[class='visible']");
+            if (obj != null) {
+                obj.className = "oculto";
+            };
+            element.className = "visible";
+        };
+        // debugger
+        d.addEventListener("keydown", (event) => {
+            if (event.key === "1") {
+                evento(f1);
+            } else if (event.key === "2") {
+                evento(f2);
+            } else if (event.key === "3") {
+                evento(f3);
+            } else {
+                const divs = d.querySelectorAll("div");
+                for (let div of divs) {
+                    div.className = "oculto";
+                }
+            }
+        })
+
+    </script>
+</body>
+
+
+</html>
