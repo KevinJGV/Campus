@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculamesta</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            font-size: 2rem;
+        }
+
+        body {
+            background-color: lightblue;
+            margin-inline: 25%;
+        }
+
+        .calc {
+            margin-top: 200px;
+            display: grid;
+            text-align: center;
+            gap: 3px;
+            background: gray;
+            border-radius: 20px;
+            overflow: hidden;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .display {
+            text-align: end;
+            background: black;
+            color: white;
+            font-size: 2em;
+            overflow: hidden;
+            grid-area: 1/1/2/5;
+            padding-right: 30px;
+        }
+
+        .op {
+            background-color: lightgray;
+        }
+
+        .body {}
+
+        .num {
+            background: whitesmoke;
+        }
+
+        .igual {
+            background: rgb(255, 115, 0);
+            grid-area: 3/4/7/5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calc">
+        <div class="display">0</div>
+        <div class="suma op body">+</div>
+        <div class="resta op body">-</div>
+        <div class="mult op body">x</div>
+        <div class="div op body">/</div>
+        <div class="siete num body">7</div>
+        <div class="ocho num body">8</div>
+        <div class="nueve num body">9</div>
+        <div class="igual body">=</div>
+        <div class="cuatro num body">4</div>
+        <div class="cinco num body">5</div>
+        <div class="seis num body">6</div>
+        <div class="uno num body">1</div>
+        <div class="dos num body">2</div>
+        <div class="tres num body">3</div>
+        <div class="cero num body">0</div>
+        <div class="punto num body">.</div>
+        <div class="limpiar num body">AC</div>
+    </div>
+    <script>
+        const d = document;
+        debugger
+        const body = d.querySelectorAll(".body");
+        const estiloOriginal = new Map();
+        for (let piece of body) {
+            estiloOriginal.set(piece, piece.style.cssText);
+        };
+
+        for (let piece of body) {
+            piece.addEventListener("mousedown", (event) => {
+                if (event.button === 0) {
+                    piece.style.backgroundColor = "black"
+                };
+            });
+            piece.addEventListener("mouseup", (event) => {
+                if (event.button === 0) {
+                    this.style.cssText = estiloOriginal.get(this)
+                };
+            });
+        };
+
+    </script>
+</body>
+
+</html>

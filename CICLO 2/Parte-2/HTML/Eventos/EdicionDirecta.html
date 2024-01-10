@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="root">
+        <div class="parent">
+            <div class="child">
+                <button>Presióname</button>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        const d = document;
+        const root = d.querySelector(".root");
+        const boton = d.querySelector("button");
+
+        boton.addEventListener("click", () => {
+            boton.dispatchEvent(new CustomEvent("user:message"), {
+                detail: {
+                    name: "Computación cuantica",
+                },
+                bubbles: true,
+            })
+        });
+        root.addEventListener("user:message", event => {
+            const name = event.detail.name;
+            console.log(`Mensaje recibido de "${name}"`)
+        })
+    </script>
+</body>
+</html>
