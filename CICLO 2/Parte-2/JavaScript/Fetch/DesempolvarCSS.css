@@ -1,0 +1,41 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+body {
+    overflow: scroll;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-flow: wrap;
+    gap: 5px;
+    justify-content: space-around;
+    overflow: scroll;
+}
+
+.card {
+    border: solid 1px;
+}
+
+img {
+    width: 235px;
+    margin: 15px;
+    margin-bottom: 0px;
+    justify-self: center;
+}
+
+h2 {
+    margin: 0 10px;
+}
+
+p {
+    margin-left: 15px;
+}
