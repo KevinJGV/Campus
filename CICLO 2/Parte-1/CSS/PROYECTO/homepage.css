@@ -5,6 +5,7 @@
     /* border: solid 1px; */
     font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
     transition: all 0.2s cubic-bezier(.22,.61,.36,1);
+    scroll-behavior: smooth;
 }
 
 html,
@@ -599,29 +600,26 @@ body {
 }
 
 #desplegar:target+.menu {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: white;
-    position: fixed;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 100%;
-    height: clamp(100%, 1.0774rem + 3.7936vw, 100%);
-    border-radius: 0;
-    transition: ease-in 0.4s;
-    padding-bottom: 1%;
-    /* padding: 5%; */
-    box-sizing: border-box;
-    overflow: hidden;
-    z-index: 9;
+    display: flex;
+	position: fixed;
+	top: 0;
+	height: clamp(100%, 1.0774rem + 3.7936vw, 100%);
+	border-radius: 0;
+	transition: ease-in 0.4s;
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 9;
+	flex-flow: column;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
 }
 
 #lownavbutton {
     width: fit-content;
     margin-inline: 48%;
     align-items: center;
-    height: 50%;
+    height: 5%;
 }
 
 #lownavbutton hr {
