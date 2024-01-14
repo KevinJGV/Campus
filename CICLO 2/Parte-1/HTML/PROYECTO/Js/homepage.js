@@ -1,21 +1,46 @@
-// Obtener los elementos por su clase
-let topbg = document.querySelector(".topbg");
-let mainlayer = document.querySelector(".mainlayer");
+const d = document;
+// const all = d.querySelectorAll("*");
+const b = d.querySelector("body");
+const topbg = d.querySelector(".topbg");
+const mainlayer = d.querySelector(".mainlayer");
+const container = d.querySelector(".containermainlayer");
+const porfolio = d.querySelector(".porfolio");
+const nav = d.querySelector(".navcontainer");
+const lateralbar = d.querySelector(".lateralbar");
 
-// Crear una función que cambie el tamaño de los elementos al hacer scroll
-function cambiarTamaño() {
-    // Obtener la posición actual del scroll
-    let scrollPos = Window.pageYOffset;
-    // Si el scroll es mayor que cero, cambiar el tamaño de los elementos
-    if (scrollPos > 0) {
-        topbg.style.transform = "scale(1)"; // El contenedor gris ocupa toda la pantalla
-        mainlayer.style.transform = "translateX(0)"; // El contenido principal ocupa toda la pantalla
-    } else {
-        // Si el scroll es cero, volver al tamaño original
-        topbg.style.transform = "scale(0.9)"; // El contenedor gris tiene un tamaño menor al de la pantalla
-        mainlayer.style.transform = "translateX(-8%)"; // El contenido principal tiene un tamaño menor al de la pantalla
-    }
+let isTrusted;
+
+// debugger
+function expandBox(e) {
+    for (let i = 0; i <= 1; i++) {
+        // if (i === 1) {
+        //     i = 0;
+        // };
+        if (isTrusted === undefined) {
+            isTrusted = 1
+            return
+        };
+    };
+    if (isTrusted === 1) {
+        topbg.style.width = '100vw';
+        topbg.style.top = '0';
+        topbg.style.borderRadius = '0';
+        mainlayer.style.right = "8%";
+        nav.style.top = '20px';
+        lateralbar.style.left = '60px';
+        lateralbar.style.height = '95%';
+        porfolio.style.paddingRight = "0";
+        this.removeEventListener('scroll', expandBox);
+    };
+};
+
+b.addEventListener("scroll", expandBox);
+
+function resetPage() {
+    if (b.scrollTop === 0) {
+        isTrusted = 1
+    };
+    b.scrollTo(0, 0);
 }
 
-// Añadir un evento que llame a la función cada vez que el usuario hace scroll
-window.addEventListener("scroll", cambiarTamaño());
+document.addEventListener("DOMContentLoaded", resetPage);

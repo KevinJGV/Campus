@@ -4,6 +4,7 @@
     color: white;
     /* border: solid 1px; */
     font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 html,
@@ -47,27 +48,23 @@ body {
     color: black;
     padding: 20px;
     border-radius: 0 0 50px 0;
-}
+    display: none;
+    }
 
 .topbg {
-    position: fixed;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-    width: 100vw;
-    height: 113vh;
-    transform: scale(0.9);
-    transition: transform 0.5s;
-    scroll-snap-align: start;
-    overflow: hidden;
-}
-
-.topbg * {
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 0;
+	width: 90vw;
+	height: 100%;
+	transition: all 0.2s cubic-bezier(.22,.61,.36,1);
+	overflow: hidden;
+	left: 50%;
+    top: 65px;
+	transform: translateX(-50%);
     border-radius: 30px 30px 0 0;
 }
+
 
 .bgblack {
     background-color: black;
@@ -556,6 +553,7 @@ body {
     left: 45%;
     right: 50%;
     top: 80px;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 .navbutton {
@@ -645,6 +643,7 @@ body {
     bottom: 15px;
     backdrop-filter: blur(1rem);
     z-index: 2;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 
@@ -708,14 +707,15 @@ body {
 
 .mainlayer {
     position: absolute;
-    left: 16%;
-    right: 8%;
+    left: 22%;
+    right: 10%;
     top: 0;
     bottom: 0;
     height: fit-content;
     transform: translateX(-8%);
     transition: transform 0.5s;
     scroll-snap-align: center;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 .seccion1 {
@@ -744,6 +744,8 @@ body {
     view-timeline-axis: block;
     animation-timeline: --h1;
     animation-name: porfolio;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
+    padding-right: 100px;
 }
 
 @keyframes porfolio {
@@ -990,11 +992,15 @@ body {
     }
 }
 
+.divHypervinculosline {
+    height: 46px;
+}
+
 .Hypervinculosline {
     text-decoration: none;
     font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-weight: Bold;
-    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
+    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem);
 }
 
 .Hypervinculosline:hover {
