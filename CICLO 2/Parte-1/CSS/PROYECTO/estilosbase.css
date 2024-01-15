@@ -3,7 +3,9 @@
 * {
     color: white;
     /* border: solid 1px; */
-    font-family: 'dela gothic one','DelaGothicOne-Regular',DelaGothicOne-Regular , sans-serif;
+    font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
+    scroll-behavior: smooth;
 }
 
 html,
@@ -15,27 +17,30 @@ body {
     padding: 0;
     margin: 0;
     position: relative;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-.advice{
+.advice {
     background-color: white;
     position: fixed;
     width: 100%;
     height: 100%;
-    padding-block: 30% ;
+    padding-block: 30%;
     text-align: center;
     justify-content: center;
     visibility: hidden;
     z-index: 9999;
 }
-.advice h1{
+
+.advice h1 {
     color: black;
     font-family: sans-serif;
     font-size: 1;
 }
 
-.alpha{
+.alpha {
     position: fixed;
     z-index: 50;
     width: fit-content;
@@ -44,19 +49,23 @@ body {
     color: black;
     padding: 20px;
     border-radius: 0 0 50px 0;
-}
+    display: none;
+    }
 
 .topbg {
-    position: fixed;
-    box-sizing: border-box;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 0;
+	width: 100vw;
+	height: 100%;
+	transition: all 0.2s cubic-bezier(.22,.61,.36,1);
+	overflow: hidden;
+	left: 50%;
     top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-    width: 100vw;
-    height: 100vh;
+	transform: translateX(-50%);
+    border-radius: 0;
 }
+
 
 .bgblack {
     background-color: black;
@@ -544,6 +553,8 @@ body {
     z-index: 3;
     left: 45%;
     right: 50%;
+    top: 20px;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 .navbutton {
@@ -589,29 +600,26 @@ body {
 }
 
 #desplegar:target+.menu {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: white;
-    position: fixed;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 100%;
-    height: clamp(100%, 1.0774rem + 3.7936vw, 100%);
-    border-radius: 0;
-    transition: ease-in 0.4s;
-    padding-bottom: 1%;
-    /* padding: 5%; */
-    box-sizing: border-box;
-    overflow: hidden;
-    z-index: 9;
+    display: flex;
+	position: fixed;
+	top: 0;
+	height: clamp(100%, 1.0774rem + 3.7936vw, 100%);
+	border-radius: 0;
+	transition: ease-in 0.4s;
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 9;
+	flex-flow: column;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
 }
 
 #lownavbutton {
     width: fit-content;
     margin-inline: 48%;
     align-items: center;
-    height: 50%;
+    height: 5%;
 }
 
 #lownavbutton hr {
@@ -627,13 +635,13 @@ body {
     border: #757573 1px solid;
     border-radius: 7pt;
     position: fixed;
-    left: 10px;
+    left: 60px;
     width: 55px;
-    height: 200px;
-    top: 45%;
-    bottom: 50%;
+    height: 95%;
+    bottom: 15px;
     backdrop-filter: blur(1rem);
     z-index: 2;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 
@@ -645,7 +653,7 @@ body {
     overflow: hidden;
     margin-block: 0;
     font-size: 2rem;
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
 }
 
 .style1 a {
@@ -662,12 +670,14 @@ body {
     padding: 0;
     box-sizing: border-box;
     height: fit-content;
+    position: absolute;
+    bottom: 50px;
 }
 
 .kglabel * {
     font-size: 2rem;
     width: fit-content;
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
     transform: rotate(-90deg);
 
 }
@@ -686,59 +696,28 @@ body {
     z-index: 3;
 }
 
+.containermainlayer {
+    width: 100vw;
+    height: 4690px;
+    position: absolute;
+
+}
+
 .mainlayer {
     position: absolute;
-    left: 16%;
+    left: 22%;
     right: 8%;
     top: 0;
     bottom: 0;
-    height: 350vh;
+    height: fit-content;
+    transform: translateX(-8%);
+    transition: transform 0.5s;
+    scroll-snap-align: center;
+    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
 }
-.Hypervinculos {
-    margin: clamp(8rem, 1.0774rem + 3.7936vh, 8rem);
-    display: block;
-    text-align: center;
-    font-size: clamp(5rem, 1.0774rem + 3.7936vh, 10rem);
-    text-decoration: none;
-}
-
-.Hypervinculos:hover {
-    text-decoration: line-through;
-}
-
-.techtools {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0;
-    box-sizing: border-box;
-    ;
-
-}
-
-.tool {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
-
-.tool img {
-    width: 90%;
-    margin-block: 20px;
-    filter: drop-shadow(16px 7px 8px #7b7b7b9c);
-    border-left: none;
-    border-bottom: none;
-    border-radius: 10pt;
-}
-
-.tool h3 {
-    font-family: 'alumni sans','AlumniSans-VariableFont_wght',AlumniSans-VariableFont_wght,sans-serif;
-}
-
 .typing-demo {
     display: inline;
-    font-family: poppins,'Poppins-Medium',Poppins-Medium,sans-serif;
+    font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-size: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
     animation: blink .5s step-end infinite alternate 2s;
     border-right: 10px solid rgba(255, 255, 255, 0.87);
@@ -750,16 +729,20 @@ body {
     }
 }
 
+.divHypervinculosline {
+    height: 46px;
+}
+
 .Hypervinculosline {
     text-decoration: none;
-    font-family: poppins,'Poppins-Medium',Poppins-Medium,sans-serif;
+    font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-weight: Bold;
-    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem)
+    font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem);
 }
 
 .Hypervinculosline:hover {
     text-decoration: line-through;
-    font-family: 'dela gothic one','DelaGothicOne-Regular',DelaGothicOne-Regular , sans-serif;
+    font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
 }
 
 .circle {
@@ -791,7 +774,6 @@ body {
     width: 100%;
     border-radius: 100px;
 }
-
 
 .footer hr {
     border: 0.1px;
@@ -830,34 +812,35 @@ body {
 }
 
 @media (min-width:319px) and (max-width:719px) {
-    html,body{
+    html,
+    body {
         overflow-x: hidden;
-    }   
+    }
 
-    .lateralbar{
+    .lateralbar {
         visibility: hidden;
     }
 
-    .menu a{
+    .menu a {
         font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
         height: 20px;
         align-content: center;
     }
 
-    #lownavbutton{
+    #lownavbutton {
         margin-inline: 40%;
     }
 
-    .navcontainer{
-        left:38%;
+    .navcontainer {
+        left: 38%;
         right: 50%;
     }
 
-    .typing-demo{
+    .typing-demo {
         font-size: clamp(1rem, 1.0774rem + 3.7936vw, 3rem);
     }
 
-    .Hypervinculosline{
+    .Hypervinculosline {
         font-size: clamp(0.5rem, 1.0774rem + 3.7936vw, 1.5rem)
     }
 
@@ -866,15 +849,21 @@ body {
         border-radius: 50%;
         position: relative;
         bottom: auto;
-        float:none;
+        float: none;
         display: block;
         margin-bottom: 50px;
         animation: spin 7s linear infinite;
-    }       
+    }   
 }
 
-@media (min-width:719px) and (max-width:920px) {
+@media (min-width:719px) and (max-width:1000px) {
 
+}
+
+@media (max-width:1024px) {
+    .lateralbar {
+        display: none;
+    }
 }
 
 /************************************************************************FINAL DE DISEÑO DE PAGINA **************************************************************************************************************/

@@ -1144,6 +1144,10 @@ body {
         font-size: clamp(0.1rem, 1.0774rem + 3.7936vw, 10rem)
     }
 
+    .freelance {
+        position:relative;
+    }
+
     .parrafo {
         margin-top: 50px;
         padding-block: 13rem;
@@ -1197,7 +1201,7 @@ body {
     }
 }
 
-@media (min-width:719px) and (max-width:920px) {
+@media (min-width:719px) and (max-width:1000px) {
     .seccion2 h2 span {
         opacity: 30%;
     }
@@ -1229,5 +1233,11 @@ body {
         margin-block: 4rem;
         font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
         text-decoration: none;
+    }
+}
+
+@media (max-width:1024px) {
+    .lateralbar {
+        display: none;
     }
 }
