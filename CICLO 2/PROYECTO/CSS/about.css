@@ -1,0 +1,242 @@
+.eq-bar {
+    fill: #1ED760;
+    transform: scale(1, -1) translate(0, -24px);
+}
+
+.eq-bar--1 {
+    animation-name: short-eq;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+.eq-bar--1 {
+    animation-name: short-eq;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+.eq-bar--2 {
+    animation-name: tall-eq;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.17s;
+}
+
+.eq-bar--3 {
+    animation-name: short-eq;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.34s;
+}
+
+@keyframes short-eq {
+    0% {
+        height: 8px
+    }
+
+    50% {
+        height: 4px
+    }
+
+    100% {
+        height: 8px
+    }
+}
+
+@keyframes tall-eq {
+    0% {
+        height: 16px
+    }
+
+    50% {
+        height: 6px
+    }
+
+    100% {
+        height: 16px
+    }
+}
+
+
+
+#mainalumni {
+    grid-area: 1/1/2/3;
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: clamp(3rem, 1.0774rem + 3.7936vw, 5rem);
+}
+
+.seccion1 p {
+    grid-area: 2/1/3/2;
+    margin: 0;
+}
+
+
+
+#alumni {
+    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2rem);
+}
+
+.spotify {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 450px;
+    margin-block: 2rem;
+}
+
+.player {
+    position: relative;
+    width: 330px;
+    display: grid;
+    grid-template-columns: auto auto 2fr;
+    border: #1ED760 solid 1px;
+    border-radius: 8px;
+    line-height: 3px;
+}
+
+.player p {
+    color: #1ED760;
+    width: 140px;
+}
+
+svg {
+    margin: 3px;
+}
+
+.carrousel {
+    width: 155px;
+    overflow: hidden;
+}
+
+.textoscroll {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll 5s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.spotify label {
+    text-align: center;
+    margin: 10px;
+    color: #666666;
+}
+
+.spotify a {
+    color: #939393;
+}
+
+.spotify label::before {
+    content: url('../../IMG/spotify-white.webp');
+    margin-right: 5px;
+}
+
+.seccion2 p {
+    font-size: clamp(1rem, 1.0774rem + 3.7936vw, 1.5rem);
+}
+
+.bgtools {
+    background-color: #8a8a8a21;
+    backdrop-filter: blur(0.5rem);
+    padding-block: 10px;
+    border: #66666636 solid 1px;
+    border-radius: 8px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(20, auto);
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 1rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-track-color: #1ED760;
+}
+
+.tool {
+    background-color: #8a8a8a21;
+    backdrop-filter: blur(0.5rem);
+    padding-block: 10px;
+    border: #66666636 solid 1px;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.tool1 {
+    visibility: hidden;
+    margin-left: 420px
+}
+
+.tool img {
+    width: 100%;
+
+}
+
+
+@media (min-width:719px) and (max-width:920px) {}
+
+@media screen and (max-width:1200px) {
+    .seccion1 {
+        height: fit-content;
+        display: block;
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 1.5rem);
+        margin-top: 200px;
+    }
+
+    .avatar {
+        display: block;
+        text-align: center;
+        border-radius: 200%;
+        margin: 5%;
+    }
+
+    .avatar img {
+        width: clamp(50%, 1.0774rem + 3.7936vw, 85%);
+        border-radius: 200%;
+        filter: drop-shadow(0 0 20px gray);
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .seccion1 {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 1.5rem);
+        margin-top: 200px;
+    }
+
+    .avatar {
+        grid-area: 2/2/3/3;
+        justify-self: right;
+        right: -200px;
+        width: clamp(500px, 1.0774rem + 3.7936vw, 900px);
+        border-radius: 200%;
+    }
+
+    .avatar img {
+        width: 100%;
+        border-radius: 200%;
+        filter: drop-shadow(0 0 20px gray);
+    }
+}
