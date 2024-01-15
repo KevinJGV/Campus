@@ -5,7 +5,6 @@
     /* border: solid 1px; */
     font-family: 'dela gothic one', 'DelaGothicOne-Regular', DelaGothicOne-Regular, sans-serif;
     transition: all 0.2s cubic-bezier(.22,.61,.36,1);
-    scroll-behavior: smooth;
 }
 
 *::selection {
