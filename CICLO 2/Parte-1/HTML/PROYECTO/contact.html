@@ -57,14 +57,15 @@
     </div>
     <div class="containermainlayer">
         <div class="mainlayer">
-            <div class="seccion1">
+            <div class="seccion">
                 <h1>Consultoria profesional</h1>
                 <br>
-                <p>Las empresas me contratan para ayudarles a crear soluciones digitales innovadoras y personalizadas,
+                <p class="p1">Las empresas me contratan para ayudarles a crear soluciones digitales innovadoras y
+                    personalizadas,
                     utilizando las mejores prácticas de desarrollo de software y diseño. Les ofrezco asesoramiento sobre
                     cómo elegir y combinar las herramientas adecuadas para sus proyectos, desde la programación hasta el
                     diseño sin código.</p>
-                <div class="mentoria">
+                <div class="tiers">
                     <h2>Mentoría para Desarrolladores y Diseñadores</h2>
                     <span>$99/30min</span>
                     <p>En esta sesión de mentoría de 30 minutos, podrás consultarme cualquier duda o problema que tengas
@@ -73,7 +74,7 @@
                     </p>
                     <a href="https://calendly.com/kgdevschedule/30min"><button>Agendar mentoria</button></a>
                 </div>
-                <div class="consulta">
+                <div class="tiers">
                     <h2>Consultoría para Empresas</h2>
                     <span>$299/hora</span>
                     <p>Hablemos sobre cómo puedo ayudarte a transformar tu idea en un producto digital funcional y
@@ -86,40 +87,36 @@
                             sesión</button></a>
                 </div>
             </div>
-            <div class="seccion2">
+            <div class="seccion altseccion">
                 <h1>Dame tu contacto</h1>
                 <br>
                 <p>Tambien soy amigable con consultas menos especificas, preguntas generales, sugerencias o propuestas
                     de
                     negocios.</p>
-                <div class="form">
-                    <fieldset>
-                        <legend>Nombre</legend>
-                        <br>
-                        <input type="text" name="nombre" id="nombre" maxlength="25" minlength="1"
-                            placeholder="Tu Nombre">
-                    </fieldset>
-                    <fieldset>
-                        <legend>E-mail</legend>
-                        <br>
-                        <input type="email" name="email" id="email" required>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Descripción</legend>
-                        <br>
-                        <input type="text" name="descripcion" id="descripcion" maxlength="500" minlength="1"
-                            placeholder="Haz tú consulta">
-                    </fieldset>
-                    <br>
+                <div class="formBox">
+                    <form action="">
+                        <div class="inputBox">
+                            <input type="text" name="nombre" id="nombre" maxlength="25" minlength="1" required="" placeholder=" ">
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" id="email" required="" placeholder=" ">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="descripcion" id="descripcion" maxlength="500" minlength="1" placeholder="Tú mensaje aquí" cols="10" rows="5"></textarea>
+                        </div>
+                    </form>
+                    <br><br>
                     <button type="submit">Enviar</button>
                 </div>
             </div>
-            <div class="seccion3">
+            <div class="seccion altseccion">
                 <h1>... O enviame un e-mail</h1>
                 <br>
                 <p>Puede tardar un poco en que recibas mi respuesta, pero seguro que mas de una semana no vas a tener
                     que
-                    esperar <span>(si no es spam, claro)</span>.</p>
+                    esperar<br><strong>(si no es spam, claro)</strong>.</p>
                 <br>
                 <a
                     href="mailto:noseasapo@sapo.com?subject=¡Hola%20Kevin!%20Estoy%20interesad@%20en%20comunicarme%20contigo.">noseasapo@sapo.com</a>

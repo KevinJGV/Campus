@@ -1,8 +1,210 @@
+h1 {
+    font-family: poppins;
+    font-size: 4rem;
+    font-weight: 501;
+}
+
+h2 {
+    font-family: poppins;
+    font-size: 2.47rem;
+    font-weight: 501;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1.52rem;
+    font-weight: normal;
+}
+
+.seccion {
+    margin-top: 150px;
+}
+
+.p1 {
+    margin-bottom: 100px;
+}
+
+.tiers {
+    padding: 5%;
+    background: #17171771;
+    border: #4F4F4F solid 0.5px;
+    border-radius: 10px;
+    margin-top: 60px;
+    backdrop-filter: blur(0.5rem);
+    box-shadow: 0 0 120px -68px;
+}
+
+.tiers h2 {
+    margin-top: -5px;
+    display: inline;
+    line-height: 1.2;
+}
+
+.tiers span {
+    font-family: poppins;
+    font-size: 1.8rem;
+    margin-inline: 30px;
+    background: #171717;
+    border-radius: 10px;
+    border: #4F4F4F solid 0.5px;
+    padding: 1%;
+}
+
+.tiers p {
+    color: #858585;
+}
+
+button {
+    background: #D9D9D9;
+    color: #171717;
+    padding: 10px 40px;
+    font-size: 1.8rem;
+    font-family: poppins;
+    font-weight: 501;
+    border-radius: 10px;
+    border: red solid;
+    margin-top: 20px;
+}
+
+button:active{
+    outline: red solid 0.2rem;
+    background: #b0b0b0;
+    transform: scale(0.9);
+}
+
+.altseccion {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.altseccion h1 {
+    text-align: center;
+}
+
+.altseccion p {
+    padding-inline: 11%;
+}
+.altseccion a {
+    text-align: center;
+	font-size: clamp(3rem, 1.0774rem + 3.7936vw, 6rem);
+	font-family: poppins;
+	font-weight: 501;
+    text-decoration: none;
+	margin-block: 4%;
+}
+
+.altseccion a:hover {
+    text-decoration: underline;
+}
+
+.formBox {
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.inputBox {
+    position: relative;
+    ;
+    flex-grow: 1;
+    padding: 50px 100px 0 100px;
+}
+
+input {
+    width: 100%;
+    font-size: 1rem;
+    font-family: poppins;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+input::selection {
+    background: rgba(133, 133, 133, 0.776);
+}
+
+input::-moz-selection {
+    background: rgba(133, 133, 133, 0.776);
+}
+
+input::-webkit-selection {
+    background: rgba(133, 133, 133, 0.776);
+}
+
+label {
+    position: absolute;
+    top: 35px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #858585;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+textarea {
+    font-family: poppins;
+    width: 100%;
+    background: #17171771;
+    border-bottom: #4F4F4F solid 0.5px;
+    border-radius: 5px;
+    backdrop-filter: blur(0.5rem);
+    
+}
+
+textarea::selection {
+    background: rgba(133, 133, 133, 0.776);
+}
+
+textarea:focus {
+    outline: rgba(255, 0, 0, 0.55) solid;
+    border: transparent solid;
+}
+
+textarea::-moz-selection {
+    background: rgba(133, 133, 133, 0.776);
+}
+
+textarea::-webkit-selection {
+    background: rgba(133, 133, 133, 0.776);
+}
+
+strong {
+    color: #858585;
+}
+
 
 @media (min-width:319px) and (max-width:719px) {
+    .altseccion h1 {
+        text-align: left;
+    }
+    
+    .altseccion p {
+        padding-inline: 0;
+    }
 
+    h1 {
+        font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
+    }
+    
+    h2 {
+        font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2.47rem);
+    }
 }
 
-@media (min-width:719px) and (max-width:1000px) {
-
-}
+@media (min-width:719px) and (max-width:1000px) {}
