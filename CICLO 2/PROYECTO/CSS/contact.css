@@ -292,10 +292,34 @@ button:active {
 }
 
 .frame1 h2 {
-    text-align: center;
+	text-align: center;
+	margin-block: 60px;
 }
 
-.checkout_formBox {}
+.checkout_formBox form {
+	gap: 40px;
+	margin-block: 75px;
+    flex-flow: column wrap;
+}
+
+.checkout_inputBox {
+	position: relative;
+	flex: 1;
+	min-width: 295px;
+	width: 440px;
+}
+
+.checkout_inputBox label {
+    top: -10px;
+    color: #858585;
+}
+
+.checkout_inputBox input:focus~label,
+.checkout_inputBox input:not(:placeholder-shown)~label {
+    top: -30px;
+    color: #000;
+    font-size: 12px;
+}
 
 .checkout input {
     border-bottom: 1px solid #000;
