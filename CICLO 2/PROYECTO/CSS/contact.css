@@ -1,11 +1,11 @@
 h1 {
-    font-family: poppins;
+    font-family: 'Poppins-semibold';
     font-size: 4rem;
     font-weight: 501;
 }
 
 h2 {
-    font-family: poppins;
+    font-family: 'Poppins-semibold';
     font-size: 2.47rem;
     font-weight: 501;
 }
@@ -16,8 +16,14 @@ p {
     font-weight: normal;
 }
 
+.shopseccion {
+    display: flex;
+    gap: 50px;
+}
+
 .seccion {
     margin-top: 150px;
+    flex: 3;
 }
 
 .p1 {
@@ -36,40 +42,263 @@ p {
 
 .tiers h2 {
     margin-top: -5px;
-    display: inline;
+    display: inline-block;
     line-height: 1.2;
 }
 
 .tiers span {
-    font-family: poppins;
+    font-family: 'Poppins-Regular';
     font-size: 1.8rem;
-    margin-inline: 30px;
+    margin-inline: 2%;
     background: #171717;
     border-radius: 10px;
     border: #4F4F4F solid 0.5px;
     padding: 1%;
+    display: inline-block;
 }
 
 .tiers p {
     color: #858585;
 }
 
+h3 {
+    font-family: 'Poppins-semibold';
+}
+
+.subtiers {
+    margin-block: 60px;
+}
+
+.esps {
+    display: flex;
+    text-align: center;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.esps_card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.esps_card img {
+    width: 100px;
+}
+
+.esps_card p {
+    font-family: 'Poppins-bold';
+}
+
+.sessionCounter h3 {
+    text-align: center;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+}
+
+.counter button {
+    background: #5b5b5b54;
+    color: #9b9b9b;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'dela gothic one';
+    border-radius: 478px;
+    border: transparent;
+    margin-top: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.counter button:active {
+    background: #bdbdbd54;
+    color: #fff;
+    box-shadow: 0 0 83px 0px;
+    outline: #fff solid 1px;
+    transform: scale(0.7);
+}
+
+
+.less {}
+
+.inputCount {
+    text-align: center;
+    max-width: 30px;
+    margin-inline: 15px;
+    margin-bottom: unset;
+    background: rgba(133, 133, 133, 0.16);
+    border-radius: 10px 10px 0 0;
+}
+
+.more {}
+
+
 button {
     background: #D9D9D9;
     color: #171717;
     padding: 10px 40px;
     font-size: 1.8rem;
-    font-family: poppins;
+    font-family: 'Poppins-semibold';
     font-weight: 501;
     border-radius: 10px;
     border: red solid;
     margin-top: 20px;
+    align-self: center;
 }
 
-button:active{
+button:active {
     outline: red solid 0.2rem;
     background: #b0b0b0;
     transform: scale(0.9);
+}
+
+.shop {
+    flex: 1.5;
+    padding: 5% 20px;
+    background: #171717;
+    border: #4F4F4F solid 0.5px;
+    border-radius: 5px;
+    margin-top: 150px;
+    z-index: 7;
+}
+
+.shop * {
+    font-family: 'Poppins-Regular';
+}
+
+.query {
+    background: #00FF5B;
+    color: black;
+    border-radius: 278px;
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-family: Poppins-Bold;
+    font-size: 1.3rem;
+}
+
+.shop_sticky h2 {
+    display: inline-block;
+    padding-right: 83px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.shop_sticky_hr {
+    width: 274px;
+    margin-left: 5px;
+}
+
+.shop_sticky {
+    position: sticky;
+    top: 3.5px;
+    width: 400px;
+}
+
+.shop_resumen_head {
+    font-size: 1.5rem;
+}
+
+.precio {
+    padding-left: 5%;
+}
+
+.cantidad {
+    font-family: 'Poppins-semibold';
+}
+
+.shop_overflow {
+    overflow-y: auto;
+    max-height: 410px;
+}
+
+.shop_overflow_element {
+    display: flex;
+    gap: 10px;
+}
+
+.espsShoppedCantidad {
+    font-size: 1.5rem;
+    align-self: center;
+    flex: 0.5;
+}
+
+.shop_overflow_element img {
+    flex: 1;
+}
+
+.shop_overflow_hr {
+    width: 95%;
+    border-color: #858585;
+    margin-bottom: 20px;
+}
+
+.detail_element {
+    flex: 4;
+}
+
+.shop_total span {
+    font-family: 'Poppins-black';
+}
+
+.checkout {
+    position: fixed;
+    z-index: 2;
+    background: #F8F8F8;
+    left: 62.5%;
+    top: 0;
+    bottom: 0;
+    padding: 50px 20px;
+}
+
+.checkout * {
+    color: black;
+}
+
+.cancelar {
+    background: 0;
+    border: 0;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    font-family: 'Poppins-regular';
+    font-weight: 1;
+    font-size: 2rem;
+    line-height: 0.7;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 75px;
+}
+
+.cancelar:active {
+    background: 0;
+    outline: 0;
+
+}
+
+.cancelar:hover {
+    background: red;
+    color: white;
+}
+
+.frame1 h2 {
+    text-align: center;
+}
+
+.checkout_formBox {}
+
+.checkout input {
+    border-bottom: 1px solid #000;
 }
 
 .altseccion {
@@ -84,13 +313,14 @@ button:active{
 .altseccion p {
     padding-inline: 11%;
 }
+
 .altseccion a {
     text-align: center;
-	font-size: clamp(3rem, 1.0774rem + 3.7936vw, 6rem);
-	font-family: poppins;
-	font-weight: 501;
+    font-size: clamp(3rem, 1.0774rem + 3.7936vw, 6rem);
+    font-family: 'Poppins-semibold';
+    font-weight: 501;
     text-decoration: none;
-	margin-block: 4%;
+    margin-block: 4%;
 }
 
 .altseccion a:hover {
@@ -119,7 +349,7 @@ form {
 input {
     width: 100%;
     font-size: 1rem;
-    font-family: poppins;
+    font-family: 'Poppins-Regular';
     color: #fff;
     margin-bottom: 30px;
     border: none;
@@ -158,13 +388,13 @@ input:not(:placeholder-shown)~label {
 }
 
 textarea {
-    font-family: poppins;
+    font-family: 'Poppins-Regular';
     width: 100%;
     background: #17171771;
     border-bottom: #4F4F4F solid 0.5px;
     border-radius: 5px;
     backdrop-filter: blur(0.5rem);
-    
+
 }
 
 textarea::selection {
@@ -184,7 +414,21 @@ textarea::-webkit-selection {
     background: rgba(133, 133, 133, 0.776);
 }
 
-strong {
+.button {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.altseccion span {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    margin-inline: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    padding: 0;
     color: #858585;
 }
 
@@ -193,7 +437,7 @@ strong {
     .altseccion h1 {
         text-align: left;
     }
-    
+
     .altseccion p {
         padding-inline: 0;
     }
@@ -201,7 +445,7 @@ strong {
     h1 {
         font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
     }
-    
+
     h2 {
         font-size: clamp(1rem, 1.0774rem + 3.7936vw, 2.47rem);
     }

@@ -1,4 +1,5 @@
-@import url(../../CSS/PROYECTO/fonts.css);
+@import url(fonts.css);
+
 
 * {
     color: white;
@@ -664,7 +665,7 @@ body {
     overflow: hidden;
     margin-block: 0;
     font-size: 2rem;
-    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
+    font-family: 'AlumniSans-VariableFont_wght', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
 }
 
 .style1 a {
@@ -688,9 +689,9 @@ body {
 .kglabel * {
     font-size: 2rem;
     width: fit-content;
-    font-family: 'alumni sans', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
+    font-family: 'AlumniSans-VariableFont_wght', 'AlumniSans-VariableFont_wght', AlumniSans-VariableFont_wght, sans-serif;
     transform: rotate(-90deg);
-
+    font-weight: 700    ;
 }
 
 .about {
@@ -728,7 +729,7 @@ body {
 }
 .typing-demo {
     display: inline;
-    font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
+    font-family: 'Poppins-Bold', 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-size: clamp(2rem, 1.0774rem + 3.7936vh, 4rem);
     animation: blink .5s step-end infinite alternate 2s;
     border-right: 10px solid rgba(255, 255, 255, 0.87);
@@ -746,7 +747,7 @@ body {
 
 .Hypervinculosline {
     text-decoration: none;
-    font-family: poppins, 'Poppins-Medium', Poppins-Medium, sans-serif;
+    font-family: 'Poppins-Regular', 'Poppins-Medium', Poppins-Medium, sans-serif;
     font-weight: Bold;
     font-size: clamp(1.5rem, 1.0774rem + 3.7936vh, 2rem);
 }
