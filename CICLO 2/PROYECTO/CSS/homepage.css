@@ -24,7 +24,7 @@
     view-timeline-axis: block;
     animation-timeline: --h1;
     animation-name: porfolio;
-    transition: all 0.2s cubic-bezier(.22,.61,.36,1);
+    transition: all 0.2s cubic-bezier(.22, .61, .36, 1);
     padding-right: 100px;
 }
 
@@ -334,7 +334,7 @@
     }
 
     .freelance {
-        position:relative;
+        position: relative;
     }
 
     .parrafo {
@@ -404,5 +404,28 @@
         margin-block: 4rem;
         font-size: clamp(2rem, 1.0774rem + 3.7936vw, 4rem);
         text-decoration: none;
+    }
+}
+
+@media (min-width:1044px) and (max-width:2586px) {
+    .porfolio {
+        top: 36rem;
+
+        font-size: clamp(3rem, 1.0774rem + 3.7936vw, 9rem);
+
+    }
+
+    .freelance {
+        top: 64rem;
+        font-size: clamp(0.1rem, 0.2774rem + 0.7936vw, 1.5rem);
+    }
+
+    .hola {
+        top: 61rem;
+    }
+
+    .parrafo {
+        padding-top: 42rem;
+        font-size: clamp(1.5rem, 1.2774rem + 1.7936vw, 3rem);
     }
 }

@@ -240,3 +240,7 @@ svg {
         filter: drop-shadow(0 0 20px gray);
     }
 }
+
+@media (min-width:1044px) and (max-width:2586px) {
+ 
+}
