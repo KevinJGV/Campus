@@ -1,4 +1,4 @@
-const d = document;
+export const d = document;
 const b = d.querySelector("body");
 
 function resetPage() {

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script defer src="Js/codigoBase.js"></script>
-    <script defer src="Js/contact.js"></script>
+    <script defer src="Js/codigoBase.js" type="module"></script>
+    <script defer src="Js/contact.js" type="module"></script>
 </head>
 
 <body>
@@ -79,50 +79,50 @@
                             para mejorar tu trabajo y tu aprendizaje. Esta sesión no se trata de hacer el trabajo por
                             ti.
                         </p>
-                        <div class="subtiers hidden">
+                        <div id="subtier1" class="subtiers hidden">
                             <h3>Selecciona hasta 2 especificaciones que desees tratar por mentoría:</h3>
                             <div class="esps">
                                 <div class="esps_card">
                                     <img src="IMG/searchf.svg" alt="Revisión de Código" srcset="">
                                     <p>Revisión de Código</p>
                                     <div class="counter">
-                                        <button class="less">-</button>
+                                        <button id="añadir1_op1_less">-</button>
                                         <input type="text" id="inputCountU_1" value="0" class="inputCount" maxlength="1"
                                             readonly>
-                                        <button class="more">+</button>
+                                        <button id="añadir1_op1_more">+</button>
                                     </div>
                                 </div>
                                 <div class="esps_card">
                                     <img src="IMG/turbo.svg" alt="Optimización del Diseño" srcset="">
                                     <p>Optimización del Diseño</p>
                                     <div class="counter">
-                                        <button class="less">-</button>
+                                        <button id="añadir1_op2_less">-</button>
                                         <input type="text" id="inputCountU_2" value="0" class="inputCount" maxlength="1"
                                             readonly>
-                                        <button class="more">+</button>
+                                        <button id="añadir1_op2_more">+</button>
                                     </div>
                                 </div>
                                 <div class="esps_card">
                                     <img src="IMG/strategy.svg" alt="Estrategias de Trabajo" srcset="">
                                     <p>Estrategias de Trabajo</p>
                                     <div class="counter">
-                                        <button class="less">-</button>
+                                        <button id="añadir1_op3_less">-</button>
                                         <input type="text" id="inputCountU_3" value="0" class="inputCount" maxlength="1"
                                             readonly>
-                                        <button class="more">+</button>
+                                        <button id="añadir1_op3_more">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="button">
-                            <button type="submit">Añadir</button>
+                            <button id="añadir1" type="submit">Añadir</button>
                         </div>
                         <div class="sessionCounter hidden">
                             <h3>Mentorías para agendar</h3>
                             <div class="counter">
-                                <button class="less">-</button>
+                                <button id="añadir1_less">-</button>
                                 <input type="text" id="inputCountU" value="0" class="inputCount" maxlength="1" readonly>
-                                <button class="more">+</button>
+                                <button id="añadir1_more">+</button>
                             </div>
                         </div>
                     </div>
@@ -137,53 +137,52 @@
                             tu
                             proyecto, así como sobre qué herramientas y plataformas usar para optimizar el proceso y el
                             resultado.</p>
-                        <div class="subtiers hidden">
+                        <div id="subtier2" class="subtiers hidden">
                             <h3>Selecciona hasta 2 especificaciones que desees tratar por consultoria:</h3>
                             <div class="esps">
                                 <div class="esps_card">
                                     <img src="IMG/raceflag.svg" alt="Análisis Competitivo" srcset="">
                                     <p>Análisis Competitivo</p>
                                     <div class="counter">
-                                        <button class="less">-</button>
+                                        <button id="añadir2_op1_less">-</button>
                                         <input type="text" id="inputCountE_1" value="0" class="inputCount" maxlength="1"
                                             readonly>
-                                        <button class="more">+</button>
+                                        <button id="añadir2_op1_more">+</button>
                                     </div>
                                 </div>
                                 <div class="esps_card">
                                     <img src="IMG/gears.svg" alt="Optimización Operativa" srcset="">
                                     <p>Optimización Operativa</p>
                                     <div class="counter">
-                                        <button class="less">-</button>
+                                        <button id="añadir2_op2_less">-</button>
                                         <input type="text" id="inputCountE_2" value="0" class="inputCount" maxlength="1"
                                             readonly>
-                                        <button class="more">+</button>
+                                        <button id="añadir2_op2_more">+</button>
                                     </div>
                                 </div>
                                 <div class="esps_card">
                                     <img src="IMG/web.svg" alt="Estrategia Digital" srcset="">
                                     <p>Estrategia Digital</p>
                                     <div class="counter">
-                                        <button class="less">-</button>
+                                        <button id="añadir2_op3_less">-</button>
                                         <input type="text" id="inputCountE_3" value="0" class="inputCount" maxlength="1"
                                             readonly>
-                                        <button class="more">+</button>
+                                        <button id="añadir2_op3_more">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="button">
-                            <button type="submit">Añadir</button>
+                            <button id="añadir2" type="submit">Añadir</button>
                         </div>
                         <div class="sessionCounter hidden">
                             <h3>Consultorías para agendar</h3>
                             <div class="counter">
-                                <button class="less">-</button>
+                                <button id="añadir2_less">-</button>
                                 <input type="text" id="inputCountE" value="0" class="inputCount" maxlength="1" readonly>
-                                <button class="more">+</button>
+                                <button id="añadir2_more">+</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="shop hidden">
