@@ -1,3 +1,7 @@
+.hidden {
+    display: none !important;
+}
+
 h1 {
     font-family: 'Poppins-semibold';
     font-size: 4rem;
@@ -24,6 +28,7 @@ p {
 .seccion {
     margin-top: 150px;
     flex: 3;
+    width: 100%;
 }
 
 .p1 {
@@ -172,6 +177,12 @@ button:active {
     font-family: 'Poppins-Regular';
 }
 
+.shopHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .query {
     background: #00FF5B;
     color: black;
@@ -188,7 +199,6 @@ button:active {
 
 .shop_sticky h2 {
     display: inline-block;
-    padding-right: 83px;
     padding-left: 10px;
     margin-bottom: 10px;
 }
@@ -201,7 +211,6 @@ button:active {
 .shop_sticky {
     position: sticky;
     top: 3.5px;
-    width: 400px;
 }
 
 .shop_resumen_head {
@@ -242,6 +251,11 @@ button:active {
     margin-bottom: 20px;
 }
 
+.shop_total h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
 .detail_element {
     flex: 4;
 }
@@ -250,10 +264,32 @@ button:active {
     font-family: 'Poppins-black';
 }
 
+.mobilecart {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: #FFF;
+    color: black;
+    font-family: 'Poppins-Regular';
+    border-radius: 955px;
+    line-height: 60px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.mobilecart img {
+    width: 30px;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
 .checkout {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     background: #F8F8F8;
+    right: 0;
     left: 62.5%;
     top: 0;
     bottom: 0;
@@ -291,22 +327,32 @@ button:active {
     color: white;
 }
 
+.frame1 {
+    height: 100%;
+}
+
 .frame1 h2 {
-	text-align: center;
-	margin-block: 60px;
+    text-align: center;
+    margin-block: 60px;
+    margin-bottom: 0;
+}
+
+.checkout_formBox {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .checkout_formBox form {
-	gap: 40px;
-	margin-block: 75px;
+    gap: 24px;
+    margin-block: 40px 10px;
     flex-flow: column wrap;
 }
 
 .checkout_inputBox {
-	position: relative;
-	flex: 1;
-	min-width: 295px;
-	width: 440px;
+    position: relative;
+    flex: 1;
+    min-width: 295px;
+    width: 440px;
 }
 
 .checkout_inputBox label {
@@ -325,6 +371,46 @@ button:active {
     border-bottom: 1px solid #000;
 }
 
+.checkout_inputBox textarea {
+    background: #5a5a5a71;
+    border: 0;
+}
+
+.checkout_inputBox textarea:focus,
+.checkout_inputBox textarea:not(:placeholder-shown) {
+    background: #99999971;
+    outline: none;
+    border: 0;
+}
+
+.frame2 {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.frame2 img {
+    flex: 2;
+}
+
+.frame2 p {
+    flex: 1.5;
+}
+
+.mobilshop * {
+    font-family: 'Poppins-Regular';
+}
+
+.mobilshop .shopHead{
+    justify-content: center;
+}
+.mobilshop hr {
+    width: 100%;
+}
+
 .altseccion {
     display: flex;
     flex-flow: column wrap;
@@ -334,13 +420,10 @@ button:active {
     text-align: center;
 }
 
-.altseccion p {
-    padding-inline: 11%;
-}
 
 .altseccion a {
     text-align: center;
-    font-size: clamp(3rem, 1.0774rem + 3.7936vw, 6rem);
+    font-size: clamp(0.5rem, 0.6774rem + 3.7936vw, 6rem);
     font-family: 'Poppins-semibold';
     font-weight: 501;
     text-decoration: none;
@@ -357,10 +440,15 @@ button:active {
 
 form {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-content: center;
     gap: 5px;
+}
+
+.nameemail {
+    display: flex;
+    align-self: center;
 }
 
 .inputBox {
@@ -418,7 +506,7 @@ textarea {
     border-bottom: #4F4F4F solid 0.5px;
     border-radius: 5px;
     backdrop-filter: blur(0.5rem);
-
+    resize: none;
 }
 
 textarea::selection {
@@ -456,7 +544,6 @@ textarea::-webkit-selection {
     color: #858585;
 }
 
-
 @media (min-width:319px) and (max-width:719px) {
     .altseccion h1 {
         text-align: left;
@@ -475,4 +562,167 @@ textarea::-webkit-selection {
     }
 }
 
-@media (min-width:719px) and (max-width:1000px) {}
+@media (max-width:560px) {
+    .seccion {
+        margin-top: 85px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .tiers span {
+        font-size: 1.3rem;
+    }
+
+    .esps {
+        flex-flow: column;
+        gap: 40px;
+    }
+
+    .esps_card img {
+        width: 50px;
+    }
+
+    .inputBox {
+        position: relative;
+        flex-grow: 1;
+        padding: 16px 19px;
+    }
+
+    button {
+        margin-top: 20px;
+    }
+
+    .altseccion p {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .nameemail {
+        flex-flow: column;
+        align-self: normal;
+    }
+
+    .checkout {
+        position: fixed;
+        z-index: 3;
+        background: #F8F8F8;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        padding: 50px 20px;
+    }
+    
+    .checkout_formBox {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    
+    .checkout_formBox form {
+        gap: 24px;
+        margin-block: 40px 10px;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+
+    .checkout_inputBox {
+        position: relative;
+        flex: 1;
+        max-width: 90%;
+    }
+    
+    .button {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        transform: scale(0.7);
+    }
+}
+
+@media (min-width:901px) {
+    .mobilecart {
+        display: none;
+    }
+
+    .frame3 {
+        display: none;
+    }
+}
+
+@media (max-width:900px) {
+    .shop {
+        display: none;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .mainlayer {
+        left: 12%;
+        width: 90%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .checkout {
+        left: 30%;
+    }
+
+
+}
+
+@media (min-width:1024px) and (max-width:1440px) {
+    .checkout_inputBox {
+        width: clamp(0.1rem, 0.2774rem + 0.7936vw, 1.5rem);
+        ;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1440px) {
+    .checkout_inputBox {
+        width: clamp(0.1rem, 0.2774rem + 0.7936vw, 1.5rem);
+        ;
+    }
+}
+
+@media (min-width:1811px) and (max-width:2586px) {
+    .shop_overflow {
+        max-height: none;
+    }
+
+    .shopHead {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .shop_sticky_hr {
+        width: 100%;
+    }
+}
+
+@media (min-width:1900px) and (max-width:2586px) {
+    .frame1 h2 {
+        font-size: clamp(2rem, 0.4774rem + 1.7936vw, 3.5rem);
+    }
+
+    .checkout_inputBox {
+        min-width: 440px;
+        width: 550px;
+    }
+
+    .checkout_inputBox textarea {
+        height: 120px;
+    }
+
+    .checkout_formBox form {
+        gap: 64px;
+    }
+
+    .checkout_inputBox * {
+        font-size: 1.5rem;
+    }
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/fonts.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script defer src="Js/codigoBase.js"></script>
+    <script defer src="Js/contact.js"></script>
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                             para mejorar tu trabajo y tu aprendizaje. Esta sesión no se trata de hacer el trabajo por
                             ti.
                         </p>
-                        <div class="subtiers">
+                        <div class="subtiers hidden">
                             <h3>Selecciona hasta 2 especificaciones que desees tratar por mentoría:</h3>
                             <div class="esps">
                                 <div class="esps_card">
@@ -113,8 +114,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button>Añadir</button>
-                        <div class="sessionCounter">
+                        <div class="button">
+                            <button type="submit">Añadir</button>
+                        </div>
+                        <div class="sessionCounter hidden">
                             <h3>Mentorías para agendar</h3>
                             <div class="counter">
                                 <button class="less">-</button>
@@ -134,7 +137,7 @@
                             tu
                             proyecto, así como sobre qué herramientas y plataformas usar para optimizar el proceso y el
                             resultado.</p>
-                        <div class="subtiers">
+                        <div class="subtiers hidden">
                             <h3>Selecciona hasta 2 especificaciones que desees tratar por consultoria:</h3>
                             <div class="esps">
                                 <div class="esps_card">
@@ -169,8 +172,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button>Añadir</button>
-                        <div class="sessionCounter">
+                        <div class="button">
+                            <button type="submit">Añadir</button>
+                        </div>
+                        <div class="sessionCounter hidden">
                             <h3>Consultorías para agendar</h3>
                             <div class="counter">
                                 <button class="less">-</button>
@@ -181,11 +186,15 @@
 
                     </div>
                 </div>
-                <div class="shop">
+                <div class="shop hidden">
                     <div class="shop_sticky">
-                        <h2>Tu canasta</h2>
-                        <span class="query"></span>
-                        <img src="IMG/shop.svg" alt="shop">
+                        <div class="shopHead">
+                            <h2>Tu canasta</h2>
+                            <div class="canasta">
+                                <span class="query"></span>
+                                <img src="IMG/shop.svg" alt="shop">
+                            </div>
+                        </div>
                         <hr class="shop_sticky_hr">
                         <br>
                         <div class="shop_resumen">
@@ -251,14 +260,16 @@
                     negocios.</p>
                 <div class="formBox">
                     <form action="">
-                        <div class="inputBox">
-                            <input type="text" name="nombre" id="nombre" maxlength="25" minlength="1" required=""
-                                placeholder=" ">
-                            <label for="nombre">Nombre</label>
-                        </div>
-                        <div class="inputBox">
-                            <input type="email" name="email" id="email" required="" placeholder=" ">
-                            <label for="email">E-mail</label>
+                        <div class="nameemail">
+                            <div class="inputBox">
+                                <input type="text" name="nombre" id="nombre" maxlength="25" minlength="1" required=""
+                                    placeholder=" ">
+                                <label for="nombre">Nombre</label>
+                            </div>
+                            <div class="inputBox">
+                                <input type="email" name="email" id="email" required="" placeholder=" ">
+                                <label for="email">E-mail</label>
+                            </div>
                         </div>
                         <div class="inputBox">
                             <textarea name="descripcion" id="descripcion" maxlength="500" minlength="1"
@@ -306,40 +317,108 @@
                 </div>
             </footer>
         </div>
-        <div class="checkout">
-            <button class="cancelar">x</button>
-            <div class="frame1">
-                <h2>Pago exitoso<br>Agendamiento de sesión</h2>
-                <div class="checkout_formBox">
-                    <form action="">
-                        <div class="checkout_inputBox">
-                            <input type="text" name="nombre" id="checkout_nombre" maxlength="25" minlength="1"
-                                required="" placeholder=" ">
-                            <label for="nombre">Nombre</label>
+        <div class="mobilecart">
+                <img src="IMG/shop copy.svg" alt="shop">
+        </div>
+        <div class="checkout hidden">
+            <div class="frames">
+                <button class="cancelar">x</button>
+                <div class="frame1">
+                    <h2>Pago exitoso<br>Agendamiento de sesión</h2>
+                    <div class="checkout_formBox">
+                        <form action="">
+                            <div class="checkout_inputBox">
+                                <input type="text" name="nombre" id="checkout_nombre" maxlength="25" minlength="1"
+                                    required="" placeholder=" ">
+                                <label for="nombre">Nombre</label>
+                            </div>
+                            <div class="checkout_inputBox">
+                                <input type="email" name="email" id="checkout_email" required="" placeholder=" ">
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="checkout_inputBox">
+                                <input type="tel" name="contacto" id="contacto" required="" placeholder=" ">
+                                <label for="contacto">Contacto</label>
+                            </div>
+                            <div class="checkout_inputBox">
+                                <input type="date" name="fecha" id="fecha" required="" placeholder=" ">
+                                <label for="fecha">Fecha de la primer sesión</label>
+                            </div>
+                            <div class="checkout_inputBox">
+                                <textarea name="descripcion" id="descripcion" maxlength="500" minlength="1"
+                                    placeholder="Descripcion de la sesiòn" cols="10" rows="3"></textarea>
+                            </div>
+                        </form>
+                        <div class="button">
+                            <button type="submit">Agendar</button>
                         </div>
-                        <div class="checkout_inputBox">
-                            <input type="email" name="email" id="checkout_email" required="" placeholder=" ">
-                            <label for="email">E-mail</label>
-                        </div>
-                        <div class="checkout_inputBox">
-                            <input type="number" name="contacto" id="contacto" required="" placeholder=" ">
-                            <label for="contacto">Contacto</label>
-                        </div>
-                        <div class="checkout_inputBox">
-                            <input type="date" name="fecha" id="fecha" required="" placeholder=" ">
-                            <label for="fecha">Fecha de la primer sesión</label>
-                        </div>
-                        <div class="checkout_inputBox">
-                            <textarea name="descripcion" id="descripcion" maxlength="500" minlength="1"
-                                placeholder="Descripcion de la sesiòn" cols="10" rows="3"></textarea>
-                        </div>
-                    </form>
-                    <div class="button">
-                        <button type="submit">Agendar</button>
                     </div>
                 </div>
-            </div>
-            <div class="frame2">
+                <div class="frame3">
+                    <div class="mobilshop">
+                        <div class="shop_sticky">
+                            <div class="shopHead">
+                                <h2>Tu canasta</h2>
+                            </div>
+                            <hr class="shop_sticky_hr">
+                            <br>
+                            <div class="shop_resumen">
+                                <div class="shop_resumen_head">
+                                    <span class="tierShoppedCantidad cantidad">x?</span>
+                                    <span class="tierShopped">ejemplo</span>
+                                    <span class="tierPrecio precio">$123 C/U</span>
+                                </div>
+                                <p>Desglozado en:</p>
+                                <div class="shop_overflow">
+                                    <div class="shop_overflow_element">
+                                        <span class="espsShoppedCantidad cantidad">xX</span>
+                                        <img src="IMG/turbo.svg" alt="">
+                                        <div class="detail_element">
+                                            <span class="espsShopped">Optimización del Diseño</span><br><span
+                                                class="espsPrecio precio">$20 C/U</span>
+                                            <h4 class="h4esps">
+                                                Consejos personalizados para mejorar la estética y usabilidad del diseño.
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <hr class="shop_overflow_hr">
+                                    <div class="shop_overflow_element">
+                                        <span class="espsShoppedCantidad cantidad">xX</span>
+                                        <img src="IMG/turbo.svg" alt="">
+                                        <div class="detail_element">
+                                            <span class="espsShopped">Optimización del Diseño</span><br><span
+                                                class="espsPrecio precio">$20 C/U</span>
+                                            <h4 class="h4esps">
+                                                Consejos personalizados para mejorar la estética y usabilidad del diseño.
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <hr class="shop_overflow_hr">
+                                    <div class="shop_overflow_element">
+                                        <span class="espsShoppedCantidad cantidad">xX</span>
+                                        <img src="IMG/turbo.svg" alt="">
+                                        <div class="detail_element">
+                                            <span class="espsShopped">Optimización del Diseño</span><br><span
+                                                class="espsPrecio precio">$20 C/U</span>
+                                            <h4 class="h4esps">
+                                                Consejos personalizados para mejorar la estética y usabilidad del diseño.
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <hr class="shop_overflow_hr">
+                                </div>
+                            </div>
+                            <div class="shop_total">
+                                <h2>Total a pagar: <span>$300</span></h2>
+                            </div>
+                            <div class="button shop_button">
+                                <button class="gocheck">CheckOut</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="frame2 hidden">
                 <img src="IMG/line-md check-all.svg" alt="">
                 <h2>¡Sesión Agendada!</h2>
                 <p>Recibira en su E-mail el comprobante de pago con el resumen de su agendamiento en un momento.</p>
