@@ -83,8 +83,8 @@
                             <h3>Selecciona hasta 2 especificaciones que desees tratar por mentoría:</h3>
                             <div class="esps">
                                 <div class="esps_card">
-                                    <img src="../IMG/searchf.svg" alt="Revisión de Código" srcset="">
-                                    <p>Revisión de Código</p>
+                                    <div id="tier1_img1" class="esps_card_img"></div>
+                                    <p id="tier1_p1">Revisión de Código</p>
                                     <div class="counter">
                                         <button id="añadir1_op1_less">-</button>
                                         <input type="text" id="inputCountU_1" value="0" class="inputCount" maxlength="1"
@@ -93,8 +93,8 @@
                                     </div>
                                 </div>
                                 <div class="esps_card">
-                                    <img src="../IMG/turbo.svg" alt="Optimización del Diseño" srcset="">
-                                    <p>Optimización del Diseño</p>
+                                    <div id="tier1_img2" class="esps_card_img"></div>
+                                    <p id="tier1_p2">Optimización del Diseño</p>
                                     <div class="counter">
                                         <button id="añadir1_op2_less">-</button>
                                         <input type="text" id="inputCountU_2" value="0" class="inputCount" maxlength="1"
@@ -103,8 +103,8 @@
                                     </div>
                                 </div>
                                 <div class="esps_card">
-                                    <img src="../IMG/strategy.svg" alt="Estrategias de Trabajo" srcset="">
-                                    <p>Estrategias de Trabajo</p>
+                                    <div id="tier1_img3" class="esps_card_img"></div>
+                                    <p id="tier1_p3">Estrategias de Trabajo</p>
                                     <div class="counter">
                                         <button id="añadir1_op3_less">-</button>
                                         <input type="text" id="inputCountU_3" value="0" class="inputCount" maxlength="1"
@@ -128,7 +128,7 @@
                     </div>
                     <div id="tier2" class="tiers">
                         <h2>Consultoría para Empresas</h2>
-                        <span>$299/hora</span>
+                        <span>$199/hora</span>
                         <p>Hablemos sobre cómo puedo ayudarte a transformar tu idea en un producto digital funcional y
                             atractivo, utilizando las últimas tecnologías y metodologías de desarrollo de software y
                             diseño.
@@ -141,8 +141,8 @@
                             <h3>Selecciona hasta 2 especificaciones que desees tratar por consultoria:</h3>
                             <div class="esps">
                                 <div class="esps_card">
-                                    <img src="../IMG/raceflag.svg" alt="Análisis Competitivo" srcset="">
-                                    <p>Análisis Competitivo</p>
+                                    <div id="tier2_img1" class="esps_card_img"></div>
+                                    <p id="tier2_p1">Análisis Competitivo</p>
                                     <div class="counter">
                                         <button id="añadir2_op1_less">-</button>
                                         <input type="text" id="inputCountE_1" value="0" class="inputCount" maxlength="1"
@@ -151,8 +151,8 @@
                                     </div>
                                 </div>
                                 <div class="esps_card">
-                                    <img src="../IMG/gears.svg" alt="Optimización Operativa" srcset="">
-                                    <p>Optimización Operativa</p>
+                                    <div id="tier2_img2" class="esps_card_img"></div>
+                                    <p id="tier2_p2">Optimización Operativa</p>
                                     <div class="counter">
                                         <button id="añadir2_op2_less">-</button>
                                         <input type="text" id="inputCountE_2" value="0" class="inputCount" maxlength="1"
@@ -161,8 +161,8 @@
                                     </div>
                                 </div>
                                 <div class="esps_card">
-                                    <img src="../IMG/web.svg" alt="Estrategia Digital" srcset="">
-                                    <p>Estrategia Digital</p>
+                                    <div id="tier2_img3" class="esps_card_img"></div>
+                                    <p id="tier2_p3">Estrategia Digital</p>
                                     <div class="counter">
                                         <button id="añadir2_op3_less">-</button>
                                         <input type="text" id="inputCountE_3" value="0" class="inputCount" maxlength="1"
@@ -198,55 +198,49 @@
                         <br>
                         <div class="shop_resumen">
                             <div class="shop_resumen_head">
-                                <span class="tierShoppedCantidad cantidad">x?</span>
-                                <span class="tierShopped">ejemplo</span>
-                                <span class="tierPrecio precio">$123 C/U</span>
+                                <span class="tierShoppedCantidad cantidad"></span>
+                                <span class="tierShopped"></span>
+                                <span class="tierPrecio precio"></span>
                             </div>
-                            <p>Desglozado en:</p>
-                            <div class="shop_overflow">
-                                <div class="shop_overflow_element">
-                                    <span class="espsShoppedCantidad cantidad">xX</span>
-                                    <img src="../IMG/turbo.svg" alt="">
-                                    <div class="detail_element">
-                                        <span class="espsShopped">Optimización del Diseño</span><br><span
-                                            class="espsPrecio precio">$20 C/U</span>
-                                        <h4 class="h4esps">
-                                            Consejos personalizados para mejorar la estética y usabilidad del diseño.
-                                        </h4>
+                            <div class="shop_body hidden">
+                                <p>Desglozado en:</p>
+                                <div class="shop_overflow">
+                                    <div id="element1" class="shop_overflow_element hidden">
+                                        <span id="item1Cantidad" class="espsShoppedCantidad cantidad"></span>
+                                        <div id="element1img" class="shop_overflow_element_img"></div>
+                                        <div class="detail_element">
+                                            <span id="element1name" class="espsShopped"></span><br><span
+                                                id="element1value" class="espsPrecio precio"></span>
+                                            <h4 id="element1des" class="h4esps"></h4>
+                                        </div>
+                                    </div>
+                                    <div id="element2" class="shop_overflow_element hidden">
+                                        <span id="item2Cantidad" class="espsShoppedCantidad cantidad"></span>
+                                        <div id="element2img" class="shop_overflow_element_img"></div>
+                                        <div class="detail_element">
+                                            <span id="element2name" class="espsShopped"></span><br>
+                                            <span id="element2value" class="espsPrecio precio"></span>
+                                            <h4 id="element2des" class="h4esps"></h4>
+                                        </div>
+                                    </div>
+                                    <div id="element3" class="shop_overflow_element hidden">
+                                        <span id="item3Cantidad" class="espsShoppedCantidad cantidad"></span>
+                                        <div id="element3img" class="shop_overflow_element_img"></div>
+                                        <div class="detail_element">
+                                            <span id="element3name" class="espsShopped"></span><br><span
+                                                id="element3value" class="espsPrecio precio"></span>
+                                            <h4 id="element3des" class="h4esps"></h4>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="shop_overflow_hr">
-                                <div class="shop_overflow_element">
-                                    <span class="espsShoppedCantidad cantidad">xX</span>
-                                    <img src="../IMG/turbo.svg" alt="">
-                                    <div class="detail_element">
-                                        <span class="espsShopped">Optimización del Diseño</span><br><span
-                                            class="espsPrecio precio">$20 C/U</span>
-                                        <h4 class="h4esps">
-                                            Consejos personalizados para mejorar la estética y usabilidad del diseño.
-                                        </h4>
-                                    </div>
+                                <div class="shop_total">
+                                    <h2>Total a pagar: <span id="totalamount"></span>
+                                    </h2>
                                 </div>
-                                <hr class="shop_overflow_hr">
-                                <div class="shop_overflow_element">
-                                    <span class="espsShoppedCantidad cantidad">xX</span>
-                                    <img src="../IMG/turbo.svg" alt="">
-                                    <div class="detail_element">
-                                        <span class="espsShopped">Optimización del Diseño</span><br><span
-                                            class="espsPrecio precio">$20 C/U</span>
-                                        <h4 class="h4esps">
-                                            Consejos personalizados para mejorar la estética y usabilidad del diseño.
-                                        </h4>
-                                    </div>
+                                <div class="button shop_button">
+                                    <button class="gocheck">CheckOut</button>
                                 </div>
-                                <hr class="shop_overflow_hr">
                             </div>
-                        </div>
-                        <div class="shop_total">
-                            <h2>Total a pagar: <span>$300</span></h2>
-                        </div>
-                        <div class="button shop_button">
-                            <button class="gocheck">CheckOut</button>
                         </div>
                     </div>
                 </div>
@@ -254,7 +248,8 @@
             <div class="seccion altseccion">
                 <h1>Dame tu contacto</h1>
                 <br>
-                <p>Tambien soy amigable con consultas menos especificas, preguntas generales, sugerencias o propuestas
+                <p>Tambien soy amigable con consultas menos especificas, preguntas generales, sugerencias o
+                    propuestas
                     de
                     negocios.</p>
                 <div class="formBox">
@@ -284,7 +279,8 @@
             <div class="seccion altseccion">
                 <h1>... O enviame un e-mail</h1>
                 <br>
-                <p>Puede tardar un poco en que recibas mi respuesta, pero seguro que mas de una semana no vas a tener
+                <p>Puede tardar un poco en que recibas mi respuesta, pero seguro que mas de una semana no vas a
+                    tener
                     que
                     esperar<br><span>(si no es spam, claro)</span>.</p>
                 <br>
@@ -303,16 +299,16 @@
                 <div class="finallabel">
                     <p class="pfooter">Find me on</p>
                     <br>
-                    <a="https: //github.com/KevinJGV"><img src="../IMG/github.svg" alt="Github" srcset=""></a=>
-                        <a href="https://discordapp.com/users/356763345283710986"><img src="../IMG/baseline-discord.svg"
-                                alt="Discord" srcset=""></a>
-                        <a href="https://instagram.com/_johaaan___?igshid=MzNlNGNkZWQ4Mg=="><img
-                                src="../IMG/instagram-alt.svg" alt="Instagram" srcset=""></a>
-                        <a href="https://www.linkedin.com/in/kevinjgv/"><img src="../IMG/linkedin-filled.svg"
-                                alt="LinkedIn" srcset=""></a>
-                        <a href="https://www.behance.net/kevinjohangv"><img src="../IMG/behance.svg" alt="Behance"
-                                srcset=""></a>
-                        <span>©2023 KGDEV </span>
+                    <a href="https: //github.com/KevinJGV"><img src="../IMG/github.svg" alt="Github" srcset=""></a>
+                    <a href="https://discordapp.com/users/356763345283710986"><img src="../IMG/baseline-discord.svg"
+                            alt="Discord" srcset=""></a>
+                    <a href="https://instagram.com/_johaaan___?igshid=MzNlNGNkZWQ4Mg=="><img
+                            src="../IMG/instagram-alt.svg" alt="Instagram" srcset=""></a>
+                    <a href="https://www.linkedin.com/in/kevinjgv/"><img src="../IMG/linkedin-filled.svg" alt="LinkedIn"
+                            srcset=""></a>
+                    <a href="https://www.behance.net/kevinjohangv"><img src="../IMG/behance.svg" alt="Behance"
+                            srcset=""></a>
+                    <span>©2023 KGDEV </span>
                 </div>
             </footer>
         </div>
@@ -320,13 +316,13 @@
             <span class="mobilecartdata"></span>
             <img src="../IMG/shop copy.svg" alt="shop">
         </div>
-        <div class="checkout hidden">
+        <div class="checkout ">
             <div class="frames">
                 <button class="cancelar">x</button>
                 <div class="frame1">
                     <h2>Pago exitoso<br>Agendamiento de sesión</h2>
                     <div class="checkout_formBox">
-                        <form action="">
+                        <form id="pay_form">
                             <div class="checkout_inputBox">
                                 <input type="text" name="nombre" id="checkout_nombre" maxlength="25" minlength="1"
                                     required="" placeholder=" ">
@@ -348,13 +344,13 @@
                                 <textarea name="descripcion" id="descripcion" maxlength="500" minlength="1"
                                     placeholder="Descripcion de la sesiòn" cols="10" rows="3"></textarea>
                             </div>
+                            <div class="button">
+                                <button id="pago" type="submit">Agendar</button>
+                            </div>
                         </form>
-                        <div class="button">
-                            <button type="submit">Agendar</button>
-                        </div>
                     </div>
                 </div>
-                <div class="frame3">
+                <div class="frame3 hidden">
                     <div class="mobilshop">
                         <div class="shop_sticky">
                             <div class="shopHead">

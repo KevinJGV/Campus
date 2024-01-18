@@ -89,12 +89,16 @@ h3 {
     align-items: center;
 }
 
-.esps_card img {
+.esps_card_img {
     width: 100px;
 }
 
 .esps_card p {
     font-family: 'Poppins-bold';
+}
+
+.h4esps {
+    font-weight: 1;
 }
 
 .session h3 {
@@ -130,7 +134,6 @@ h3 {
 }
 
 
-.less {}
 
 .inputCount {
     text-align: center;
@@ -141,7 +144,6 @@ h3 {
     border-radius: 10px 10px 0 0;
 }
 
-.more {}
 
 
 button {
@@ -233,6 +235,8 @@ button:active {
 .shop_overflow_element {
     display: flex;
     gap: 10px;
+    border-bottom: 0.5px solid;
+    margin-bottom: 25px;
 }
 
 .espsShoppedCantidad {
@@ -241,7 +245,7 @@ button:active {
     flex: 0.5;
 }
 
-.shop_overflow_element img {
+.shop_overflow_element_img {
     flex: 1;
 }
 
@@ -585,10 +589,6 @@ textarea::-webkit-selection {
     .esps {
         flex-flow: column;
         gap: 40px;
-    }
-
-    .esps_card img {
-        width: 50px;
     }
 
     .inputBox {

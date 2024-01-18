@@ -86,6 +86,59 @@ const b = d.querySelector("body");
 /// CODIGO DE FUNCIONALIDADES
 
 
+//Funciones
+async function fetchjson(index, op, elem, indexelem, target) {
+    try {
+        let response = await fetch('http://localhost:3000/tiers', {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        });
+        const json = await response.json();
+        const objeto = Object.keys(json[index].elementos);
+        const propiedad = objeto[indexelem]
+        const elemento = json[index].elementos[propiedad];
+
+        switch (op) {
+            case 1:
+                elem.textContent = "";
+                elem.insertAdjacentHTML("afterbegin", elemento.img);
+                break
+            case 2:
+                elem.textContent = propiedad;
+                break
+            case 3:
+                const tierShopped = d.querySelector(".tierShopped");
+                const tierPrecio = d.querySelector(".tierPrecio");
+                tierShopped.textContent = json[index].nombre;
+                tierPrecio.textContent = `$${json[index].valor} C/U`;
+                break
+            case 4:
+                elem.textContent = "";
+                elem.insertAdjacentText("afterbegin", propiedad);
+                break
+            case 5:
+                elem.textContent = "";
+                elem.insertAdjacentText("afterbegin", elemento.def);
+                break
+            case 6:
+                const x = Number(elem.value);
+                const res = x * JSON.parse(json[index].valor);
+                total_flag = res;
+                target.textContent = `$${res}`;
+                break
+        }
+    } catch (e) {
+        console.error("Ocurrió un error con JSON-SERVER", e);
+    }
+};
+
+function updateCart(elem) {
+    const event = new Event('input');
+    elem.dispatchEvent(event);
+}
+
 //Botones
 const tier1 = d.querySelector("#tier1");
 const añadir1 = d.querySelector("#añadir1");
@@ -96,7 +149,9 @@ const añadir2 = d.querySelector("#añadir2");
 const subtier2 = d.querySelector("#subtier2");
 const consults = d.querySelector(".consultingCounter");
 const shop = d.querySelector(".shop");
+const shop_body = d.querySelector(".shop_body");
 
+const añadir = [añadir1, añadir2]
 //Banderas
 let tier;
 
@@ -118,18 +173,63 @@ const CountUEl3less = d.querySelector("#añadir1_op3_less");
 const countinputarrU = [CountU, inputCountU1, inputCountU2, inputCountU3];
 const countmorearrU = [CountUmore, CountUEl1more, CountUEl2more, CountUEl3more];
 const countlessarrU = [CountUless, CountUEl1less, CountUEl2less, CountUEl3less];
+
+//Tier1 tienda
+const tier1_img1 = d.querySelector("#tier1_img1");
+const tier1_img2 = d.querySelector("#tier1_img2");
+const tier1_img3 = d.querySelector("#tier1_img3");
+const tier1_p1 = d.querySelector("#tier1_p1");
+const tier1_p2 = d.querySelector("#tier1_p2");
+const tier1_p3 = d.querySelector("#tier1_p3");
+
+const tier1_imgs = [tier1_img1, tier1_img2, tier1_img3];
+const tier1_ps = [tier1_p1, tier1_p2, tier1_p3];
+
+for (let img of tier1_imgs) {
+    const index = tier1_imgs.indexOf(img);
+    fetchjson(0, 1, img, index);
+};
+for (let p of tier1_ps) {
+    const index = tier1_ps.indexOf(p);
+    fetchjson(0, 2, p, index);
+}
+
+let total_flag;
+const total = d.querySelector("#totalamount");
 //Eventos de click
 
-añadir1.addEventListener("click", () => {
-    subtier1.classList.toggle("hidden");
-    tier2.classList.toggle("hidden");
-    couching.classList.toggle("hidden");
-    shop.classList.toggle("hidden");
-    CountU.value = 1;
-    añadir1.classList.toggle("hidden");
-    updateCart(CountU);
-    tier = 1;
-});
+for (let boton of añadir) {
+    const index = añadir.indexOf(boton);
+    if (index === 0) {
+        boton.addEventListener("click", () => {
+            subtier1.classList.toggle("hidden");
+            tier2.classList.toggle("hidden");
+            couching.classList.toggle("hidden");
+            shop.classList.toggle("hidden");
+            CountU.value = 1;
+            total.textContent = `$${99}`;
+            total_flag = 99;
+            boton.classList.toggle("hidden");
+            updateCart(CountU);
+            tier = 0;
+            fetchjson(index, 3)
+        });
+    } else {
+        boton.addEventListener("click", () => {
+            subtier2.classList.toggle("hidden");
+            tier1.classList.toggle("hidden");
+            consults.classList.toggle("hidden");
+            shop.classList.toggle("hidden");
+            CountE.value = 1;
+            total.textContent = `$${199}`;
+            total_flag = 199
+            boton.classList.toggle("hidden");
+            updateCart(CountE);
+            tier = 1;
+            fetchjson(index, 3)
+        });
+    }
+};
 
 for (let counter of countmorearrU) {
     counter.addEventListener("click", () => {
@@ -141,6 +241,8 @@ for (let counter of countmorearrU) {
         updateCart(input);
     })
 };
+
+
 
 for (let counter of countlessarrU) {
     counter.addEventListener("click", () => {
@@ -157,6 +259,7 @@ for (let counter of countlessarrU) {
                 tier2.classList.toggle("hidden");
                 couching.classList.toggle("hidden");
                 shop.classList.toggle("hidden");
+                shop_body.classList.add("hidden");
                 añadir1.classList.toggle("hidden");
                 updateCart(input);
                 tier = undefined;
@@ -172,6 +275,7 @@ for (let counter of countlessarrU) {
                 input.value = InputValue;
             }
         }
+        updateCart(input);
     })
 };
 
@@ -191,21 +295,32 @@ const CountEEl3more = d.querySelector("#añadir2_op3_more");
 const CountEEl3less = d.querySelector("#añadir2_op3_less");
 
 const countinputarrE = [CountE, inputCountE1, inputCountE2, inputCountE3];
+const countinputarrEitems = [inputCountE1, inputCountE2, inputCountE3];
 const countmorearrE = [CountEmore, CountEEl1more, CountEEl2more, CountEEl3more];
 const countlessarrE = [CountEless, CountEEl1less, CountEEl2less, CountEEl3less];
 
-//Eventos de click
+//Tier2 tienda
+const tier2_img1 = d.querySelector("#tier2_img1");
+const tier2_img2 = d.querySelector("#tier2_img2");
+const tier2_img3 = d.querySelector("#tier2_img3");
+const tier2_p1 = d.querySelector("#tier2_p1");
+const tier2_p2 = d.querySelector("#tier2_p2");
+const tier2_p3 = d.querySelector("#tier2_p3");
 
-añadir2.addEventListener("click", () => {
-    subtier2.classList.toggle("hidden");
-    tier1.classList.toggle("hidden");
-    consults.classList.toggle("hidden");
-    shop.classList.toggle("hidden");
-    CountE.value = 1;
-    añadir2.classList.toggle("hidden");
-    updateCart(CountE);
-    tier = 2;
-});
+const tier2_imgs = [tier2_img1, tier2_img2, tier2_img3];
+const tier2_ps = [tier2_p1, tier2_p2, tier2_p3];
+
+for (let img of tier2_imgs) {
+    const index = tier2_imgs.indexOf(img);
+    fetchjson(1, 1, img, index);
+};
+for (let p of tier2_ps) {
+    const index = tier2_ps.indexOf(p);
+    fetchjson(1, 2, p, index);
+}
+
+
+//Eventos de click
 
 for (let counter of countmorearrE) {
     counter.addEventListener("click", () => {
@@ -214,9 +329,7 @@ for (let counter of countmorearrE) {
         let InputValue = Number(input.value);
         InputValue++;
         input.value = InputValue
-        if (index === 0) {
-            updateCart(input);
-        }
+        updateCart(input);
     })
 };
 
@@ -235,12 +348,16 @@ for (let counter of countlessarrE) {
                 tier1.classList.toggle("hidden");
                 consults.classList.toggle("hidden");
                 shop.classList.toggle("hidden");
+                shop_body.classList.add("hidden");
                 añadir2.classList.toggle("hidden");
                 b.scrollTo(0, 500);
                 updateCart(input);
                 tier = undefined;
             } else {
                 input.value = InputValue;
+                for (let input of countinputarrEitems) {
+                    input.value = 0;
+                }
                 updateCart(input);
             }
         } else {
@@ -249,29 +366,24 @@ for (let counter of countlessarrE) {
                 input.value = 0;
             } else {
                 input.value = InputValue;
+                for (let input of countinputarrEitems) {
+                    input.value = 0;
+                }
             }
         }
+        updateCart(input);
     })
 };
 
-// d.addEventListener("DOMContentLoaded", () => {
-//     const allInputs = d.querySelectorAll("input");
-//     for (let input of allInputs) {
-//         input.value = "";
-//     }
-// })
 
 // Añadir al carrito
 const query = d.querySelector(".query");
 const mobilequery = d.querySelector(".mobilecartdata");
 const mobilequery_background = d.querySelector(".mobilecart");
 const totalCount = d.querySelector(".tierShoppedCantidad");
-const inputflags = [CountE, CountU];
-
-function updateCart(elem) {
-    const event = new Event('input');
-    elem.dispatchEvent(event);
-}
+const inputflags = [CountU, CountE];
+const checkout = d.querySelector(".checkout");
+const salir = d.querySelector(".cancelar");
 
 for (let input of inputflags) {
     input.addEventListener("input", () => {
@@ -280,15 +392,206 @@ for (let input of inputflags) {
         totalCount.textContent = "";
         query.insertAdjacentText("afterbegin", input.value);
         mobilequery.insertAdjacentText("afterbegin", input.value);
-        totalCount.insertAdjacentText("afterbegin", `x${input.value}`)
+        totalCount.insertAdjacentText("afterbegin", `x${input.value} `)
         if (mobilequery.textContent !== "") {
             mobilequery_background.style.backgroundColor = "#00FF5B"
         } else {
             mobilequery_background.style.backgroundColor = "#FFF"
         }
+
     })
 }
 
+// mobilequery_background.addEventListener("click", () => {
+//     checkout.classList.toggle("hidden");
+// })
+
+salir.addEventListener("click", () => {
+    checkout.classList.toggle("hidden");
+})
+
 //Shop-Data
+const item1Cantidad = d.querySelector("#item1Cantidad");
+const item2Cantidad = d.querySelector("#item2Cantidad");
+const item3Cantidad = d.querySelector("#item3Cantidad");
+const element1img = d.querySelector("#element1img");
+const element2img = d.querySelector("#element2img");
+const element3img = d.querySelector("#element3img");
+const element1name = d.querySelector("#element1name");
+const element2name = d.querySelector("#element2name");
+const element3name = d.querySelector("#element3name");
+const element1des = d.querySelector("#element1des");
+const element2des = d.querySelector("#element2des");
+const element3des = d.querySelector("#element3des");
+const element1 = d.querySelector("#element1");
+const element2 = d.querySelector("#element2");
+const element3 = d.querySelector("#element3");
+const itemsCantidad = [item1Cantidad, item2Cantidad, item3Cantidad];
+const elementImgs = [element1img, element2img, element3img];
+for (let img of elementImgs) {
+    const index = elementImgs.indexOf(img);
+    for (let boton of añadir) {
+        boton.addEventListener("click", () => {
+            fetchjson(tier, 1, img, index)
+        })
+    }
+};
+const elementNames = [element1name, element2name, element3name];
+for (let name of elementNames) {
+    const index = elementNames.indexOf(name);
+    for (let boton of añadir) {
+        boton.addEventListener("click", () => {
+            fetchjson(tier, 4, name, index)
+        })
+    }
+};
+const elementDes = [element1des, element2des, element3des];
+for (let des of elementDes) {
+    const index = elementDes.indexOf(des);
+    for (let boton of añadir) {
+        boton.addEventListener("click", () => {
+            fetchjson(tier, 5, des, index)
+        })
+    }
+};
+const elements = [element1, element2, element3]
+const countBox1Arr = [inputCountU1, inputCountE1];
+const countBox2Arr = [inputCountU2, inputCountE2];
+const countBox3Arr = [inputCountU3, inputCountE3];
+const AllSubInputarr = [inputCountU1, inputCountU2, inputCountU3, inputCountE1, inputCountE2, inputCountE3];
+
+for (let input of countBox1Arr) {
+    input.addEventListener("input", () => {
+        if (input.value === "0" || input.value === "") {
+            element1.classList.add("hidden");
+        } else {
+            element1.classList.remove("hidden");
+        }
+        item1Cantidad.textContent = "";
+        item1Cantidad.insertAdjacentText("afterbegin", `x${input.value} `)
+    })
+}
+
+for (let input of countBox2Arr) {
+    input.addEventListener("input", () => {
+        if (input.value === "0" || input.value === "") {
+            element2.classList.add("hidden");
+        } else {
+            element2.classList.remove("hidden");
+        }
+        item2Cantidad.textContent = "";
+        item2Cantidad.insertAdjacentText("afterbegin", `x${input.value} `)
+    })
+}
+
+for (let input of countBox3Arr) {
+    input.addEventListener("input", () => {
+        if (input.value === "0" || input.value === "") {
+            element3.classList.add("hidden");
+        } else {
+            element3.classList.remove("hidden");
+        }
+        item3Cantidad.textContent = "";
+        item3Cantidad.insertAdjacentText("afterbegin", `x${input.value} `)
+    })
+}
 
 
+for (let input of AllSubInputarr) {
+    input.addEventListener("input", () => {
+        let condicion = AllSubInputarr.every(i => i.value.trim() === "" || i.value === "0");
+        if (condicion) {
+            shop_body.classList.add("hidden");
+        } else {
+            shop_body.classList.remove("hidden");
+        }
+    })
+}
+
+
+
+
+
+const morebuttons = [CountUEl1more, CountUEl2more, CountUEl3more, CountEEl1more, CountEEl2more, CountEEl3more];
+
+for (let input of AllSubInputarr) {
+    input.addEventListener("input", updateButtons);
+}
+
+for (let flag of inputflags) {
+    flag.addEventListener("input", updateButtons);
+
+}
+
+function updateButtons() {
+    let maxSum = 0;
+    for (let flag of inputflags) {
+        maxSum += 2 * Number(flag.value);
+    }
+    let sum = AllSubInputarr.reduce((a, b) => a + Number(b.value), 0);
+    for (let button of morebuttons) {
+        if (sum === maxSum) {
+            button.setAttribute("disabled", "");
+        } else {
+            button.removeAttribute("disabled");
+        }
+    }
+}
+
+
+for (let flag of inputflags) {
+    const index = inputflags.indexOf(flag);
+
+    flag.addEventListener("input", () => fetchjson(tier, 6, flag, index, total))
+}
+
+//GO CHECK
+
+const gocheck = d.querySelector(".gocheck");
+
+gocheck.addEventListener("click", () => checkout.classList.toggle("hidden"));
+
+const pay_form = d.querySelector("#pay_form");
+const username = d.querySelector("#checkout_nombre");
+const email = d.querySelector("#checkout_email");
+const contacto = d.querySelector("#contacto");
+const fecha = d.querySelector("#fecha");
+const descripcion = d.querySelector("#descripcion");
+const pago = d.querySelector("#pago");
+
+pay_form.addEventListener("submit", event => {
+    event.preventDefault();
+    const form = new FormData(event.target);
+    let datos = {};
+    for (let [key, value] of form.entries()) {
+        datos[key] = value;
+    };
+    json = JSON.stringify(datos);
+    fetch('http://localhost:3000/citas_agendadas', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: json,
+        // total_flag
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('Éxito:', data);
+        }).catch(e => console.error("Ocurrió un error Enviando su formulario."));
+}
+)
+
+
+
+
+
+
+
+
+d.addEventListener("DOMContentLoaded", () => {
+    const allInputs = d.querySelectorAll("input");
+    for (let input of allInputs) {
+        input.value = "";
+    }
+})
