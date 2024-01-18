@@ -1,0 +1,18 @@
+{
+	"tier 1": {
+		"elementos": {
+			"Revisión de Código": "Un análisis detallado del código para identificar errores, mejorar la eficiencia y asegurar buenas prácticas.",
+			"Optimización del Diseño": "Consejos personalizados para mejorar la estética y usabilidad del diseño.",
+			"Estrategias de Trabajo": "Técnicas para mejorar la productividad y calidad del trabajo."
+		},
+		"valor": "99"
+	},
+	"tier 2": {
+		"elementos": {
+			"Análisis Competitivo": "Un estudio detallado sobre los competidores y recomendaciones estratégicas.",
+			"Optimización Operativa": "Consejos para mejorar los procesos internos, reducir costos y aumentar la eficiencia.",
+			"Estrategia Digital": "Planificación personalizada para potenciar la presencia online y digitalización."
+		},
+		"valor": "199"
+	}
+}
