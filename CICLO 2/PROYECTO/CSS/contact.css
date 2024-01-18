@@ -278,7 +278,13 @@ button:active {
     text-align: center;
 }
 
+.mobilecartdata {
+    color: black;
+    font-family: 'Poppins-Regular', sans-serif;
+}
+
 .mobilecart img {
+
     width: 30px;
     position: absolute;
     top: 6px;
@@ -404,9 +410,10 @@ button:active {
     font-family: 'Poppins-Regular';
 }
 
-.mobilshop .shopHead{
+.mobilshop .shopHead {
     justify-content: center;
 }
+
 .mobilshop hr {
     width: 100%;
 }
@@ -614,13 +621,13 @@ textarea::-webkit-selection {
         bottom: 0;
         padding: 50px 20px;
     }
-    
+
     .checkout_formBox {
         display: flex;
         flex-flow: column wrap;
         width: 100%;
     }
-    
+
     .checkout_formBox form {
         gap: 24px;
         margin-block: 40px 10px;
@@ -633,7 +640,7 @@ textarea::-webkit-selection {
         flex: 1;
         max-width: 90%;
     }
-    
+
     .button {
         display: flex;
         flex-flow: column;
