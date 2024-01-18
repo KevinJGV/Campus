@@ -39,14 +39,21 @@
       "valor": "199"
     }
   ],
-  "citas_agendadas": [
+  "citas_agendadas": [],
+  "mensajes": [
     {
-      "id": "230c",
-      "nombre": "asdasdasd",
+      "id": "2ae0",
+      "username": "asdadsad",
       "email": "asdasdas@asdasd.com",
-      "contacto": "3143253258",
-      "fecha": "2024-01-08",
-      "descripcion": "asdasdqwdsdsdf"
+      "contacto": "",
+      "fecha": "",
+      "descripcion": "asdadqw f"
+    },
+    {
+      "id": "26dd",
+      "username": "asdasd",
+      "email": "asdasdas@asdasd.com",
+      "descripcion": "asfwefergergtr"
     }
   ]
 }

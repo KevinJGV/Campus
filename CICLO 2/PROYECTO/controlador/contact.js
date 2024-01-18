@@ -193,7 +193,7 @@ for (let p of tier1_ps) {
     const index = tier1_ps.indexOf(p);
     fetchjson(0, 2, p, index);
 }
-
+const tierShopped = d.querySelector(".tierShopped");
 let total_flag;
 const total = d.querySelector("#totalamount");
 //Eventos de click
@@ -548,50 +548,84 @@ for (let flag of inputflags) {
 //GO CHECK
 
 const gocheck = d.querySelector(".gocheck");
-
 gocheck.addEventListener("click", () => checkout.classList.toggle("hidden"));
 
-const pay_form = d.querySelector("#pay_form");
-const username = d.querySelector("#checkout_nombre");
-const email = d.querySelector("#checkout_email");
-const contacto = d.querySelector("#contacto");
-const fecha = d.querySelector("#fecha");
-const descripcion = d.querySelector("#descripcion");
-const pago = d.querySelector("#pago");
-
-pay_form.addEventListener("submit", event => {
-    event.preventDefault();
-    const form = new FormData(event.target);
-    let datos = {};
-    for (let [key, value] of form.entries()) {
-        datos[key] = value;
+function fetchpay(total, servicio) {
+    // const pay_form = d.querySelector("#pay_form");
+    const username = d.querySelector("#checkout_nombre");
+    const email = d.querySelector("#checkout_email");
+    const contacto = d.querySelector("#contacto");
+    const fecha = d.querySelector("#fecha");
+    const descripcion = d.querySelector("#descripcion_final");
+    const f1 = d.querySelector(".frame1");
+    const f2 = d.querySelector(".frame2");
+    const datos = {
+        "username": username.value,
+        "email": email.value,
+        "contacto": contacto.value,
+        "fecha": fecha.value,
+        "descripcion": descripcion.value,
+        "servicio": servicio.textContent,
+        "total": total,
     };
     json = JSON.stringify(datos);
+    f1.classList.add("hidden");
+    f2.classList.remove("hidden");
     fetch('http://localhost:3000/citas_agendadas', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json; charset=UTF-8',
         },
         body: json,
-        // total_flag
     })
         .then(res => res.json())
         .then(data => {
-            console.log('Éxito:', data);
+            console.log('Éxito:', datos);
         }).catch(e => console.error("Ocurrió un error Enviando su formulario."));
-}
-)
+};
+
+const pago = d.querySelector("#pago");
+
+pago.addEventListener("click", () => fetchpay(total_flag, tierShopped))
 
 
+async function fetchmsj() {
+    const nombre = d.querySelector("#nombre");
+    const email = d.querySelector("#email");
+    const contacto = d.querySelector("#contacto");
+    const fecha = d.querySelector("#fecha");
+    const descripcion = d.querySelector("#descripcion");
+    const datos = {
+        "username": nombre.value,
+        "email": email.value,
+        "descripcion": descripcion.value,
+    };
+    json = JSON.stringify(datos);
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    fetch('http://localhost:3000/mensajes', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: json,
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('Éxito:', datos);
+        }).catch(e => console.error("Ocurrió un error Enviando su formulario."));
+};
 
+const mensaje = d.querySelector("#mensaje");
 
-
-
-
+mensaje.addEventListener("click", fetchmsj)
 
 d.addEventListener("DOMContentLoaded", () => {
     const allInputs = d.querySelectorAll("input");
+    const text = d.querySelectorAll("textarea");
     for (let input of allInputs) {
+        input.value = "";
+    };
+    for (let input of text) {
         input.value = "";
     }
 })

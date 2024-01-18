@@ -272,7 +272,7 @@
                     </form>
                     <br><br>
                     <div class="button">
-                        <button type="submit">Enviar</button>
+                        <button id="mensaje" type="submit">Enviar</button>
                     </div>
                 </div>
             </div>
@@ -316,7 +316,7 @@
             <span class="mobilecartdata"></span>
             <img src="../IMG/shop copy.svg" alt="shop">
         </div>
-        <div class="checkout ">
+        <div class="checkout hidden">
             <div class="frames">
                 <button class="cancelar">x</button>
                 <div class="frame1">
@@ -341,13 +341,13 @@
                                 <label for="fecha">Fecha de la primer sesión</label>
                             </div>
                             <div class="checkout_inputBox">
-                                <textarea name="descripcion" id="descripcion" maxlength="500" minlength="1"
+                                <textarea name="descripcion" id="descripcion_final" maxlength="500" minlength="1"
                                     placeholder="Descripcion de la sesiòn" cols="10" rows="3"></textarea>
                             </div>
-                            <div class="button">
-                                <button id="pago" type="submit">Agendar</button>
-                            </div>
                         </form>
+                        <div class="button">
+                            <button id="pago">Agendar</button>
+                        </div>
                     </div>
                 </div>
                 <div class="frame3 hidden">
