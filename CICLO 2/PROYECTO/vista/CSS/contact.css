@@ -95,7 +95,7 @@ h3 {
 
 .esps_card p {
     font-family: 'Poppins-bold';
-    font-size: clamp(0.1rem, 0.2774rem + 0.9936vw, 1.52rem);
+    font-size: clamp(0.99rem, 0.2774rem + 0.9936vw, 1.52rem);
 }
 
 .h4esps {
