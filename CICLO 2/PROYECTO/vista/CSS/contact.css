@@ -64,7 +64,6 @@ p {
 
 .tiers p {
     color: #858585;
-    font-size: clamp(0.1rem, 0.2774rem + 0.9936vw, 1.52rem);
 }
 
 h3 {
