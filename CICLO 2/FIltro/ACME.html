@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="controlador/js.js"></script>
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .checkout {
+            position: fixed;
+            z-index: 3;
+            background: #F8F8F8;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            padding: 50px 20px;
+        }
+
+        .checkout * {
+            color: black;
+        }
+
+        .checkout_formBox {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .checkout_formBox form,
+        .añadir_body {
+            gap: 24px;
+            margin-block: 40px 10px;
+            flex-flow: column wrap;
+            width: 100%;
+            display: flex;
+            align-content: center;
+        }
+
+        .checkout_inputBox,
+        .input {
+            position: relative;
+            flex: 1;
+            min-width: 295px;
+            width: 440px;
+        }
+
+        .checkout_inputBox label,
+        .input label {
+            top: -10px;
+            color: #858585;
+        }
+
+        .checkout_inputBox input:focus~label,
+        .checkout_inputBox input:not(:placeholder-shown)~label,
+        .input input:focus~label,
+        .input input:not(:placeholder-shown)~label {
+            top: -30px;
+            color: #000;
+            font-size: 12px;
+        }
+
+        .checkout input,
+        .input input {
+            border-bottom: 1px solid #000;
+        }
+
+        .checkout_inputBox textarea {
+            background: #5a5a5a71;
+            border: 0;
+        }
+
+        .checkout_inputBox textarea:focus,
+        .checkout_inputBox textarea:not(:placeholder-shown) {
+            background: #99999971;
+            outline: none;
+            border: 0;
+        }
+
+
+        .frame1 {
+            height: 100%;
+        }
+
+        .frame1 h2 {
+            text-align: center;
+            margin-block: 60px;
+            margin-bottom: 0;
+        }
+
+        input {
+            width: 100%;
+            font-size: 1rem;
+            font-family: 'Poppins-Regular';
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        input::selection {
+            background: rgba(133, 133, 133, 0.776);
+        }
+
+        input::-moz-selection {
+            background: rgba(133, 133, 133, 0.776);
+        }
+
+        input::-webkit-selection {
+            background: rgba(133, 133, 133, 0.776);
+        }
+
+        label {
+            position: absolute;
+            top: 35px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #858585;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        input:focus~label,
+        input:not(:placeholder-shown)~label {
+            top: 10px;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        button {
+            background: #D9D9D9;
+            color: #171717;
+            padding: 10px 40px;
+            font-size: 1.8rem;
+            font-family: 'Poppins-semibold';
+            font-weight: 501;
+            border-radius: 10px;
+            border: red solid;
+            margin-top: 20px;
+            align-self: center;
+        }
+
+        button:active {
+            outline: red solid 0.2rem;
+            background: #b0b0b0;
+            transform: scale(0.9);
+        }
+
+        .button {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .sub {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .añadir {
+            background-color: whitesmoke;
+            color: #000;
+        }
+
+        .añadir * {
+            color: #000;
+        }
+
+        .añadir>input {
+            border-bottom: #000 1px solid;
+        }
+
+        .popup_header,
+        .añadir_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 30px;
+        }
+
+        .popup_foot,
+        .añadir_foot {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkout">
+        <div class="frame1">
+            <h2>CF ACME v0.1<br>Inicie sesión</h2>
+            <div class="checkout_formBox">
+                <form id="pay_form">
+                    <div class="checkout_inputBox">
+                        <input type="text" name="usuario" id="checkout_nombre" maxlength="10" minlength="1" required
+                            placeholder=" ">
+                        <label for="usuario">Usuario - Cédula</label>
+                    </div>
+                    <div class="checkout_inputBox">
+                        <input type="password" name="pass" id="pass" minlength="6" required placeholder=" ">
+                        <label for="pass">Contraseña</label>
+                    </div>
+            </div>
+            </form>
+            <div class="button">
+                <button id="login">INGRESAR</button>
+            </div>
+        </div>
+    </div>
+    <div class="funcionario hidden">
+        <h1>Bienvendido, funcionario: <span class="regis_name"></span></h1>
+        <div class="checkout_inputBox">
+            <input style="border-bottom: #000 solid 1px;" type="text" name="usuario" id="input_consulta" maxlength="10"
+                minlength="1" required placeholder=" ">
+            <label for="usuario">Cédula de cliente</label>
+        </div>
+        <div class="button">
+            <button id="consultar">Consultar</button>
+        </div>
+    </div>
+    <div class="contenido hidden">
+        <div class="sub">
+            <h2 class="flex1">ID: <span class="insert_id"></span></h2>
+            <h2 class="flex2">NOMBRE: <span class="insert_name"></span></h2>
+            <h2 class="flex3">TOTAL COMPRAS: <span class="insert_shopping"></span></h2>
+            <h2 class="flex3">Bonos Disponibles: <span class="insert_bonos"></span></h2>
+        </div>
+        <div class="cuerpo">
+            <div class="registro_cliente">
+                <h3>COMPRAS ACUMULADAS: <span id="total_acumulados"></span></h3>
+                <br>
+                <h3>Faltan <span id="faltantes"></span> compras para un bono</h3>
+            </div>
+            <div class="button">
+                <button id="register_shop">Registrar <br> compra</button>
+                <button id="exchange" disabled>Canjear 1 bono</button>
+            </div>
+            <div class="añadir">
+                <div class="añadir_header">
+                    <h2>AÑADIR</h2>
+                    <button class="cancelar">x</button>
+                </div>
+                <div class="añadir_body">
+                    <div class="input">
+                        <label for="cedula_compra">Cedula</label>
+                        <input type="text" name="cedula_compra">
+                    </div>
+                    <div class="input">
+                        <label for="id">ID Perfume</label>
+                        <input type="text" name="id">
+                    </div>
+                    <div class="input">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="text" name="cantidad">
+                    </div>
+                </div>
+                <div class="añadir_foot">
+                    <button class="editar">Registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
