@@ -16,7 +16,7 @@ function caso1(elem) {
     let newIds = [];
     for (let e of elem) {
         if (newIds.length === 0) {
-            newIds.push([])
-        }
-    }
-}
+            newIds.push([]);
+        };
+    };
+};
