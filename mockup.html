@@ -5,7 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style></style>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: rgb(241, 241, 241);
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding-inline: 20px;
+        }
+
+        .opciones {
+            display: flex;
+            align-items: center;
+        }
+
+        .opciones ul {
+            display: flex;
+            padding: 0 100px;
+            gap: 20px;
+        }
+
+        .opciones li {
+            list-style-type: none;
+        }
+
+        .sub {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .popup_box {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.425);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .popup,
+        .añadir {
+            background-color: whitesmoke;
+            width: 40%;
+        }
+
+        .popup_header,
+        .añadir_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 30px;
+        }
+
+        .input {
+            display: flex;
+            flex-flow: column;
+            gap: 5px;
+            margin: 20px;
+        }
+
+        .popup_foot,
+        .añadir_foot {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+    </style>
 
 </head>
 
@@ -32,7 +123,7 @@
                 <h2 class="flex4">OPCIONES</h2>
                 <button class="flex5">Añadir</button>
             </div>
-            <div class=" cuerpo">
+            <div class="cuerpo">
                 <div class="item">
                     <p class="flex1">123</p>
                     <p class="flex2">Nombre</p>
@@ -41,8 +132,55 @@
                     <button class="flex5">Eliminar</button>
                 </div>
             </div>
-        </div>
     </main>
+    <div class="popup_box">
+        <div class="popup">
+            <div class="popup_header">
+                <h2>EDITAR</h2>
+                <button class="cancelar">x</button>
+            </div>
+            <div class="popup_body">
+                <div class="input">
+                    <label for="id">ID</label>
+                    <input type="text" name="id">
+                </div>
+                <div class="input">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="input">
+                    <label for="N/A">N/A</label>
+                    <input type="text" name="na">
+                </div>
+            </div>
+            <div class="popup_foot">
+                <button class="editar">Editar</button>
+            </div>
+        </div>
+        <div class="añadir">
+            <div class="añadir_header">
+                <h2>AÑADIR</h2>
+                <button class="cancelar">x</button>
+            </div>
+            <div class="añadir_body">
+                <div class="input">
+                    <label for="id">ID</label>
+                    <input type="text" name="id">
+                </div>
+                <div class="input">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="input">
+                    <label for="N/A">N/A</label>
+                    <input type="text" name="na">
+                </div>
+            </div>
+            <div class="añadir_foot">
+                <button class="editar">Añadir</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
