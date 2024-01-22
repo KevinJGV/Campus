@@ -97,7 +97,27 @@
             margin: 20px 0;
         }
     </style>
+    <script defer>
+        //FUNCION GENERAL PARA TODOS LOS CASOS
+        function groupBy(fn) {
+            const output = new Map;
+            array.forEach(element => {
+                let dato;
+                if (output.has(fn(element))) {
+                    dato = output.get(fn(element));
+                    dato.push(element)
+                } else {
+                    dato = [element]
+                    output.set(fn(element), dato)
+                }
+                dato = [];
+            });
+            return output;
+        }
 
+        array.nuevoMetodo = groupBy;
+        //array.nuevoMetodo(fn)
+    </script>
 </head>
 
 <body>
