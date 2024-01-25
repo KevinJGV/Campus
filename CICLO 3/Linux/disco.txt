@@ -1,0 +1,8 @@
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+tmpfs            1,5G   2,2M  1,5G   1% /run
+/dev/nvme0n1p6   107G    40G   63G  39% /
+tmpfs            7,5G   4,3M  7,5G   1% /dev/shm
+tmpfs            5,0M   4,0K  5,0M   1% /run/lock
+efivarfs         128K    46K   78K  38% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    96M    33M   64M  34% /boot/efi
+tmpfs            1,5G   1,7M  1,5G   1% /run/user/1003
